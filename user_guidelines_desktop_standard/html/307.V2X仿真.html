@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7. V2X仿真 &mdash; Docs</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+      <link rel="stylesheet" type="text/css" href="_static/extra.css?v=be618c9b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=34088549"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=beaddf03"></script>
+        <script src="_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+        <script src="_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="8. 仿真合成数据生成" href="308.%E4%BB%BF%E7%9C%9F%E5%90%88%E6%88%90%E6%95%B0%E6%8D%AE%E7%94%9F%E6%88%90.html" />
+    <link rel="prev" title="6. 传感器仿真" href="306.%E4%BC%A0%E6%84%9F%E5%99%A8%E4%BB%BF%E7%9C%9F.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            TAD Sim
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">🪄概述</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="101.%E5%85%B3%E4%BA%8E%20TAD%20Sim%20%E5%8D%95%E6%9C%BA%E7%89%88.html">1. 关于 TAD Sim 单机版</a></li>
+<li class="toctree-l1"><a class="reference internal" href="102.%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D.html">2. 功能介绍</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀快速入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="201.%E5%8D%95%E6%9C%BA%E7%89%88%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2.html">1. 单机版安装部署</a></li>
+<li class="toctree-l1"><a class="reference internal" href="202.%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E7%AE%97%E6%B3%95%E6%8E%A5%E5%85%A5.html">2. 如何进行算法接入</a></li>
+<li class="toctree-l1"><a class="reference internal" href="203.%E5%AF%BC%E5%85%A5%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%AE%97%E6%B3%95%E5%88%B0%E5%B9%B3%E5%8F%B0.html">3. 导入第一个算法到平台</a></li>
+<li class="toctree-l1"><a class="reference internal" href="204.%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%BB%BF%E7%9C%9F%E5%9C%BA%E6%99%AF.html">4. 创建第一个仿真场景</a></li>
+<li class="toctree-l1"><a class="reference internal" href="205.%E6%92%AD%E6%94%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%9C%BA%E6%99%AF.html">5. 播放第一个场景</a></li>
+<li class="toctree-l1"><a class="reference internal" href="206.%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%9C%B0%E5%9B%BE.html">6. 创建第一个地图</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💡用户指引</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="301.%E4%B8%93%E4%B8%9A%E6%9C%AF%E8%AF%AD.html">1. 专业术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="302.%E5%9C%BA%E6%99%AF%E7%BC%96%E8%BE%91%E5%99%A8.html">2. 场景编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="303.%E5%9C%BA%E6%99%AF%E6%92%AD%E6%94%BE%E5%99%A8.html">3. 场景播放器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="304.%E5%9C%B0%E5%9B%BE%E7%BC%96%E8%BE%91%E5%99%A8.html">4. 地图编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="305.%E5%8A%A8%E5%8A%9B%E5%AD%A6%E4%BB%BF%E7%9C%9F.html">5. 动力学仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="306.%E4%BC%A0%E6%84%9F%E5%99%A8%E4%BB%BF%E7%9C%9F.html">6. 传感器仿真</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. V2X仿真</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">7.1 配置方式</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="308.%E4%BB%BF%E7%9C%9F%E5%90%88%E6%88%90%E6%95%B0%E6%8D%AE%E7%94%9F%E6%88%90.html">8. 仿真合成数据生成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="309.%E5%9C%BA%E6%99%AF%E8%AF%84%E6%B5%8B.html">9. 场景评测</a></li>
+<li class="toctree-l1"><a class="reference internal" href="310.%E4%BB%BF%E7%9C%9F%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AE%B0%E5%BD%95%E5%92%8C%E5%9B%9E%E6%94%BE.html">10. 仿真数据的记录和回放</a></li>
+<li class="toctree-l1"><a class="reference internal" href="311.%E5%8D%95%E6%9C%BA%E5%A4%9A%E8%BF%9B%E7%A8%8B%E5%B9%B6%E8%A1%8C%E4%BB%BF%E7%9C%9F.html">11. 单机多进程并行仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="312.OpenSCENARIO%20%E6%94%AF%E6%8C%81.html">12. OpenSCENARIO 支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="313.OpenDRIVE%20%E6%94%AF%E6%8C%81.html">13. OpenDRIVE 支持</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚开发者指引</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="401.%E7%B3%BB%E7%BB%9F%E7%BA%A6%E5%AE%9A.html">1. 系统约定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="402.%E7%AE%97%E6%B3%95%E6%8E%A5%E5%85%A5%E8%AF%B4%E6%98%8E.html">2. 算法接入说明 - txSimSDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="403.%E4%BB%BF%E7%9C%9F%E6%B6%88%E6%81%AF%E8%AF%B4%E6%98%8E.html">3. 仿真消息说明</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔄版本说明</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="501.%E6%9C%80%E6%96%B0%E8%BF%AD%E4%BB%A3.html">1. 最新迭代</a></li>
+<li class="toctree-l1"><a class="reference internal" href="502.%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC.html">2. 历史版本</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TAD Sim</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">7. V2X仿真</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="v2x">
+<h1>7. V2X仿真<a class="headerlink" href="#v2x" title="Link to this heading"></a></h1>
+<p>在构建未来交通系统的征途上, TAD Sim 系统搭载先进的 V2X(Vehicle-to-Everything) 技术, 为您提供一种高效且直观的方法, 以实现车辆与周边环境的全面互联互通.</p>
+<p>借助地图编辑器, 您可以在道路的任何位置精准放置关键设施, 如杆位、路侧传感器以及 RSU(Road Side Units) 设备. 这些设备不仅为您的模拟场景增添了真实感, 更是实现智能交通管理的基础.</p>
+<p>更进一步, 我们的系统允许您为主车添加 OBU(On-Board Units) 模块, 这是 V2X 通信的核心组件. 通过 OBU 模块, 车辆能够接收并发送信息, 与周围的交通基础设施进行实时交互, 从而构建一个真实且全面的交通模拟场景.</p>
+<p>在这个场景中, 车辆不再是孤立的个体, 而是成为了一个智能交通网络的一部分.每一辆车都能够感知周围环境, 做出更加智能的决策, 从而提高道路安全, 减少拥堵, 优化交通流.</p>
+<section id="id1">
+<h2>7.1 配置方式<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p><strong>Step 1. 路侧传感器及设备参数配置</strong></p>
+<ul class="simple">
+<li><p>通过地图编辑器 <code class="docutils literal notranslate"><span class="pre">添加物体</span></code> 工具在道路相应位置放置杆位,  路侧传感器 和 RSU 设备. 在属性栏设置设备参数, 参数说明见传感器仿真章节.</p></li>
+<li><p>保存当前地图.</p></li>
+</ul>
+<div align="center"><img src="./_static/images/image242.png" alt="" width="700px"></div><br>
+<p>初始化参数说明:</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>名称</th>
+<th>Name</th>
+<th>默认值</th>
+<th>范围</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SPAT<br>发送频率</td>
+<td>FrequencySPAT</td>
+<td>10</td>
+<td>[0~100]</td>
+<td>发送频率, 0表示不发送</td>
+</tr>
+<tr>
+<td>RSM<br>发送频率</td>
+<td>FrequencyRSM</td>
+<td>10</td>
+<td>[0~100]</td>
+<td>发送频率, 0表示不发送</td>
+</tr>
+<tr>
+<td>RSI<br>发送频率</td>
+<td>FrequencyRSI</td>
+<td>10</td>
+<td>[0~100]</td>
+<td>发送频率, 0表示不发送</td>
+</tr>
+<tr>
+<td>MAP<br>发送频率</td>
+<td>FrequencyMAP</td>
+<td>10</td>
+<td>[0~100]</td>
+<td>发送频率, 0表示不发送</td>
+</tr>
+<tr>
+<td>通信距离</td>
+<td>DistanceCommu</td>
+<td>300</td>
+<td>[10~2000米]</td>
+<td>通信距离</td>
+</tr>
+<tr>
+<td>频段</td>
+<td>Band</td>
+<td>5905-5925</td>
+<td>(5905-5915/5915-5925/5905-5925三选一)</td>
+<td></td>
+</tr>
+<tr>
+<td>传输速率</td>
+<td>Mbps</td>
+<td>100</td>
+<td>[0.1~1000Mbps]</td>
+<td>带宽, 会影响拥堵时的延时</td>
+</tr>
+<tr>
+<td>最大延时</td>
+<td>MaxDelay</td>
+<td>100</td>
+<td>[0~1000ms]</td>
+<td>最大延时, 和拥堵调节配合使用, 超过最大延时则考虑拥堵调节</td>
+</tr>
+<tr>
+<td>地图半径</td>
+<td>MapRadius</td>
+<td>1000</td>
+<td>[10~2000米]</td>
+<td>MAP消息中地图范围</td>
+</tr>
+<tr>
+<td>路口 ID</td>
+<td>JunctionIDs</td>
+<td></td>
+<td>可多选</td>
+<td>MAP消息中的路口数据, 如果不指定, 则按照地图半径内包括的路口发送</td>
+</tr>
+<tr>
+<td>关键事件<br>立即触发</td>
+<td>TriggerImmediately</td>
+<td>True</td>
+<td>True, False</td>
+<td>打开时, 不遵守频率, 立即发送关键事件</td>
+</tr>
+<tr>
+<td>拥堵调节</td>
+<td>CongestionRegulation</td>
+<td>True</td>
+<td>True, False</td>
+<td>打开是, 如果车辆太多, 造成拥堵, 会降低发送频率, 保证低延时</td>
+</tr>
+<tr>
+<td>云协同<br>(V2N)</td>
+<td>V2N</td>
+<td>False</td>
+<td>True, False</td>
+<td>rsu联网, 提升数据预警能力范围, 比如关键事件</td>
+</tr>
+<tr>
+<td>车路协同<br>(V2I)</td>
+<td>V2I</td>
+<td>False</td>
+<td>True, False</td>
+<td>禁用BSM, 不接收obu数据</td>
+</tr>
+<tr>
+<td>消息预设</td>
+<td>PreMSG</td>
+<td></td>
+<td></td>
+<td>导入外部文件, 用于消息体的预定义</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 2. 场景主车和交通车配置</strong></p>
+<p>通过该地图创建场景, 添加主车、交通车. 在主车传感器配置窗口中添加 OBU 模块, 参数说明见  <a class="reference internal" href="306.%E4%BC%A0%E6%84%9F%E5%99%A8%E4%BB%BF%E7%9C%9F.html"><span class="std std-doc">传感器仿真</span></a> 章节.</p>
+<div align="center"><img src="./_static/images/image245.png" alt="" width="700px"></div><br>
+<p>初始化参数说明:</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>名称</th>
+<th>Name</th>
+<th>默认值</th>
+<th>范围</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BSM<br>发送频率</td>
+<td>FrequencyBSM</td>
+<td>10</td>
+<td>[0~100]</td>
+<td>0表示关闭</td>
+</tr>
+<tr>
+<td>空旷<br>通信距离</td>
+<td>DistanceOpen</td>
+<td>800</td>
+<td>[100~1000米]</td>
+<td>空旷通信距离</td>
+</tr>
+<tr>
+<td>城市<br>通信距离</td>
+<td>DistanceCity</td>
+<td>300</td>
+<td>[10~500米]</td>
+<td>城市通信距离</td>
+</tr>
+<tr>
+<td>频段</td>
+<td>Band</td>
+<td>5905-5925</td>
+<td>5905-5915, 5915-5925, 5905-5925三选一</td>
+<td></td>
+</tr>
+<tr>
+<td>传输速率</td>
+<td>Mbps</td>
+<td>10</td>
+<td>[0.1~100Mbps]</td>
+<td>带宽, 会影响拥堵时的延时</td>
+</tr>
+<tr>
+<td>系统延时</td>
+<td>SystemDelay</td>
+<td>10</td>
+<td>[0~1000ms]</td>
+<td>系统固定延时</td>
+</tr>
+<tr>
+<td>通信延时</td>
+<td>CommuDelay</td>
+<td>20</td>
+<td>[0~1000ms]</td>
+<td></td>
+</tr>
+<tr>
+<td>关键事件<br>立即触发</td>
+<td>TriggerImmediately</td>
+<td>True</td>
+<td>True, False</td>
+<td>打开时, 不遵守频率, 立即发送</td>
+</tr>
+<tr>
+<td>定位精度</td>
+<td>PosAccuracy</td>
+<td>0.5</td>
+<td>[0.1~10米]</td>
+<td>按照布朗运动规则, 对定位精度添加偏移</td>
+</tr>
+<tr>
+<td>禁止组队</td>
+<td>NoTeam</td>
+<td>False</td>
+<td>True, False</td>
+<td>禁用时, 不接受其他车发送的BSM</td>
+</tr>
+<tr>
+<td>关闭通信<br>RSU</td>
+<td>DisableRSU</td>
+<td>False</td>
+<td>True, False</td>
+<td>禁用时, 不接受RSU的消息</td>
+</tr>
+<tr>
+<td>BSM 预设</td>
+<td>PreBSM</td>
+<td></td>
+<td></td>
+<td>导入外部文件, 用于消息体的预定义</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 3. 模块配置和场景运行</strong></p>
+<p>V2X 仿真数据对应的模块是 <code class="docutils literal notranslate"><span class="pre">V2X</span></code>, topic 是 <code class="docutils literal notranslate"><span class="pre">V2XASN1</span></code>.</p>
+<p>用户可以通过实时 subscribe V2XASN1 topic 的方式获取 V2X2020 标准数据.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="306.%E4%BC%A0%E6%84%9F%E5%99%A8%E4%BB%BF%E7%9C%9F.html" class="btn btn-neutral float-left" title="6. 传感器仿真" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="308.%E4%BB%BF%E7%9C%9F%E5%90%88%E6%88%90%E6%95%B0%E6%8D%AE%E7%94%9F%E6%88%90.html" class="btn btn-neutral float-right" title="8. 仿真合成数据生成" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 Copyright (C) 2024 Tencent Inc.  All rights reserved。</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

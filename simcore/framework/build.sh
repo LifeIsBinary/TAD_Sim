@@ -48,7 +48,7 @@ echo -e "framework build successfully.\n"
 # build framework cli
 cd "$FRAMEWORK_CLI"
 echo "framework_cli build start..."
-go env -w GOPROXY=https://goproxy.io,direct
+go env -w GOPROXY=https://goproxy.cn,direct
 go mod tidy -compat=1.17
 go build
 echo -e "framework_cli build successfully.\n"

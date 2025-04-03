@@ -1,0 +1,14 @@
+.. _exhale_variable_txsim__messenger_8h_1a3aa41d451c2001ca26352896576f44ec:
+
+Variable tx_sim::topic::kUnionFlag
+==================================
+
+- Defined in :ref:`file__build_simcore_framework_src_txsim_messenger.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: tx_sim::topic::kUnionFlag
+   :project: txSimSDK

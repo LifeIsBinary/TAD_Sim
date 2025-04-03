@@ -1,0 +1,17 @@
+.. _exhale_class_classtx__sim_1_1SimModuleService:
+
+Class SimModuleService
+======================
+
+- Defined in :ref:`file__build_simcore_framework_src_txsim_module_service.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: tx_sim::SimModuleService
+   :project: txSimSDK
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -1,11 +1,3 @@
-import { dropElements } from '@/utils/tools'
-
-export const MyDropConfig = {
-  mounted (el: HTMLElement) {
-    // 注册可触发放置的容器元素
-    dropElements.add(el)
-  },
-  unmounted (el: HTMLElement) {
-    dropElements.delete(el)
-  },
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:54953fca9947b72671f3d28131514944a6d34941dada099108eefc22552c96f9
+size 247

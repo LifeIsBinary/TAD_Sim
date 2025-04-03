@@ -1,0 +1,58 @@
+
+.. _file__build_simcore_framework_src_txsim_module_service.h:
+
+File txsim_module_service.h
+===========================
+
+|exhale_lsh| :ref:`Parent directory <dir__build_simcore_framework_src>` (``/build/simcore/framework/src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``/build/simcore/framework/src/txsim_module_service.h``)
+--------------------------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file__build_simcore_framework_src_txsim_module_service.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``memory``
+
+- ``stdexcept``
+
+- ``stdint.h``
+
+- ``txsim_module.h`` (:ref:`file__build_simcore_framework_src_txsim_module.h`)
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_tx_sim`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classtx__sim_1_1SimModuleService`
+

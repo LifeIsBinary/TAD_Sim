@@ -1,0 +1,14 @@
+.. _exhale_variable_txsim__messenger_8h_1abe2d07e0b26bac2b8b0803d5553c14b5:
+
+Variable tx_sim::constant::kInitKeyModuleSharedLibDirectory
+===========================================================
+
+- Defined in :ref:`file__build_simcore_framework_src_txsim_messenger.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: tx_sim::constant::kInitKeyModuleSharedLibDirectory
+   :project: txSimSDK

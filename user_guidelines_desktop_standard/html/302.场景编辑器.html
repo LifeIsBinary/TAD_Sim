@@ -1,0 +1,2651 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2. 场景编辑器 &mdash; Docs</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+      <link rel="stylesheet" type="text/css" href="_static/extra.css?v=be618c9b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=34088549"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=beaddf03"></script>
+        <script src="_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+        <script src="_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="3. 场景播放器" href="303.%E5%9C%BA%E6%99%AF%E6%92%AD%E6%94%BE%E5%99%A8.html" />
+    <link rel="prev" title="1. 专业术语" href="301.%E4%B8%93%E4%B8%9A%E6%9C%AF%E8%AF%AD.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            TAD Sim
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">🪄概述</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="101.%E5%85%B3%E4%BA%8E%20TAD%20Sim%20%E5%8D%95%E6%9C%BA%E7%89%88.html">1. 关于 TAD Sim 单机版</a></li>
+<li class="toctree-l1"><a class="reference internal" href="102.%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D.html">2. 功能介绍</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀快速入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="201.%E5%8D%95%E6%9C%BA%E7%89%88%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2.html">1. 单机版安装部署</a></li>
+<li class="toctree-l1"><a class="reference internal" href="202.%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E7%AE%97%E6%B3%95%E6%8E%A5%E5%85%A5.html">2. 如何进行算法接入</a></li>
+<li class="toctree-l1"><a class="reference internal" href="203.%E5%AF%BC%E5%85%A5%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%AE%97%E6%B3%95%E5%88%B0%E5%B9%B3%E5%8F%B0.html">3. 导入第一个算法到平台</a></li>
+<li class="toctree-l1"><a class="reference internal" href="204.%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%BB%BF%E7%9C%9F%E5%9C%BA%E6%99%AF.html">4. 创建第一个仿真场景</a></li>
+<li class="toctree-l1"><a class="reference internal" href="205.%E6%92%AD%E6%94%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%9C%BA%E6%99%AF.html">5. 播放第一个场景</a></li>
+<li class="toctree-l1"><a class="reference internal" href="206.%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%9C%B0%E5%9B%BE.html">6. 创建第一个地图</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💡用户指引</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="301.%E4%B8%93%E4%B8%9A%E6%9C%AF%E8%AF%AD.html">1. 专业术语</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. 场景编辑器</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">2.1 功能清单</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">2.2. 属性栏</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">2.2.1. 场景属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">2.2.2. 主车属性</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id6">2.2.2.1. 传感器设备配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">2.2.2.2. 控制器配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">2.2.2.3. 动力学参数配置</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">2.2.3. 交通车属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">2.2.4. 摩托车/非机动车属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">2.2.5. 行人属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">2.2.6. 动物属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">2.2.7. 动态障碍物属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">2.2.8. 静态障碍物属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">2.2.9. 事件设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">2.2.10. 自定义三维模型导入</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id17">2.2.10.1 三维模型导入步骤</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id18">2.2.10.2 三维模型导入要求</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id19">2.3. 菜单栏</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id20">2.3.1. 场景库管理页面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id21">2.3.2. 地图管理页面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id22">2.3.3. 主车算法管理页面</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id23">2.3.3.1. 模组配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id24">2.3.3.2. 模块设置</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id25">2.3.4. 全局模块管理页面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id26">2.3.5. 交通流配置页面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id27">2.3.6. 指标管理页面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id28">2.3.7. 评测报告管理页面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id29">2.3.8. 仿真设置页面</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id30">2.4. 工具栏</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id31">2.4.1. 打开页面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id32">2.4.2. 新建页面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id33">2.4.3. 保存页面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id34">2.4.4. 交通流页面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id35">2.4.5. 信控配置页面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id36">2.4.6. 环境配置页面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id37">2.4.7. 场景生成页面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id38">2.4.8. 测量页面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id39">2.4.9. 返回主车页面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id40">2.4.10. 视角切换页面</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id41">2.5. 快捷键操作</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="303.%E5%9C%BA%E6%99%AF%E6%92%AD%E6%94%BE%E5%99%A8.html">3. 场景播放器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="304.%E5%9C%B0%E5%9B%BE%E7%BC%96%E8%BE%91%E5%99%A8.html">4. 地图编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="305.%E5%8A%A8%E5%8A%9B%E5%AD%A6%E4%BB%BF%E7%9C%9F.html">5. 动力学仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="306.%E4%BC%A0%E6%84%9F%E5%99%A8%E4%BB%BF%E7%9C%9F.html">6. 传感器仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="307.V2X%E4%BB%BF%E7%9C%9F.html">7. V2X仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="308.%E4%BB%BF%E7%9C%9F%E5%90%88%E6%88%90%E6%95%B0%E6%8D%AE%E7%94%9F%E6%88%90.html">8. 仿真合成数据生成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="309.%E5%9C%BA%E6%99%AF%E8%AF%84%E6%B5%8B.html">9. 场景评测</a></li>
+<li class="toctree-l1"><a class="reference internal" href="310.%E4%BB%BF%E7%9C%9F%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AE%B0%E5%BD%95%E5%92%8C%E5%9B%9E%E6%94%BE.html">10. 仿真数据的记录和回放</a></li>
+<li class="toctree-l1"><a class="reference internal" href="311.%E5%8D%95%E6%9C%BA%E5%A4%9A%E8%BF%9B%E7%A8%8B%E5%B9%B6%E8%A1%8C%E4%BB%BF%E7%9C%9F.html">11. 单机多进程并行仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="312.OpenSCENARIO%20%E6%94%AF%E6%8C%81.html">12. OpenSCENARIO 支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="313.OpenDRIVE%20%E6%94%AF%E6%8C%81.html">13. OpenDRIVE 支持</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚开发者指引</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="401.%E7%B3%BB%E7%BB%9F%E7%BA%A6%E5%AE%9A.html">1. 系统约定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="402.%E7%AE%97%E6%B3%95%E6%8E%A5%E5%85%A5%E8%AF%B4%E6%98%8E.html">2. 算法接入说明 - txSimSDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="403.%E4%BB%BF%E7%9C%9F%E6%B6%88%E6%81%AF%E8%AF%B4%E6%98%8E.html">3. 仿真消息说明</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔄版本说明</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="501.%E6%9C%80%E6%96%B0%E8%BF%AD%E4%BB%A3.html">1. 最新迭代</a></li>
+<li class="toctree-l1"><a class="reference internal" href="502.%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC.html">2. 历史版本</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TAD Sim</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">2. 场景编辑器</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>2. 场景编辑器<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<p>场景编辑器具备丰富的操作功能, 可以对主车配置、地图、交通参与者、环境等场景要素进行参数级设定, 以满足用户多样化需求.</p>
+<div align="center"><img src="./_static/images/image48.png" alt="" width="700px"></div><br>
+<section id="id2">
+<h2>2.1 功能清单<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>ID</p></th>
+<th class="head"><p>功能</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>菜单栏</p></td>
+<td><p>菜单栏提供各种编辑和查看操作.菜单栏包括以下功能: <br> - 文件:包括新建、打开、打开最近、保存、另存为、从TAPD导入 (暂不支持)、退出功能. <br> - 编辑:包括删除功能. <br> - 数据管理:下拉框中包括场景库管理、地图管理、主车算法管理、全局模块管理、指标管理、评测报告管理功能. <br> - 系统设置:仿真设置, 具体介绍见<a class="reference internal" href="#id29"><span class="std std-ref">仿真设置</span></a>. <br> - 帮助:可查看版本信息.</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>工具栏</p></td>
+<td><p>工具栏用于选择当前编辑工具, 并进入下一步操作.工具栏包括以下项: <br> - 打开:打开场景库操作, 具体流程见<a class="reference internal" href="#id31"><span class="std std-ref">打开</span></a>页面. <br> - 新建:全新创建一个测试场景, 新建流程具体见<a class="reference internal" href="#id32"><span class="std std-ref">新建</span></a>页面. <br> - 保存:保存正在编辑的场景, <a class="reference internal" href="#id33"><span class="std std-ref">保存</span></a>页面.<br> - 交通流:交通流的相关配置 (暂未开放).  <br> - 主车配置:配置主车模型元素的相关参数, 包括传感器模型、控制器模型、动力学模型等, 见<a class="reference internal" href="#id5"><span class="std std-ref">主车属性</span></a>页面. <br> - 信控配置:用于配置当前场景中包含的信控⽅案, 见<a class="reference internal" href="#id35"><span class="std std-ref">信控配置</span></a>页面. <br> - 环境配置:仿真场景中对场景的物理天气信息进行配置, 见<a class="reference internal" href="#id36"><span class="std std-ref">环境配置</span></a>页面. <br> - 场景生成:批量生成场景, 通过对所编辑的场景进行基本信息配置, 可大量生成场景, 见<a class="reference internal" href="#id37"><span class="std std-ref">场景生成</span></a>页面<br> - 测量:对当前场景增加测量线, 实现测量距离、朝向、夹角功能, 见<a class="reference internal" href="#id38"><span class="std std-ref">测量</span></a>页面 <br> - 返回主车:场景编辑状态时, 捕捉定位主车位置, 见<a class="reference internal" href="#id39"><span class="std std-ref">返回主车</span></a>页面 <br> - 视角切换:场景播放状态下可以切换播放视角效果, 场景编辑目前支持顶视角及透视角. <br> - “播放”页面目前支持顶视角、司机视角、跟车视角及自由视角, 见<a class="reference internal" href="#id40"><span class="std std-ref">视角切换</span></a>页面<br> - 视窗放大缩小:支持放大缩小阈值 (0.1%-1000%). 用户滚动鼠标中间滚轮即有放大或缩小编辑器视图效果.</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>场景库/<br>模型库</p></td>
+<td><p>-  场景库:用户上传或系统自带的场景, 存于场景库中.以场景集分组显示场景, 单击场景集可展开或折叠子场景. <br> 鼠标双击场景名称可打开当前场景.未添加到任何场景集中的场景显示在”未分组场景”中. <br> - 模型库:提供多种场景元素, 目前支持自动驾驶主车、交通车辆、摩托车、非机动车、行人、动物、障碍物.</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>窗口</p></td>
+<td><p>- 场景编辑:切换场景编辑状态时, 支持在当前场景添加模型库中的场景元素, 调整各种配置参数. <br> - 播放:播放目标场景, 场景进入播放运行状态. <br> - 地图编辑:点击进入地图编辑器.</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>场景元素栏</p></td>
+<td><p>用户可在编辑器中添加各种元素, 场景元素将分类呈现.选中目标元素, 可在编辑器中聚焦此元素.点中某场景元素, 右键删除, 同时该元素会同步在编辑器视图中删除.</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>属性栏</p></td>
+<td><p>- 显示地图中元素的基本信息, 用户可根据需要自定义参数, 可编辑类型包括场景、主车、交通车、摩托车、非机动车、行人、动物、障碍物及交通灯.详情可见<a class="reference internal" href="#id3"><span class="std std-ref">属性栏</span></a>页面. <br> - 传感器:支持主车的多种模拟硬件传感器配置, 允许用户自定义传感器参数, 见[“传感器”页面]</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>编辑界面</p></td>
+<td><p>场景编辑状态下, 编辑界面上方分别显示场景名称、地图名称、地图位置偏移坐标、地图经纬度坐标.播放状态下, 编辑界面上方分别显示场景名称、地图名称、算法运行数据.支持播放当前场景库中全部场景.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id3">
+<h2>2.2. 属性栏<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<section id="id4">
+<h3>2.2.1. 场景属性<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<p>选中场景元素中的场景, 该栏即显示场景基本信息.</p>
+<div align="center"><img src="./_static/images/image49.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p><strong>基本信息栏:</strong></p>
+<ul>
+<li><p>包括场景名称、地图及其工况说明.</p></li>
+</ul>
+</li>
+<li><p><strong>指标设置组栏</strong>:</p>
+<ul>
+<li><p>点击下拉栏可以设置该场景关联的评测指标组.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id5">
+<h3>2.2.2. 主车属性<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<p>选中场景元素中的主车, 该栏即显示场景基本信息, 用户可根据需要自定义参数. (此处轨迹点-设置轨迹点特指主车的行驶轨迹点, 必须设置).</p>
+<div align="center"><img src="./_static/images/image50.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p><strong>所在车道</strong>:</p>
+<ul>
+<li><p>以车道行驶方向为前方.如果是单向车道, 车道编号从左到右依次是 -1, -2,  -3,  -4, -5.</p></li>
+<li><p>如果是双向车道, 则车道编号从左到右依次是 5, 4, 3, 2, 1, -1, -2, -3, -4, -5.</p></li>
+</ul>
+</li>
+<li><p><strong>纵向距离</strong>:</p>
+<ul>
+<li><p>距离某路段 (section) 的纵向位置.</p></li>
+</ul>
+</li>
+<li><p><strong>横向偏移</strong>:</p>
+<ul>
+<li><p>车道线中心位置的横向偏移量, 向左偏移为正, 向右偏移为负.</p></li>
+</ul>
+</li>
+<li><p><strong>高度</strong>:</p>
+<ul>
+<li><p>车辆所在高度.</p></li>
+</ul>
+</li>
+<li><p><strong>角度</strong>:</p>
+<ul>
+<li><p>车辆的方位朝向角度.</p></li>
+</ul>
+</li>
+<li><p><strong>速度</strong>:</p>
+<ul>
+<li><p>设置主车的初始速度和最大速度、最大加速度、最大减速度.</p></li>
+</ul>
+</li>
+<li><p><strong>车辆类型配置</strong>:</p>
+<ul>
+<li><p>修改主车模型.</p></li>
+</ul>
+</li>
+<li><p><strong>控制器初始状态</strong>:</p>
+<ul>
+<li><p>主车的横向控制和纵向控制, 默认开启.</p></li>
+</ul>
+</li>
+<li><p><strong>轨迹跟踪</strong>:</p>
+<ul>
+<li><p>轨迹跟踪模式下, 通过选点绘制的轨迹线需要通过拟合曲线的方式呈现, 并保持一定的弧度, 不能出现尖角等转弯, 曲率半径在2m以上.</p></li>
+<li><p>勾选后, 车辆完全根据设定轨迹行驶, 无智能控制模型且无判断道路、识别方向、避障等能力.</p></li>
+<li><p>如不勾选, 车辆只会一定程度上参考用户设置的轨迹, 但会通过寻路主动规划合理路径.</p></li>
+<li><p>轨迹跟踪模式开启后, <code class="docutils literal notranslate"><span class="pre">吸附至车道中心线</span></code> 不可框选.</p></li>
+</ul>
+</li>
+<li><p><strong>采样间隔</strong>:</p>
+<ul>
+<li><p>可输入范围: [-360, 360°].</p></li>
+<li><p>小数点后限制: 3位.</p></li>
+</ul>
+</li>
+<li><p><strong>事件设置</strong>:</p>
+<ul>
+<li><p>点击 <code class="docutils literal notranslate"><span class="pre">事件设置</span></code> 按钮可以进入 <code class="docutils literal notranslate"><span class="pre">事件设置</span></code> 弹窗.详细说明见”<a class="reference internal" href="#id15"><span class="std std-ref">事件设置</span></a>”页面说明.</p></li>
+</ul>
+</li>
+<li><p><strong>设置轨迹点</strong>:</p>
+<ul>
+<li><p>设置主车行驶必须要经过的轨迹点.</p></li>
+<li><p>单击设置轨迹点, 开始绘制轨迹点, 绘制完毕, 单击回车键, 停止绘制.</p></li>
+<li><p>按住 ctrl 的同时点击鼠标左键可在现有的轨迹线上新增轨迹点. (注: 点击”设置轨迹点”再次绘制, 会在之前次绘制的基础上继续绘制轨迹点)</p></li>
+</ul>
+</li>
+<li><p><strong>吸附至车道中心线</strong>:</p>
+<ul>
+<li><p>勾选后, 每次绘制轨迹点时, 轨迹点位置会自动吸附在绘制点所属车道中心线位置.</p></li>
+</ul>
+</li>
+</ul>
+<div align="center"><img src="./_static/images/image295.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p>打开主车配置界面, 点击对应图标, 可以对配置好的主车模型进行一键克隆, 同时也可以对新增的模型进行删除.</p></li>
+</ul>
+<div align="center"><img src="./_static/images/image296.png" alt="" width="700px"></div><br>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>注: 系统内置模型无法删除.</p>
+</div>
+<p><strong>关于主车传感器、控制器、动力学参数配置如下所示:</strong></p>
+<p>点击主车模型右侧的 <code class="docutils literal notranslate"><span class="pre">设置</span></code> 图标, 页面中间弹出详情窗口, 显示三维主车模型预览, 按住鼠标左键可转动模型, 鼠标滚轮可缩放模型.</p>
+<div align="center"><img src="./_static/images/image25.png" alt="" width="700px"></div><br>
+<p>配置主车模型元素的相关参数, 包括传感器模型、控制器模型、动力学模型等.<br>
+点击 <code class="docutils literal notranslate"><span class="pre">保存</span></code>, 配置主车模型完成.</p>
+<div align="center"><img src="./_static/images/image26.png" alt="" width="700px"></div><br>
+<section id="id6">
+<h4>2.2.2.1. 传感器设备配置<a class="headerlink" href="#id6" title="Link to this heading"></a></h4>
+<p>传感器设备配置支持摄像头、鱼眼Camera、语义Camera、深度Camera、Lidar、Radar、超声波雷达、IMU、GPS、V2X 以及真值传感器等.</p>
+<ul class="simple">
+<li><p>支持设备从下方的设备列表中拖拽到主车上, 设备列表显示的传感器名称和下方的传感器列表需要一致.</p></li>
+<li><p>鼠标选中后拖拽到车上, 自动吸附到松开时的车上相应装配位置, 可通过右侧参数调节调整位置.</p></li>
+<li><p>列表中选中一个传感器, 左侧视图需要高亮定位, 右侧基本信息需要显示该传感器信息.</p></li>
+<li><p>在列表选中后可右键删除和 delete 键删除传感器, 支持按住 shift 和 ctrl 多选.</p></li>
+<li><p>多选后, 右侧信息列表显示为空.</p></li>
+</ul>
+<div align="center"><img src="./_static/images/image51.png" alt="" width="700px"></div><br>
+<p><strong>以摄像头为例, 选中下方设备列表中的摄像头拖拽至主车上, 配置如下参数:</strong></p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>名称</th>
+<th>默认值</th>
+<th>范围</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>位置 X(cm)</td>
+<td>0</td>
+<td>[-1000, 1000]</td>
+<td>安装位置, 坐标原点位于四轮中心的地面垂点</td>
+</tr>
+<tr>
+<td>位置 Y(cm)</td>
+<td>0</td>
+<td>[-1000, 1000]</td>
+<td>安装位置, 坐标原点位于四轮中心的地面垂点</td>
+</tr>
+<tr>
+<td>位置 Z(cm)</td>
+<td>171</td>
+<td>[0, 1000]</td>
+<td>安装位置, 坐标原点位于四轮中心的地面垂点</td>
+</tr>
+<tr>
+<td>旋转 X(°)</td>
+<td>0</td>
+<td>[-180, 180]</td>
+<td>安装角度</td>
+</tr>
+<tr>
+<td>旋转 Y(°)</td>
+<td>0</td>
+<td>[-180, 180]</td>
+<td>安装角度</td>
+</tr>
+<tr>
+<td>旋转 Z(°)</td>
+<td>0</td>
+<td>[-180, 180]</td>
+<td>安装角度</td>
+</tr>
+<tr>
+<td>GPU配置</td>
+<td>空(前端GPU)</td>
+<td>-</td>
+<td>多实例模式下, 分配的GPU序号</td>
+</tr>
+<tr>
+<td>实例ID</td>
+<td>0</td>
+<td>-</td>
+<td>和GPU配置一起使用, <br> 当配置了多个 display 实例时, <br> 每个实例必须指定格式为"A.B"的实例编号, <br> 其中A为实例ID, B为 GPU 序号, 多实例则会运行在不同的 GPU 上. <br> 这两个传感器配置则规定了该传感器分配在哪个实例上</td>
+</tr>
+<tr>
+<td>频率 (Hz)</td>
+<td>25</td>
+<td>[0, 1000]</td>
+<td>拍照频率</td>
+</tr>
+<tr>
+<td>色彩模式</td>
+<td>彩色</td>
+<td>彩色 | 灰度</td>
+<td>-</td>
+</tr>
+<tr>
+<td>水平分辨率</td>
+<td>1920</td>
+<td>整数</td>
+<td>图像尺寸, 像素</td>
+</tr>
+<tr>
+<td>垂直分辨率</td>
+<td>1208</td>
+<td>整数</td>
+<td>图像尺寸, 像素</td>
+</tr>
+<tr>
+<td>细腻度</td>
+<td>0</td>
+<td>[-5.0, 5.0]</td>
+<td>正数细腻, 负数粗糙.细腻会增加渲染负担</td>
+</tr>
+<tr>
+<td>模糊</td>
+<td>0</td>
+<td>[0, 1]</td>
+<td>-</td>
+</tr>
+<tr>
+<td>运动模糊</td>
+<td>0</td>
+<td>[0, 1]</td>
+<td>-</td>
+</tr>
+<tr>
+<td>光晕强度</td>
+<td>0</td>
+<td>[0, 1]</td>
+<td>-</td>
+</tr>
+<tr>
+<td>噪声强度</td>
+<td>0</td>
+<td>[0.0, 1.0]</td>
+<td>-</td>
+</tr>
+<tr>
+<td>暗角</td>
+<td>0.4</td>
+<td>[0.0, 1.0]</td>
+<td></td>
+</tr>
+<tr>
+<td>泛光bloom</td>
+<td>0.675</td>
+<td>[0.0, 1.0]</td>
+<td></td>
+</tr>
+<tr>
+<td>曝光模式</td>
+<td>0</td>
+<td>自动0 <br> 手动1 <br> (手动时:快门速度, <br> ISO,孔径参数有效)</td>
+<td></td>
+</tr>
+<tr>
+<td>曝光补偿</td>
+<td>1</td>
+<td>-15.0～15.0</td>
+<td>曝光的对数2\^n调整, 负值变暗, 正值加亮</td>
+</tr>
+<tr>
+<td>快门速度</td>
+<td>60</td>
+<td>1.0\~2000.0, 单位1/s</td>
+<td>像素亮度B = 曝光 * 场景表面亮度L <br> 曝光 = 1 / (孔径^2 / 快门速度 * 100 / ISO)</td>
+</tr>
+<tr>
+<td>ISO</td>
+<td>100</td>
+<td>1.0 ~ 无穷</td>
+<td>1.0 ~ 无穷</td>
+</tr>
+<tr>
+<td>孔径(光阑、光圈)</td>
+<td>4</td>
+<td>1.0 ~ 32.0</td>
+<td>1.0 ~ 32.0</td>
+</tr>
+<tr>
+<td>色温</td>
+<td>6500</td>
+<td>1500 ～ 15000K</td>
+<td>色温</td>
+</tr>
+<tr>
+<td>白色调</td>
+<td>0</td>
+<td>-1.0 ～ 1.0</td>
+<td></td>
+</tr>
+<tr>
+<td>镜头透镜率</td>
+<td>98</td>
+<td>1.0 ～ 100.0%</td>
+<td></td>
+</tr>
+<tr>
+<td>畸变参数</td>
+<td>k1=-5.3336804278253547e-001,  <br> k2=4.5773462092698042e-001, <br> k3=-4.8360765272003647e-001,  <br> p1=-2.3929586859060227e-003, <br> p2=1.8364297357014352e-003</td>
+<td>-</td>
+<td>分布表示 k1,k2,k3,p1,p2</td>
+</tr>
+<tr>
+<td>内参形式</td>
+<td>0</td>
+<td>0:矩阵 <br> 1:FOV <br> 2:感光器</td>
+<td>-</td>
+</tr>
+<tr>
+<td>内参矩阵</td>
+<td>1.9451674168728503e+003, <br> 0,  <br> 9.4611889604089231e+002; <br> 0, <br> 1.9381372280069070e+003, <br> 6.1970485474739780e+002; <br> 0,0,1</td>
+<td>长度为9的数组, <br> 给出默认值的位置readonly, <br> 其余位置值依次为fx, skew, cx, fy, cy.</td>
+<td>当内参形式为矩阵时</td>
+</tr>
+<tr>
+<td>水平 FOV(°)</td>
+<td>60</td>
+<td>[0, 180]</td>
+<td>当内参形式为fov时</td>
+</tr>
+<tr>
+<td>垂直 FOV(°)</td>
+<td>36.28</td>
+<td>[0, 180]</td>
+<td>当内参形式为fov时</td>
+</tr>
+<tr>
+<td>感光器宽度 (mm)</td>
+<td>10</td>
+<td>(0, 10000]</td>
+<td>当内参形式为感光器时</td>
+</tr>
+<tr>
+<td>感光器高度(mm)</td>
+<td>10</td>
+<td>(0, 10000]</td>
+<td>当内参形式为感光器时</td>
+</tr>
+<tr>
+<td>镜头焦距(mm)</td>
+<td>10</td>
+<td>(0, 10000]                                     f</td>
+<td>当内参形式为感光器时</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id7">
+<h4>2.2.2.2. 控制器配置<a class="headerlink" href="#id7" title="Link to this heading"></a></h4>
+<p>下拉列表显示主车控制器配置列表, 包括系统预设和用户创建的配置.</p>
+<p>选择主车模型应用的控制器算法.</p>
+<div align="center"><img src="./_static/images/image52.png" alt="" width="700px"></div><br>
+</section>
+<section id="id8">
+<h4>2.2.2.3. 动力学参数配置<a class="headerlink" href="#id8" title="Link to this heading"></a></h4>
+<p>动力学模型采用参数化建模, 可通过前端编辑动力学参数集, 动力学模型通过加载生成的动力学参数集, 实现对车辆特性的模拟.</p>
+<p>同时结合 OpenDRIVE 高精度地图, 动力学模型能够自动生成路面高程, 模拟路面起伏对于算法仿真的影响, 如感知算法, 规划控制算法等.</p>
+<p>动力学参数包括车型配置、动力模块、传动模块、转向模块、悬架模块、轮胎与制动、簧上质量、车身模块、SoftECU 等信息.</p>
+<p>配置如下图所示:</p>
+<div align="center"><img src="./_static/images/image53.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p>车型配置参数:</p></li>
+</ul>
+<div align="center"><img src="./_static/images/image54.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p>动力模块参数:</p></li>
+</ul>
+<div align="center"><img src="./_static/images/image55.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p>传动模块参数:</p></li>
+</ul>
+<div align="center"><img src="./_static/images/image56.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p>转向模块参数:</p></li>
+</ul>
+<div align="center"><img src="./_static/images/image57.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p>悬架模块参数:</p></li>
+</ul>
+<div align="center"><img src="./_static/images/image58.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p>轮胎与制动参数:</p></li>
+</ul>
+<div align="center"><img src="./_static/images/image59.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p>簧上质量参数:</p></li>
+</ul>
+<div align="center"><img src="./_static/images/image60.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p>车身模块参数:</p></li>
+</ul>
+<div align="center"><img src="./_static/images/image61.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p>SoftECU参数</p></li>
+</ul>
+<div align="center"><img src="./_static/images/image62.png" alt="" width="700px"></div><br>
+</section>
+</section>
+<section id="id9">
+<h3>2.2.3. 交通车属性<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
+<p>选中场景元素中的交通车, 该栏即显示场景基本信息, 用户可根据需要自定义参数.</p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>注: 此处轨迹点-设置轨迹点特指主车的行驶轨迹点, 必须设置.</p>
+</div>
+<div align="center"><img src="./_static/images/image63.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p><strong>所在车道:</strong></p>
+<ul>
+<li><p>以车道行驶方向为前方,</p></li>
+<li><p>如果是单向车道, 车道编号从左到右依次是 -1, -2,  -3, -4, -5.</p></li>
+<li><p>如果是双向车道, 则车道编号从左到右依次是 5, 4, 3, 2, 1, -1, -2, -3, -4, -5.</p></li>
+</ul>
+</li>
+<li><p><strong>纵向距离:</strong></p>
+<ul>
+<li><p>距离某路段的纵向位置.</p></li>
+</ul>
+</li>
+<li><p><strong>横向偏移:</strong></p>
+<ul>
+<li><p>车道线中心位置的横向偏移量,  向左偏移为正, 向右偏移为负.</p></li>
+</ul>
+</li>
+<li><p><strong>初始高度:</strong></p>
+<ul>
+<li><p>交通车的初始高度.</p></li>
+</ul>
+</li>
+<li><p><strong>速度:</strong></p>
+<ul>
+<li><p>设置交通车的初始速度和最大速度.</p></li>
+</ul>
+</li>
+<li><p><strong>AI 控制:</strong></p>
+<ul>
+<li><p>AI 控制交通车行驶行为, 其动作行为具有随机性.</p></li>
+</ul>
+</li>
+<li><p><strong>AI模型:</strong></p>
+<ul>
+<li><p>支持高速和城区两种AI模型切换</p></li>
+</ul>
+</li>
+<li><p><strong>激进程度:</strong></p>
+<ul>
+<li><p>仅在AI控制模式的交通车对驾驶员模型参数的调节.</p></li>
+<li><p>数值越大, 驾驶员行为越激进.</p></li>
+</ul>
+</li>
+<li><p><strong>自定义:</strong></p>
+<ul>
+<li><p>自定义控制下, 可以设置交通车的具体触发行为参数.</p></li>
+<li><p>点击 <code class="docutils literal notranslate"><span class="pre">事件设置</span></code> 按钮可以进入 <a class="reference internal" href="#id15"><span class="std std-ref">事件设置</span></a> 弹窗.</p></li>
+</ul>
+</li>
+<li><p><strong>轨迹跟踪:</strong></p>
+<ul>
+<li><p>勾选后, 车辆完全根据设定轨迹行驶, 无智能控制模型且无判断道路、识别方向、避障等能力.</p></li>
+<li><p>如不勾选, 车辆只会一定程度上参考用户设置的轨迹, 但会通过寻路主动规划合理路径.</p></li>
+<li><p>两种模式下都支持触发设置, 触发设置优先级更高, 一旦满足触发条件后, 会不遵循轨迹运行.</p></li>
+</ul>
+</li>
+<li><p><strong>参照车:</strong></p>
+<ul>
+<li><p>非轨迹跟踪模式的自定义控制交通车可设置速度参照车.</p></li>
+<li><p>参照车可选择主车或其他自定义控制的交通车.</p></li>
+<li><p>当前车辆只有速度会和参照车保持一致.</p></li>
+</ul>
+</li>
+<li><p><strong>设置轨迹点:</strong></p>
+<ul>
+<li><p>设置交通车轨迹点.轨迹跟踪模式下需设置轨迹点速度和档位.</p></li>
+</ul>
+</li>
+<li><p><strong>大小:</strong></p>
+<ul>
+<li><p>显示交通车的长宽高.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id10">
+<h3>2.2.4. 摩托车/非机动车属性<a class="headerlink" href="#id10" title="Link to this heading"></a></h3>
+<p>摩托车/非机动车参数配置功能包含种类、数量、位置、速度、轨迹路径、事件设置等参数配置:</p>
+<div align="center"><img src="./_static/images/image64.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p><strong>所在车道:</strong></p>
+<ul>
+<li><p>以车道行驶方向为前方,</p></li>
+<li><p>如果是单向车道, 车道编号从左到右依次是 -1, -2, -3, -4, -5.</p></li>
+<li><p>如果是双向车道, 则车道编号从左到右依次是 5, 4, 3, 2, 1, -1, -2, -3, -4, -5.</p></li>
+</ul>
+</li>
+<li><p><strong>纵向距离:</strong></p>
+<ul>
+<li><p>距离某路段的纵向位置.</p></li>
+</ul>
+</li>
+<li><p><strong>横向偏移:</strong></p>
+<ul>
+<li><p>车道线中心位置的横向偏移量, 向左偏移为正, 向右偏移为负.</p></li>
+</ul>
+</li>
+<li><p><strong>初始高度:</strong></p>
+<ul>
+<li><p>摩托车/非机动车的初始高度.</p></li>
+</ul>
+</li>
+<li><p><strong>速度:</strong></p>
+<ul>
+<li><p>设置初始速度和最大速度.</p></li>
+</ul>
+</li>
+<li><p><strong>自定义:</strong></p>
+<ul>
+<li><p>自定义控制下, 可以设置摩托车/非机动车的具体触发行为参数.</p></li>
+<li><p>点击 <code class="docutils literal notranslate"><span class="pre">触发设置</span></code> 按钮可以进入 <code class="docutils literal notranslate"><span class="pre">触发条件配置</span></code> 弹窗.</p></li>
+<li><p>分别配置 <code class="docutils literal notranslate"><span class="pre">时间触发</span></code> 和 <code class="docutils literal notranslate"><span class="pre">条件触发</span></code> 信息,</p></li>
+<li><p>当前版本的 <code class="docutils literal notranslate"><span class="pre">条件触发</span></code> 类型仅支持 <code class="docutils literal notranslate"><span class="pre">TTC</span></code> 和 <code class="docutils literal notranslate"><span class="pre">与主车距离</span></code> 两种.</p></li>
+</ul>
+</li>
+</ul>
+<div align="center"><img src="./_static/images/image65.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p><strong>设置轨迹点:</strong></p>
+<ul>
+<li><p>设置摩托车/非机动车轨迹点.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id11">
+<h3>2.2.5. 行人属性<a class="headerlink" href="#id11" title="Link to this heading"></a></h3>
+<p>行人参数配置功能支持种类、数量、位置、速度、轨迹路径、行为事件等参数配置:</p>
+<div align="center"><img src="./_static/images/image66.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p><strong>所在车道:</strong></p>
+<ul>
+<li><p>以车道行驶方向为前方,</p></li>
+<li><p>如果是单向车道, 车道编号从左到右依次是 -1, -2,  -3,  -4, -5.</p></li>
+<li><p>如果是双向车道, 则车道编号从左到右依次是 5, 4, 3, 2, 1, -1, -2, -3, -4, -5.</p></li>
+</ul>
+</li>
+<li><p><strong>纵向距离:</strong></p>
+<ul>
+<li><p>距离某路段的纵向位置.</p></li>
+</ul>
+</li>
+<li><p><strong>横向偏移:</strong></p>
+<ul>
+<li><p>车道线中心位置的横向偏移量, 向左偏移为正,  向右偏移为负.</p></li>
+</ul>
+</li>
+<li><p><strong>初始高度:</strong></p>
+<ul>
+<li><p>行人的初始高度.</p></li>
+</ul>
+</li>
+<li><p><strong>速度:</strong></p>
+<ul>
+<li><p>行人速度范围在 0-10m/s 之间.</p></li>
+</ul>
+</li>
+<li><p><strong>设置轨迹点:</strong></p>
+<ul>
+<li><p>设置行人轨迹点.(同主车轨迹点设置)</p></li>
+</ul>
+</li>
+<li><p><strong>自定义:</strong></p>
+<ul>
+<li><p>自定义控制下, 可以设置行人的具体触发行为参数.</p></li>
+<li><p>点击 <code class="docutils literal notranslate"><span class="pre">触发设置</span></code> 按钮可以进入 <code class="docutils literal notranslate"><span class="pre">触发条件配置</span></code> 弹窗.</p></li>
+<li><p>分别配置 <code class="docutils literal notranslate"><span class="pre">时间触发</span></code> 和 <code class="docutils literal notranslate"><span class="pre">条件触发</span></code> 信息,</p></li>
+<li><p>当前版本的 <code class="docutils literal notranslate"><span class="pre">条件触发</span></code> 类型仅支持 <code class="docutils literal notranslate"><span class="pre">TTC</span></code> 和 <code class="docutils literal notranslate"><span class="pre">与主车距离</span></code> 两种.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id12">
+<h3>2.2.6. 动物属性<a class="headerlink" href="#id12" title="Link to this heading"></a></h3>
+<p>动物参数配置功能支持种类、数量、位置、速度、轨迹路径等参数配置.</p>
+<div align="center"><img src="./_static/images/image67.png" alt="" width="700px"></div><br>
+<p>选中场景元素中的动物, 该栏即显示场景基本信息, 用户可根据需要自定义参数.</p>
+<ul class="simple">
+<li><p><strong>所在车道:</strong></p>
+<ul>
+<li><p>以车道行驶方向为前方,</p></li>
+<li><p>如果是单向车道, 车道编号从左到右依次是 -1, -2,  -3,  -4, -5.</p></li>
+<li><p>如果是双向车道, 则车道编号从左到右依次是 5, 4, 3, 2, 1, -1, -2, -3, -4, -5.</p></li>
+</ul>
+</li>
+<li><p><strong>纵向距离:</strong></p>
+<ul>
+<li><p>距离某路段的纵向位置.</p></li>
+</ul>
+</li>
+<li><p><strong>横向偏移:</strong></p>
+<ul>
+<li><p>车道线中心位置的横向偏移量, 向左偏移为正, 向右偏移为负.</p></li>
+</ul>
+</li>
+<li><p><strong>初始高度:</strong></p>
+<ul>
+<li><p>动物的初始高度.</p></li>
+</ul>
+</li>
+<li><p><strong>速度:</strong></p>
+<ul>
+<li><p>设置动物的初始速度和最大速度.动物的速度范围是0-33.34m/s.</p></li>
+</ul>
+</li>
+<li><p><strong>自定义:</strong></p>
+<ul>
+<li><p>自定义控制下, 可以设置动物的具体触发行为参数.</p></li>
+<li><p>点击 <code class="docutils literal notranslate"><span class="pre">触发设置</span></code> 按钮可以进入 <code class="docutils literal notranslate"><span class="pre">触发条件配置</span></code> 弹窗.</p></li>
+<li><p>分别配置 <code class="docutils literal notranslate"><span class="pre">时间触发</span></code> 和 <code class="docutils literal notranslate"><span class="pre">条件触发</span></code> 信息,</p></li>
+<li><p>当前版本的 <code class="docutils literal notranslate"><span class="pre">条件触发</span></code> 类型仅支持 <code class="docutils literal notranslate"><span class="pre">TTC</span></code> 和 <code class="docutils literal notranslate"><span class="pre">与主车距离</span></code> 两种.</p></li>
+</ul>
+</li>
+<li><p><strong>设置轨迹点:</strong></p>
+<ul>
+<li><p>设置动物轨迹点.(同主车轨迹点设置)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id13">
+<h3>2.2.7. 动态障碍物属性<a class="headerlink" href="#id13" title="Link to this heading"></a></h3>
+<p>动态障碍物参数配置功能支持种类、数量、位置、速度、轨迹路径等参数配置.</p>
+<div align="center"><img src="./_static/images/image68.png" alt="" width="700px"></div><br>
+<p>选中场景元素中的障碍物, 该栏即显示场景基本信息, 用户可根据需要自定义参数.</p>
+<ul class="simple">
+<li><p><strong>所在车道:</strong></p>
+<ul>
+<li><p>以车道行驶方向为前方,</p></li>
+<li><p>如果是单向车道, 车道编号从左到右依次是 -1, -2,  -3,  -4, -5.</p></li>
+<li><p>如果是双向车道, 则车道编号从左到右依次是 5, 4, 3, 2, 1, -1, -2, -3, -4, -5.</p></li>
+</ul>
+</li>
+<li><p><strong>纵向距离:</strong></p>
+<ul>
+<li><p>距离某路段的纵向位置.</p></li>
+</ul>
+</li>
+<li><p><strong>横向偏移:</strong></p>
+<ul>
+<li><p>车道线中心位置的横向偏移量, 向左偏移为正, 向右偏移为负.</p></li>
+</ul>
+</li>
+<li><p><strong>初始高度:</strong></p>
+<ul>
+<li><p>障碍物的初始高度.</p></li>
+</ul>
+</li>
+<li><p><strong>速度:</strong></p>
+<ul>
+<li><p>设置障碍物的初始速度和最大速度.</p></li>
+</ul>
+</li>
+<li><p><strong>自定义:</strong></p>
+<ul>
+<li><p>自定义控制下, 可以设置障碍物的具体触发行为参数.</p></li>
+<li><p>点击 <code class="docutils literal notranslate"><span class="pre">触发设置</span></code> 按钮可以进入 <code class="docutils literal notranslate"><span class="pre">事件配置</span></code> 弹窗.</p></li>
+<li><p>详细说明见 <a class="reference internal" href="#id15"><span class="std std-ref">事件设置</span></a>.</p></li>
+</ul>
+</li>
+<li><p><strong>设置轨迹点:</strong></p>
+<ul>
+<li><p>设置障碍物轨迹点.(同主车轨迹点­设置).</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id14">
+<h3>2.2.8. 静态障碍物属性<a class="headerlink" href="#id14" title="Link to this heading"></a></h3>
+<p>静态障碍物参数配置功能支持种类、数量、位置等参数配置选中场景元素中的障碍物, 该栏即显示场景基本信息, 用户可根据需要自定义参数.</p>
+<div align="center"><img src="./_static/images/image69.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p><strong>所在车道:</strong></p>
+<ul>
+<li><p>以车道行驶方向为前方,</p></li>
+<li><p>如果是单向车道, 车道编号从左到右依次是 -1, -2,  -3,  -4, -5.</p></li>
+<li><p>如果是双向车道, 则车道编号从左到右依次是5, 4, 3, 2, 1, -1, -2, -3, -4, -5.</p></li>
+</ul>
+</li>
+<li><p><strong>纵向距离:</strong></p>
+<ul>
+<li><p>距离某路段的纵向位置.</p></li>
+</ul>
+</li>
+<li><p><strong>横向偏移:</strong></p>
+<ul>
+<li><p>车道线中心位置的横向偏移量, 向左偏移为正, 向右偏移为负.</p></li>
+</ul>
+</li>
+<li><p><strong>初始高度:</strong></p>
+<ul>
+<li><p>障碍物的初始高度.</p></li>
+</ul>
+</li>
+<li><p><strong>角度:</strong></p>
+<ul>
+<li><p>障碍物的方位朝向角度.</p></li>
+</ul>
+</li>
+<li><p><strong>大小:</strong></p>
+<ul>
+<li><p>障碍物长宽高.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id15">
+<h3>2.2.9. 事件设置<a class="headerlink" href="#id15" title="Link to this heading"></a></h3>
+<p>点击事件设置后进入事件设置事件配置窗口.</p>
+<div align="center"><img src="./_static/images/image70.png" alt="" width="700px"></div><br>
+<p><strong>详细交互说明如下:</strong></p>
+<div align="center"><img src="./_static/images/image71.png" alt="" width="700px"></div><br>
+<div align="center"><img src="./_static/images/image72.png" alt="" width="700px"></div><br>
+<div align="center"><img src="./_static/images/image73.png" alt="" width="700px"></div><br>
+<p><strong>事件设置具体功能说明如下 (加速度触发、静止触发当前暂不支持):</strong></p>
+<div align="center"><img src="./_static/images/image292.png" alt="" width="700px"></div><br>
+<p><strong>字段规则说明:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>字段名</p></th>
+<th class="head"><p>明细项</p></th>
+<th class="head"><p>备注</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>值</p></td>
+<td><p>=</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>&lt;</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>&gt;</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>速度值</p></td>
+<td><p>范围[-33.34,33.34], 限数字、小数点,保留小数点后两位</p></td>
+<td><p>默认为0</p></td>
+</tr>
+<tr class="row-even"><td><p>经度</p></td>
+<td><p>限数字、小数点,保留小数点后八位</p></td>
+<td><p>默认为当前位置经度</p></td>
+</tr>
+<tr class="row-odd"><td><p>纬度</p></td>
+<td><p>限数字、小数点,保留小数点后八位</p></td>
+<td><p>默认为当前位置纬度</p></td>
+</tr>
+<tr class="row-even"><td><p>海拔</p></td>
+<td><p>范围[0,100],限数字、小数点,保留小数点后两位</p></td>
+<td><p>默认为当前位置高度</p></td>
+</tr>
+<tr class="row-odd"><td><p>距离值</p></td>
+<td><p>限数字、小数点,保留小数点后三位</p></td>
+<td><p>默认为5</p></td>
+</tr>
+<tr class="row-even"><td><p>半径(容差)</p></td>
+<td><p>范围[0,10000],限数字、小数点,保留小数点后两位</p></td>
+<td><p>默认为0</p></td>
+</tr>
+<tr class="row-odd"><td><p>偏移</p></td>
+<td><p>横向范围[-9,9],纵向范围[-80,80],限数字、小数点,保留小数点后三位</p></td>
+<td><p>默认为0</p></td>
+</tr>
+<tr class="row-even"><td><p>容差</p></td>
+<td><p>范围[0,100],限数字、小数点,保留小数点后两位</p></td>
+<td><p>默认为0</p></td>
+</tr>
+<tr class="row-odd"><td><p>距离类型</p></td>
+<td><p>欧式距离/道路坐标系距离</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>速度类型</p></td>
+<td><p>绝对</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>相对</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>加速度值</p></td>
+<td><p>m/s²,范围[-20,20],限数字、小数点,保留小数</p></td>
+<td><p>默认为0</p></td>
+</tr>
+<tr class="row-odd"><td><p>加速度类型</p></td>
+<td><p>绝对加速度</p></td>
+<td><p>绝对加速度</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>相对加速度</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>相对x</p></td>
+<td><p>范围[-100000,100000],限数字、小数点,保留小数点后三位</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>相对y</p></td>
+<td><p>范围[-100000,100000],限数字、小数点,保留小数点后三位</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>相对z</p></td>
+<td><p>范围[-100000,100000],限数字、小数点,保留小数点后三位</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>朝向</p></td>
+<td><p>°,范围[-360,360°],小数点后限制三位</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>容差</p></td>
+<td><p>m,范围[0,100],限数字、小数点,保留小数点后</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>静止时长</p></td>
+<td><p>s,范围[1,100000],限数字、小数点,保留小数点</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>变量</p></td>
+<td><p>允许用户自定义</p></td>
+<td><p>为空</p></td>
+</tr>
+<tr class="row-even"><td><p>参数规则</p></td>
+<td><p>允许用户自定义</p></td>
+<td><p>为空</p></td>
+</tr>
+<tr class="row-odd"><td><p>条件边界</p></td>
+<td><p>无</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>上升</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>下降</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>上升或下降</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>对象选择</p></td>
+<td><p>主车</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>动态交通车</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>行人、非机动车、摩托车</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>动物</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id16">
+<h3>2.2.10. 自定义三维模型导入<a class="headerlink" href="#id16" title="Link to this heading"></a></h3>
+<p>TAD Sim 场景编辑器支持自定义三维模型导入, 方便您开展个性化开发测试工程.</p>
+<p>实施方法及注意事项如下：</p>
+<section id="id17">
+<h4>2.2.10.1 三维模型导入步骤<a class="headerlink" href="#id17" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p>点击 <code class="docutils literal notranslate"><span class="pre">导入模型</span></code> 按钮.</p></li>
+<li><p>在弹出的 <code class="docutils literal notranslate"><span class="pre">导入模型</span></code> 窗口中, 输入 <code class="docutils literal notranslate"><span class="pre">模型名称</span></code>.</p></li>
+<li><p>选择 <code class="docutils literal notranslate"><span class="pre">模型类型</span></code>, 并点击上传三维模型文件, 或将三维模型文件拖拽到对应区域, 同时点击 <code class="docutils literal notranslate"><span class="pre">缩略图</span></code> 图标上传模型缩略图.</p></li>
+</ul>
+<div align="center"><img src="./_static/images/image320.png" alt="" width="700px"></div><br>
+<p>待缩略图上传成功后, 鼠标悬浮至<code class="docutils literal notranslate"><span class="pre">缩略图</span></code>处, 可进行模型的修改、删除操作.模型参数的修改参见下图所示.</p>
+<ul class="simple">
+<li><p>场景编辑器的属性配置同当前各类型模型；</p></li>
+<li><p>地图编辑器支持位置、尺寸编辑.</p></li>
+</ul>
+<div align="center"><img src="./_static/images/image324.png" alt="" width="700px"></div><br>
+<div align="center"><img src="./_static/images/image325.png" alt="" width="700px"></div><br>
+<div align="center"><img src="./_static/images/image326.png" alt="" width="700px"></div><br>
+<p>编辑完成并点击确定后, 会出现如下提示弹窗, 需要进一步确认.</p>
+<div align="center"><img src="./_static/images/image323.png" alt="" width="700px"></div><br>
+</section>
+<section id="id18">
+<h4>2.2.10.2 三维模型导入要求<a class="headerlink" href="#id18" title="Link to this heading"></a></h4>
+<p><strong>为保证导入模型的可用性，作如下必要要求:</strong></p>
+<ul class="simple">
+<li><p><strong>模型名称</strong>: 支持中文、英文字母、数字, 长度限制20个字符, 中文算两个字符, 其余算一个, 具体要求如下：<br></p>
+<ol class="arabic simple">
+<li><p>中文版：模型名称填入中文, 作为中文名记入；<br></p></li>
+<li><p>英文版：model name填入英文, 作为英文名记入；<br></p></li>
+<li><p>变量名：根据模型类型自动生成.<br></p></li>
+</ol>
+</li>
+<li><p><strong>模型类型</strong>: 根据不同模型类型, 下拉框中包含不同选择:</p>
+<ol class="arabic simple">
+<li><p>自动驾驶主车：包括轿车（默认）、货车、卡车、拖车、半拖车、公交车;<br></p></li>
+<li><p>交通车辆：包括轿车（默认）、货车、卡车、拖车、半拖车、公交车、火车、有轨电车；<br></p></li>
+<li><p>摩托车：摩托车；<br></p></li>
+<li><p>非机动车：自行车；<br></p></li>
+<li><p>行人：行人；<br></p></li>
+<li><p>动物：动物；<br></p></li>
+<li><p>静态障碍物：障碍物（默认）、灯杆、树木、植被、路障、栏杆、建筑、路灯、龙门架、路标.<br></p></li>
+</ol>
+</li>
+<li><p><strong>模型格式</strong>：</p>
+<ul>
+<li><p>上传文件：仅支持上传.zip 格式, 其中.zip不超过5Mb，压缩包内包含的 fbx 模型文件大小不超过2Mb；</p></li>
+<li><p>缩略图：支持上传.png格式, 大小不超过 300Kb, 非必填, 当未上传时, 自动生成模型缩略图；</p></li>
+</ul>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>注意事项：
+上传的文件需包含FBX模型、贴图, 支持校验, 当缺少文件或格式错误时, 会出现错误提示；</p>
+</div>
+<ul class="simple">
+<li><p><strong>模型建模工具</strong></p>
+<ul>
+<li><p>目前支持 3dsmax2020 及以下版本输出的文件</p></li>
+</ul>
+</li>
+<li><p><strong>模型整理</strong></p>
+<ul>
+<li><p>导入的模型文件需以米为单位</p></li>
+<li><p>车辆正方向朝向x轴</p></li>
+<li><p>模型导出前需进行重置变换</p></li>
+<li><p>模型导入前需清除贴图路径</p></li>
+<li><p>坐标轴居模型中央</p></li>
+</ul>
+</li>
+<li><p><strong>模型规范</strong></p>
+<ul>
+<li><p>无多余贴图通道, 无孤立点</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>同时，为保证模型导入后系统的工作效率及显示效果，对模型的建议要求如下：</strong></p>
+<ul class="simple">
+<li><p><strong>导入模型建议制作要求概述</strong></p>
+<ul>
+<li><p>TAD Sim使用 Unreal Engine 作为核心渲染模块, 导入的模型需符合基本游戏建模要求.模型需结构准确, 写实风格, PBR 材质真实, 材质类型使用标准standard, 精简材质球数量.通过布线和贴图绘制表现丰富的结构细节.材质数量按规范尽量压缩, 面数保持节制, 保障模型在渲染时高效运行.</p></li>
+<li><p>模型设置单面显示, 即背面消隐.</p></li>
+<li><p>模型不应出现漏缝、露面、穿帮面、不规整面、重叠面、无用的点线面, 清除通道信息、自定义通道信息、游离点以及位图光学路径.</p></li>
+<li><p>任意三角形、四边形或多边形的长宽比小于5倍, 任意点引出的线不超过7条.</p></li>
+</ul>
+</li>
+<li><p><strong>以车辆模型为例，建议制作规范</strong></p>
+<ul>
+<li><p>车辆长、宽、高尺寸准确, 与真实数据一致, 模型外轮廓无几何边缘感.</p></li>
+<li><p>模型朝向以行驶方向为 X 轴, 正方向车辆上方向为 Z 轴正方向.</p></li>
+<li><p>模型材质真实, 贴图各个通道绘制准确, 无溶色, 无遗漏的通道.</p></li>
+</ul>
+</li>
+<li><p><strong>模型贴图建议制作规范</strong></p>
+<ul>
+<li><p>推荐以标准 PBR 流程制作, 建议使用 Substance Painter 进行制作.</p></li>
+<li><p>贴图尺寸采用 2N 次幂原则, 即贴图的宽或高的数值都符合2的N次幂数, 多拼一贴图或子贴图符合 2N 次幂原则.</p></li>
+<li><p>贴图按中距离原则控制像素密度, 贴图的清晰度尽量修整锐度, 保持高清, 在放大200%的时候贴图与原尺寸的差别肉眼分辨几乎相同, 而放大800%时有明显的马赛克化而无模糊.</p></li>
+<li><p>贴图最大尺寸<code class="docutils literal notranslate"><span class="pre">2048*2048</span></code>, png 格式.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="id19">
+<h2>2.3. 菜单栏<a class="headerlink" href="#id19" title="Link to this heading"></a></h2>
+<section id="id20">
+<h3>2.3.1. 场景库管理页面<a class="headerlink" href="#id20" title="Link to this heading"></a></h3>
+<p>在菜单栏中 <code class="docutils literal notranslate"><span class="pre">数据管理</span></code> 下拉框中, 点击 <code class="docutils literal notranslate"><span class="pre">场景库管理</span></code>, 或单击工具栏<code class="docutils literal notranslate"><span class="pre">打开</span></code>按键, 或在菜单栏中 <code class="docutils literal notranslate"><span class="pre">文件</span></code> 下拉框中点击 <code class="docutils literal notranslate"><span class="pre">打开</span></code>, 出现 <code class="docutils literal notranslate"><span class="pre">场景管理</span></code> 弹窗.</p>
+<div align="center"><img src="./_static/images/image74.png" alt="" width="700px"></div><br>
+<p>在 <code class="docutils literal notranslate"><span class="pre">我的场景</span></code> 模块中, 可以通过点击某一特定场景右侧 <code class="docutils literal notranslate"><span class="pre">打开</span></code> 按钮, 在场景编辑页面打开该场景.</p>
+<div align="center"><img src="./_static/images/image75.png" alt="" width="700px"></div><br>
+<p>场景列表可通过关键词搜索、场景集或场景格式的筛选来快速定位到目标场景.</p>
+<p>勾选目标场景后点击导出或删除图标, 支持对场景的批量导出和删除. 单击导入图标, 将外部场景导入到场景库中, 目前不支持含中文字符的路径.</p>
+<p>在 <code class="docutils literal notranslate"><span class="pre">场景集管理</span></code> 模块中, 用户可以创建、删除及复制场景集, 设置场景集名称, 添加及删除子场景, 点击 <code class="docutils literal notranslate"><span class="pre">保存</span></code> 后保存场景集.</p>
+<p>在更新版本中, 支持场景集管理、场景管理的 logsim 和 worldsim 场景区分.</p>
+<div align="center"><img src="./_static/images/image76.png" alt="" width="700px"></div><br>
+</section>
+<section id="id21">
+<h3>2.3.2. 地图管理页面<a class="headerlink" href="#id21" title="Link to this heading"></a></h3>
+<p>在菜单栏中 <code class="docutils literal notranslate"><span class="pre">数据管理</span></code> 下拉框中, 点击 <code class="docutils literal notranslate"><span class="pre">地图管理</span></code>, 进入 <code class="docutils literal notranslate"><span class="pre">地图管理</span></code> 弹窗.</p>
+<div align="center"><img src="./_static/images/image78.png" alt="" width="700px"></div><br>
+<p>勾选目标地图, 支持批量导出.单击导入图标, 将外部地图导入至地图库中存储, 目前不支持含中文字符的路径. 可以通过名称搜索, 快速筛选目标地图.</p>
+<div align="center"><img src="./_static/images/image79.png" alt="" width="700px"></div><br>
+</section>
+<section id="id22">
+<h3>2.3.3. 主车算法管理页面<a class="headerlink" href="#id22" title="Link to this heading"></a></h3>
+<p>主车算法管理可针对主车的算法模块进行统一管理.</p>
+<p>在菜单栏中 <code class="docutils literal notranslate"><span class="pre">数据管理</span></code> 下拉框中, 点击 <code class="docutils literal notranslate"><span class="pre">主车算法管理</span></code>, 进入 <code class="docutils literal notranslate"><span class="pre">主车算法管理</span></code> 弹窗.</p>
+<div align="center"><img src="./_static/images/image81.png" alt="" width="700px"></div><br>
+<p>在 <code class="docutils literal notranslate"><span class="pre">模组配置</span></code> 模块中, 用户可通过模组配置的方式, 设置并保存多个模块的固定组合方式.</p>
+<p>所勾选中的模组为当前应用的模组配置, 在需要切换算法运行时, 用户只需切换对应的模组.</p>
+<div align="center"><img src="./_static/images/image82.png" alt="" width="700px"></div><br>
+<section id="id23">
+<h4>2.3.3.1. 模组配置<a class="headerlink" href="#id23" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><strong>名称栏:</strong></p>
+<ul>
+<li><p>当前模组配置的自定义名称.</p></li>
+</ul>
+</li>
+<li><p><strong>上下箭头图标:</strong></p>
+<ul>
+<li><p>上移、下移, 调整模块的运行先后顺序.</p></li>
+</ul>
+</li>
+<li><p><strong>加号图标:</strong></p>
+<ul>
+<li><p>支持新增模组. 支持在当前模组配置中添加模块.</p></li>
+</ul>
+</li>
+<li><p><strong>减号图标:</strong></p>
+<ul>
+<li><p>将选中的模块移出当前模组配置(不是将模块删除).</p></li>
+</ul>
+</li>
+<li><p><strong>复制图标:</strong></p>
+<ul>
+<li><p>复制当前模组.</p></li>
+</ul>
+</li>
+<li><p><strong>导入图标:</strong></p>
+<ul>
+<li><p>导入模组.</p></li>
+</ul>
+</li>
+<li><p><strong>导出图标:</strong></p>
+<ul>
+<li><p>导出当前选中的模组.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>关于算法执行顺序对仿真结果的影响说明如下所示:</strong></p>
+<ul class="simple">
+<li><p>算法分为同步、异步以及优先级调度方式, 同步、异步和优先级的调度方式在实现方式上都是基于有优先级的事件队列, 当前系统对每个模块定义了 2 个有关调度的属性:</p>
+<ul>
+<li><p>execution period: 当前模块计划的执行周期, 即每隔多久时间会被调用执行一次.</p></li>
+<li><p>response time: 当前模块每次执行时预期的执行耗时.</p></li>
+</ul>
+</li>
+<li><p>云平台中, 任务执行过程默认为 <code class="docutils literal notranslate"><span class="pre">同步调度模式</span></code>.</p></li>
+<li><p>当同步调度模式时, 算法按照执行顺序的配置依次执行.如果算法顺序符合逻辑流程, 那么每一个算法执行后的输出, 都将在当前周期内, 给到下一个算法作为输入. 如果算法顺序打乱, 那么算法的输入可能来源于上一个周期的其他算法的输出.由于仿真系统是闭环的,即算法之间的输入输出是相互依赖的, 所以实际执行过程中, 差一帧对于仿真结果并没有影响.</p></li>
+<li><p>在同步调度模式中, 目前腾讯内置的算法对于执行顺序没有要求.如果外部算法或者新建算法本身对于输入输出有特别的要求, 那么可以通过调整算法顺序, 适配算法逻辑. 否则, 算法的顺序对于仿真的结果没有影响.一般建议将评测算法放在最下方, 如果不配置, 并不产生影响.</p></li>
+<li><p>当异步调度模式时, 算法同时执行, 在当前步长内, 顺序为 n的算法, 无法获取顺序为 1 的算法的输出, 所以在异步模式下, 算法的顺序对仿真结果并没有依赖.</p></li>
+<li><p>当优先级调度模式时, 即在异步调度的基础上, 部分算法对于优先级有要求.用户可以对这部分算法进行移动, 以配置优先级.</p></li>
+</ul>
+</section>
+<section id="id24">
+<h4>2.3.3.2. 模块设置<a class="headerlink" href="#id24" title="Link to this heading"></a></h4>
+<p>在 <code class="docutils literal notranslate"><span class="pre">模块设置</span></code> 模块中, 用户可对某一特定模块进行具体设置.</p>
+<div align="center"><img src="./_static/images/image83.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p><strong>预设图标:</strong></p>
+<ul>
+<li><p>系统自带 <code class="docutils literal notranslate"><span class="pre">预设</span></code> 图标, 用户自定义创建模块无此图标.</p></li>
+</ul>
+</li>
+<li><p><strong>复制图标:</strong></p>
+<ul>
+<li><p>克隆当前模块, 保存克隆即完成新建模块.</p></li>
+</ul>
+</li>
+<li><p><strong>加号图标:</strong></p>
+<ul>
+<li><p>可新增配置本地算法, 需在右侧基本信息处完善基本信息.</p></li>
+</ul>
+</li>
+<li><p><strong>基本信息栏:</strong></p>
+<ul>
+<li><p>模块基本信息配置.</p></li>
+</ul>
+</li>
+<li><p><strong>高级配置栏:</strong></p>
+<ul>
+<li><p>特殊信息配置.</p></li>
+</ul>
+</li>
+<li><p><strong>保存按钮:</strong></p>
+<ul>
+<li><p>保存当前参数配置修改.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>系统预置 Traffic、Planning 等多个模块, 详细信息如下:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>模块名称</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Traffic</p></td>
+<td><p>交通流模块为自动驾驶系统提供一个高保真、 可重复、 可度量、可对比、 可评价、 可预测、 可增强的虚拟仿真交通流验证环境.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sensor_Truth</p></td>
+<td><p>真值传感器模块, 输出真值</p></td>
+</tr>
+<tr class="row-even"><td><p>Traffic_Filter</p></td>
+<td><p>依赖真值传感器的交通流数据输出</p></td>
+</tr>
+<tr class="row-odd"><td><p>Planning</p></td>
+<td><p>路径规划模块</p></td>
+</tr>
+<tr class="row-even"><td><p>Perfect_Control</p></td>
+<td><p>完美控制, 忽略车辆物理条件等的限制, 输入是planning给出的轨迹trajectory, 输出直接是车辆当前一帧的定位location和运动信息, 包含位置、速度、朝向、横摆角速度、加速度等, 满足Planning闭环仿真测试的需求.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Controller</p></td>
+<td><p>控制模块, 需要和车辆动力学模块 vehicle_dynamics 一起运行, <br> controller 的输入是 planning 给出的轨迹 trajectory, <br> 输出是给到车辆动力学模块的控制信号(刹车、油门、方向盘等), <br> 车辆动力学模块根据车和周围环境的物理性质计算出车辆下一帧的定位 location</p></td>
+</tr>
+<tr class="row-even"><td><p>Vehicle_dynamics</p></td>
+<td><p>车辆动力学模块, 接收控制模块的控制命令, 输出车辆的底盘、车身、动力等系统信息, 以及车辆的定位信息.详情可见 <a class="reference internal" href="305.%E5%8A%A8%E5%8A%9B%E5%AD%A6%E4%BB%BF%E7%9C%9F.html"><span class="std std-doc">动力学仿真</span></a>页面</p></td>
+</tr>
+<tr class="row-odd"><td><p>Grading</p></td>
+<td><p>评测模块, 主要用于辅助/自动驾驶车辆的仿真测试评测. 模块从TADSim仿真系统中获取特定的消息, 如主车定位消息、交通参与者感知消息、高精度地图、红绿灯状态、规划轨迹等, 通过对客户选择的特定指标进行监测及评测, 并给出对应的详细评测数据. 支持测评报告自动生成. 详情可见 <a class="reference internal" href="309.%E5%9C%BA%E6%99%AF%E8%AF%84%E6%B5%8B.html#id1"><span class="std std-ref">场景评测</span></a> 页面.</p></td>
+</tr>
+<tr class="row-even"><td><p>Protobuf_Log_Player</p></td>
+<td><p>回放仿真数据模块, 可以回放指定的topic的仿真数据, 从而实现多次重复实验. 详情可见 <a class="reference internal" href="310.%E4%BB%BF%E7%9C%9F%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AE%B0%E5%BD%95%E5%92%8C%E5%9B%9E%E6%94%BE.html#protobuf-log-player"><span class="std std-ref">Protobuf_Log_Player模块</span></a>页面</p></td>
+</tr>
+<tr class="row-odd"><td><p>imu_gps</p></td>
+<td><p>IMU仿真数据的topic是IMU_SIM,对应的proto是osi_imu.  proto.GPS仿真数据的topic是GPS_SIM, 对应的proto是osi_gps.proto.</p></td>
+</tr>
+<tr class="row-even"><td><p>Protobuf_Logger</p></td>
+<td><p>仿真数据录制模块, 可以录制tadsim指定topic的仿真数据. 配合回放模块, 可实现多次重复实验. 详情可见 <a class="reference internal" href="310.%E4%BB%BF%E7%9C%9F%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AE%B0%E5%BD%95%E5%92%8C%E5%9B%9E%E6%94%BE.html#protobuf-logger"><span class="std std-ref">Protobuf_Logger模块</span></a> 页面</p></td>
+</tr>
+<tr class="row-odd"><td><p>Perfect_Planning</p></td>
+<td><p>路径规划模块, 支持大规模交通流场景、虚拟城市多主车交互场景, 支持虚拟城市交通元素交互.</p></td>
+</tr>
+<tr class="row-even"><td><p>Display</p></td>
+<td><p>三维渲染播放模块, 接收主车与交通车的轨迹数据, 在三维场景下动态渲染车辆、障碍物、地图放置物等物体. 并支持激光雷达、深度相机等多种传感器仿真渲染.</p></td>
+</tr>
+<tr class="row-odd"><td><p>V2X</p></td>
+<td><p>根据前端传感器配置的OUB和RSU参数输出主车OUB接受到的交通消息, 输出消息topic-V2XASN1, 输出pb消息文件v2x_asn1_2020.proto. 输出消息包含BSM、RSM、RSI、SPAT和MAP消息, 模拟RSU发送频率、传输距离、数据延迟、数据丢包和网络传输速率等因子对V2X通讯的影响, 需要在前端传感器参数窗口进行配置才能启动V2X功能.</p></td>
+</tr>
+<tr class="row-even"><td><p>Radar</p></td>
+<td><p>毫米波雷达传感器模块块</p></td>
+</tr>
+<tr class="row-odd"><td><p>Lane_Marks</p></td>
+<td><p>主车附近车道线信息输出模块, 输出消息topic-LANE_MARKS, 输出pb消息文件laneMarks.protoc, 依赖pb文件basic.protoc、location.protoc和traffic.protco. 根据主车位置不断变化, 输出主车左右多车道线(1-n, 左右输出车道数由前端参数配置)数据, 每个车道线按照以主车为参考点向前和向后离散坐标形式输出; 坐标以车身坐标系为参考, 车头向前为正X, 车身向左为正Y, 车身垂直向上为正Z. 同时输出主车在某一个车道累计滞留时间、主车距离下一个路口距离、主车距离车道中心线距离、主车距离左侧车道线距离、主车距离右侧车道线距离等信息.</p></td>
+</tr>
+</tbody>
+</table>
+<p>自动驾驶算法测试的模块组合配置示例如下:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>系统模块</p></th>
+<th class="head"><p>感知算法 <br> 单元测试</p></th>
+<th class="head"><p>定位算法 <br> 单元测试</p></th>
+<th class="head"><p>决策规划算法 <br> 单元测试</p></th>
+<th class="head"><p>控制算法 <br> 单元测试</p></th>
+<th class="head"><p>全算法 <br> 闭环测试</p></th>
+<th class="head"><p>车辆在环 <br> 测试 VIL</p></th>
+<th class="head"><p>模型在环 <br> 测试 MIL</p></th>
+<th class="head"><p>硬件在环 <br> 测试</p></th>
+<th class="head"><p>真实场景 <br> 测试</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Perception</p></td>
+<td><p>√</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>√</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Location</p></td>
+<td><p></p></td>
+<td><p>√</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>√</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Planning</p></td>
+<td><p></p></td>
+<td><p>√</p></td>
+<td><p>√</p></td>
+<td><p></p></td>
+<td><p>√</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Controller</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>√</p></td>
+<td><p>√</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Traffic</p></td>
+<td><p>√</p></td>
+<td><p></p></td>
+<td><p>√</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>√</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Display</p></td>
+<td><p>√</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>√</p></td>
+<td><p>√</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Perfect_Control</p></td>
+<td><p></p></td>
+<td><p>√</p></td>
+<td><p>√</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Sensor_Truth</p></td>
+<td><p>√</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>√</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>vehicle_dynamics</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>√</p></td>
+<td><p>√</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Grading</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>√</p></td>
+<td><p>√</p></td>
+<td><p>√</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>VIL</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>√</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>MIL</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>传感器配置</p></td>
+<td><p>Camera <br> Lidar <br> Radar…</p></td>
+<td><p>IMU <br> GPS</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>Camera <br> Lidar <br> Radar <br> IMU <br> GPS</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>各模块可配置参数项如下:</strong></p>
+<ul class="simple">
+<li><p><strong>名称:</strong></p>
+<ul>
+<li><p>模块名称, 每个模块名称应该保持唯一, 不能重复.</p></li>
+</ul>
+</li>
+<li><p><strong>分类:</strong></p>
+<ul>
+<li><p>定义当前模块的分类.</p></li>
+</ul>
+</li>
+<li><p><strong>调用周期:</strong></p>
+<ul>
+<li><p>模块 Step 方法被调用的周期, 单位 ms.</p></li>
+</ul>
+</li>
+<li><p><strong>预期执行时长:</strong></p>
+<ul>
+<li><p>模块 Step 方法预期的执行时长, 不应大于该模块的调用周期.</p></li>
+<li><p>(仿真系统为了保证场景的可复现性, 无论模块每次实际运行时长为多少, 对于该模块发出的消息而言, 保证在模块预期执行时长结束之前不会被其他模块所见, 而在预期结束时长结束之后会立即被其他模块可见)</p></li>
+</ul>
+</li>
+<li><p><strong>是否自动启动:</strong></p>
+<ul>
+<li><p>该模块程序是否在加载场景时由仿真系统自动启动, 如果勾选, 下面的启动相关参数必须填写.</p></li>
+</ul>
+</li>
+<li><p><strong>接入模式:</strong></p>
+<ul>
+<li><p>选择该模块是动态库或者可执行文件.</p></li>
+</ul>
+</li>
+<li><p><strong>可执行文件路径:</strong></p>
+<ul>
+<li><p>对应 <code class="docutils literal notranslate"><span class="pre">可执行文件</span></code> 接入模式.</p></li>
+<li><p>填写可执行文件的在用户电脑中的绝对路径 (最好使用绝对路径, 尽量避免使用相对路径).</p></li>
+<li><p>以 py 脚本为例, 该栏填写用户电脑上 python 解释器的绝对路径,</p></li>
+<li><p>例如 <code class="docutils literal notranslate"><span class="pre">C:\Users\AppData\Local\Programs\Python\Python39\python.exe</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>可执行文件参数:</strong></p>
+<ul>
+<li><p>对应 <code class="docutils literal notranslate"><span class="pre">可执行文件</span></code> 接入模式, 所填写字段与所执行的算法脚本一致.</p></li>
+<li><p>以 py 脚本为例, Python 执行命令一般使用 <code class="docutils literal notranslate"><span class="pre">python xxx.py --key value</span></code>,</p></li>
+<li><p>那么该栏填写 python 的命令行参数, <code class="docutils literal notranslate"><span class="pre">[&quot;xxx.py&quot;, &quot;--key&quot;, &quot;value&quot;]</span></code>, 如下图所示:</p></li>
+</ul>
+</li>
+</ul>
+<div align="center"><img src="./_static/images/image84.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p>针对Traffic模块用户可选择是否过滤掉特定范围外车辆相关信息, 可以通过 <code class="docutils literal notranslate"><span class="pre">可执行文件参数</span></code> 栏进行设置. 系统默认不对交通车辆进行过滤, 设置情况如下:</p></li>
+</ul>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="na">[</span>
+<span class="w">  </span><span class="na">&quot;--app_name&quot;, &quot;Traffic_clone&quot;,</span>
+<span class="w">  </span><span class="na">&quot;--ip_addr_port&quot;, &quot;&quot;,</span>
+<span class="w">  </span><span class="na">&quot;--EnableTrafficVisionFilter</span><span class="o">=</span><span class="s">false&quot;,</span>
+<span class="w">  </span><span class="na">&quot;--TrafficVisionFilterAltitudeDiff</span><span class="o">=</span><span class="s">100&quot;,</span>
+<span class="w">  </span><span class="na">&quot;--TrafficVisionFilterRadius</span><span class="o">=</span><span class="s">1000.0&quot;</span>
+<span class="na">]</span>
+
+<span class="c1"># 用户可开启对交通车辆的过滤并自定义过滤参数,</span>
+<span class="c1"># &quot;TrafficVisionFilterRadius=100.0&quot;, 表示仅过滤出主车方圆100.0米内的车辆.</span>
+<span class="c1"># &quot;TrafficVisionFilterAltitudeDiff=2.0&quot;, 表示仅过滤出高度差在2米内的车辆.</span>
+
+<span class="c1"># 设置情况举例如下</span>
+<span class="na">[</span>
+<span class="w">  </span><span class="na">&quot;--app_name&quot;, &quot;Traffic_clone&quot;,</span>
+<span class="w">  </span><span class="na">&quot;--ip_addr_port&quot;, &quot;&quot;,</span>
+<span class="w">  </span><span class="na">&quot;--EnableTrafficVisionFilter</span><span class="o">=</span><span class="s">true&quot;,</span>
+<span class="w">  </span><span class="na">&quot;--TrafficVisionFilterAltitudeDiff</span><span class="o">=</span><span class="s">100&quot;,</span>
+<span class="w">  </span><span class="na">&quot;--TrafficVisionFilterRadius</span><span class="o">=</span><span class="s">2.0&quot;</span>
+<span class="na">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>动态链接库路径:</strong></p>
+<ul>
+<li><p>对应 <code class="docutils literal notranslate"><span class="pre">动态链接库</span></code> 接入模式.</p></li>
+</ul>
+</li>
+<li><p><strong>依赖路径</strong></p>
+<ul>
+<li><p>自动启动模块时模块程序的依赖库搜索路径.(系统路径默认包含, 格式为json字符串)</p></li>
+<li><p>仅linux版本支持, 如下图所示:</p></li>
+</ul>
+</li>
+</ul>
+<div align="center"><img src="./_static/images/image85.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p><strong>服务器接入地址:</strong></p>
+<ul>
+<li><p>如果填写, 模块进程则会监听在指定地址上, 默认不填会由系统自动指定可用端口.一般用于模块开发人员调试.</p></li>
+</ul>
+</li>
+<li><p><strong>初始化参数:</strong></p>
+<ul>
+<li><p>由模块自己定义.</p></li>
+</ul>
+</li>
+</ul>
+<p>具体信息如下表:</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>模块名称</th>
+<th>模块说明</th>
+<th>初始化参数说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sensor_Truth</td>
+<td>真值传感器模块,输出真值</td>
+<td>freespace_limitZ 参数:用于设置真值传感器输出的消息<br> 过滤情况,仅过滤出车辆高度差为特定数值(米)<br> 范围内的车辆信息.如设置 <code>freespace_limitZ=2.0</code>, <br> 用于设置真值传感器仅输出<br> 车辆高度差为2米内的车辆信息.<br> - CameraTruth=ON: 开启图像真值子模块 <br> -LidarTruth=ON: 开启lidar真值子模块 <br> - UltrasonicTruth=ON: 开启超声波真值子模块 <br> -SensorTruth=ON: 开启目标真值子模块 <br> - DebugDir=XXX/XXX: 指定调试输出目录 <br> - device=0, 默认all: 指定算法id, 只有绑定到该id的<br> 传感器才被读取, 可以指定all, 表示所有传感器 <br> -CT_MaxDistance=100.0: 相机目标最大距离 <br> -CT_Completeness=0.5: 相机目标完整度, 被遮挡的<br> 面积比例不能小于该值 <br> - CT_MinArea=20: 相机目标的像素面积 <br> - LT_Completeness=0.5: Lidar目标完整度, 被遮挡的<br> 激光数比例不能小于该值 <br> - LT_MinHitNum=5: 最小激光个数, 小于它的目标被丢弃</td>
+</tr>
+<tr>
+<td>Lane_Marks</td>
+<td>主车附近车道线信息输出模块</td>
+<td>- forwardLength参数:车道线向前取点最大距离(m)<br> (初始参数为80) <br> - laneDetectingCount 参数:左右输出车道线数<br> (比如2,左右同时输出两条车道线信息)(初始参数为2) <br> - sampleInterval参数:车道线取点间距(m) (初始参数为3)</td>
+</tr>
+<tr>
+<td>Traffic_Filter</td>
+<td>依赖真值传感器的交通流数据输出</td>
+<td>- FilterSensorIDs 参数:表示需要该模块生效的真值<br> 传感器的id,空格隔开,不写就是全部使用 <br> - FilterLimitZ 参数:表示高度过滤值,0表示不过滤</td>
+</tr>
+<tr>
+<td>V2X_Traffic_Filter</td>
+<td>根据前端传感器配置的 OUB 和 RSU 参数输出主车 OUB 接受到的交通消息</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Radar</td>
+<td>Radar传感器模块</td>
+<td>-IgnoreZ=ON: 是否忽略z值, 解决某些情况下<br> location和traffic的z值不一致的问题. <br> - DebugDir=XXX/XXX: 指定调试输出目录device=0: <br> 指定算法id, 只有绑定到该id的传感器才被读取, <br> 可以指定all, 表示所有传感器.</td>
+</tr>
+<tr>
+<td>Planning</td>
+<td>路径规划模块</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Perfect_Control</td>
+<td>完美控制,输入是 planning 给出的轨迹 trajectory ,输出直接是车辆下一帧的定位 location ,不管车辆物理条件的限制</td>
+<td>- Option 参数:可选参数包括global/local),global模式输出<br> 定位消息为 ENU 坐标系,local 模式除了输出 ENU 坐标系下<br> 的定位,还输出为局部坐标系(初始参数为 global ) <br> - StepTime 参数:模块仿真步长(初始参数为20) <br> - useMapZValue 参数:输出定位信息时是否包含高程<br> (不需要初始化, 程序内默认值0, 一般无须关注), <br> 可选参数为0/1, 0表示不含高程, 1表示包含高程 <br> - enableFakeTrailer 参数:可选参数为0/1, 0表示输出的<br> 定位信息不包含挂车, 1表示输出<br> 的定位信息包含挂车(初始参数为0) <br> - _log_level: 日志等级(不需要初始化, 程序内默认值0, <br> 一般无须关注), 可选参数0/1/2/3, 等级越高, <br> 日志越多越详细, 但性能可能有所下降</td>
+</tr>
+<tr>
+<td>Controller</td>
+<td>控制模块, 需要和车辆动力学模块 vehicle_dyna <br> mics一起运行,controller 的输入是 planning 给出的轨迹 trajectory, 输出是给到车辆动力学模块的控制信号(刹车、油门、方向盘等),车辆动力学模块根据车和周围环境的物理性质计算出车辆下一帧的定位 location</td>
+<td>configFile 参数: <br> - 控制模块参数文件路径 <br> - 初始参数为 C:\Program Files\tadsim\resources<br> \app\service\controller\ControlConfig_gw.cfg</td>
+</tr>
+<tr>
+<td>Traffic</td>
+<td>交通流模块. 为自动驾驶系统提供一个高保真、 可重复、 可度量、可对比、 可评价、 可预测、 可增强的虚拟仿真交通流验证环境.</td>
+<td>AI交通流随机种子: 勾选后开放交通流生成的随机性,<br> 含AI交通流的同一个场景多次运行可能产生不同的交通流<br> 行为结果, 默认情况下不勾选.</td>
+</tr>
+<tr>
+<td>Grading</td>
+<td>评测模块,详情可见<a href="./311.场景评测.md">场景评测</a>章节</td>
+<td>- 1、channels: 表示所需订阅Topic和protobuf消息<br>(初始参数为 CONTROL||LOCATION<br>||TRAJECTORY||VEHICLE_STATE||<br>TRAFFIC||GRADING||ENVIRONMENTAL). <br> -2、 post-script: 将 pblog 中的数据导出<br>为 xlsx 和 json 格式的后处理脚本(初始化参数, windows 为<br>C:\Users\%USER%\AppData\Roaming\tadsim\data\service_data..<br>..\sys\service_data\script\post_process, <br>linux为/home/%USER%/.config/tadsim/data<br>/service_data/../../sys/service_data/script<br> /post_process)<br> - 3、log-folder: 仿真数据存放的路径(初始化参数, windows是<br>C:\Users\%USER%\AppData\Roaming\tadsim\data<br>\service_data\sim_data\pblog, linux 是/home/%USER%<br>/.config/tadsim/data/service_data/sim_data/pblog <br> - 4、enableGrading: 是否开启评测(初始化为1)<br> - 5、enablePBLogger: 是否录制数据(单机版初始化为1,<br> 云端初始化为0), 可自动实现仿真数据录制 <br> - 6、DataDir: 云端文件路径(仅云端初始化为<br> <code>@{SimRoot}</code>, 单机版无须填写和关注) <br> - 7、sync: stop时是否等待录制线程结束, 1为等待,<br>  0为不等直接stop(仅云端初始化为1, 程序内默认值0,<br>  一般无须关注)<br> - 8、stepTime: 模块仿真步长<br> (不需要初始化, 调试用, 一般无须关注)<br> - 9、simcity: 是否开启虚拟城市模式, 若开启则不写<br>评测报告 (仅云端关注并按情况初始化, 单机版无须填写和关注)<br> - 10、_log_level: 日志等级(初始化为0), <br>可选参数0/1/2/3, 等级越高, 日志越多越详细, <br>但性能可能有所下降.)</td>
+</tr>
+<tr>
+<td>Protobuf_Log_Player</td>
+<td>仿真数据回放模块, 可以回放指定的topic的仿真数据, 从而实现多次重复实验.</td>
+<td>- 1、channels: 要回放的仿真 topic 数据(初始参数<br>为CONTROL||LOCATION||TRAJECTORY<br> ||VEHICLE_STATE||TRAFFIC).<br> - 2、log-file: 要回放的仿真 pblog 数据文件路径<br>(初始参数, windows 是C:\Users\%USER%\AppData<br>\Roaming\tadsim\data\service_data\sim_data<br>\pblog\some_xxx.pblog, linux是/home/%USER%<br>/.config/tadsim/data/service_data/sim_data<br>/pblog/some_xxx.pblog)</td>
+</tr>
+<tr>
+<td>Vehicle_dynamics</td>
+<td>车辆动力学模块, 接收控制模块的控制命令, 输出车辆的底盘, 车身, 动力等系统信息, 以及车辆的定位信息</td>
+<td>- LicFile: 车辆动力学 license 文件路径(初始参数为<br>C:\Program Files\tadsim\resources\app\service<br>\vehicle_dynamics\EchoSim_TENCENT_LX.lic). <br> - ParaFile: 车辆动力学参数文件路径(初始参数为<br>C:\Program Files\tadsim\resources\app\service<br> \vehicle_dynamics\Run_Tencent_20191028<br> _EngineMap_GearShift.PAR). <br> - enableTerrain: 初始参数为1, 可选参数为0/1, <br> 0表示不使用高程信息, 1表示使用高程信息. <br> - stepTime: 模块仿真步长(初始参数为 10)</td>
+</tr>
+<tr>
+<td>MIL</td>
+<td>模型在环, 用于 simulink 和 tadsim 联合仿真, 详情可见<a href="./305.模型在环%20.md">模型在环</a>章节</td>
+<td>- pub-topics: (初始参数为CONTORL), simulink 往<br>  tadsim 发送的仿真 topic. <br> -sub-topic: (初始设为 LOCATION||VEHICLE_STATE<br> ||TXSIM_SENSOR_DATA||LOCAL_LOCATION||<br> TXSIM_DETECTED_LINES), tadsim 发送给 simulink<br> 的仿真topic <br> - xil-cfg: simulink 链接的 ip 和端口定义文件<br> (初始参数为C:\Program Files\tadsim\resources<br> \app\service\mil\mil_cfg.json)</td>
+</tr>
+<tr>
+<td>imu_gps</td>
+<td>IMU 仿真数据的 topic 是IMU_SIM, 对应的 proto 是 osi_imu.proto.GPS 仿真数据的 topic 是 GPS_SIM, 对应的 proto 是 osi_gps.proto.</td>
+<td>- mode: 可选, 可指定 imu 或 gps, 分别表示<br> imu only, gps only</td>
+</tr>
+<tr>
+<td>Protobuf_Logger</td>
+<td>仿真数据录制模块, 可以录制 tadsim 指定 topic 的仿真数据. 配合回放模块, 可实现多次重复实验.</td>
+<td>- 1、channels: 要录制的仿真 topic 数据(初始参数<br> 为CONTROL||LOCATION||TRAJECTORY||<br> VEHICLE_STATE||TRAFFIC) <br> -2、log-folder: 仿真数据存放的路径(初始化参数, <br> windows 是C:\Users\%USER%\AppData<br> \Roaming\tadsim\data\service_data\sim_data\pblog, linux是/home/%USER%/.config/tadsim/data/service_data/sim_data/pblog)<br> -3、sync: stop 时是否等待录制线程结束, 1为等待, 0为<br> 不等直接 stop(不需要初始化, 程序内默认值0, 一般无须关注) <br> -4、post-script: 自定义的数据后处理的工具(windows<br>为 dir、linux 为ls, 即单独运行时不使用工具, 一般<br>无须关注)</td>
+</tr>
+<tr>
+<td>Perfect_Planning</td>
+<td>路径规划模块, 支持大规模交通流场景、虚拟城市多主车交互场景, 支持虚拟城市交通元素交互</td>
+<td>1、ego_rnd_seed ( 主车随机种子 ) <br> 2、ego_pubilc_location (是否订阅 Location 消息) <br> 3、dummy_ignore_perception (是否忽略障碍车 ) <br> 4、ego_location_closed_loop (是否启用<br> Location 进行实时轨迹的重新规划) <br> 5、route_end_behavior_force_stop ( 是否到达轨迹<br>终点强制停止默认为false)  <br> 6、looking_distance_factor( 描点距离调节因子, <br>默认为1.0 )  <br> 7、wheel2steer(车轮角与方向盘的转换值, 默认为18.0 ) <br> 8、use_ego_lanechange( 主车是否根据交通流进行变道, <br>默认为true )</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p><strong>执行超时时间:</strong></p>
+<ul>
+<li><p>模块执行仿真定义的接口函数时的最大超时时间.</p></li>
+</ul>
+</li>
+<li><p><strong>单步超时时间:</strong></p>
+<ul>
+<li><p>模块Step方法的最大超时时间.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="id25">
+<h3>2.3.4. 全局模块管理页面<a class="headerlink" href="#id25" title="Link to this heading"></a></h3>
+<p>全局模块管理用于管理全局算法模块. 在菜单栏中 <code class="docutils literal notranslate"><span class="pre">数据管理</span></code> 下拉框中, 点击 <code class="docutils literal notranslate"><span class="pre">全局模块管理</span></code>, 进入 <code class="docutils literal notranslate"><span class="pre">全局模块管理</span></code> 弹窗.</p>
+<div align="center"><img src="./_static/images/image86.png" alt="" width="700px"></div><br>
+<p>在 <code class="docutils literal notranslate"><span class="pre">模组配置</span></code> 模块中, 用户可通过模组配置的方式, 应用特定模组在系统中运行.</p>
+<div align="center"><img src="./_static/images/image87.png" alt="" width="700px"></div><br>
+<p>在 <code class="docutils literal notranslate"><span class="pre">模块设置</span></code> 模块中, 用户可对某一特定模块进行具体设置.</p>
+<ul class="simple">
+<li><p><strong>预设图标:</strong></p>
+<ul>
+<li><p>系统自带 <code class="docutils literal notranslate"><span class="pre">预设</span></code> 图标, 用户自定义创建模块无此图标.</p></li>
+</ul>
+</li>
+<li><p><strong>复制图标</strong>:</p>
+<ul>
+<li><p>克隆当前模块, 保存克隆即完成新建模块.</p></li>
+</ul>
+</li>
+<li><p><strong>加号图标</strong>:</p>
+<ul>
+<li><p>可新增配置本地算法, 需在右侧基本信息处完善基本信息.</p></li>
+</ul>
+</li>
+<li><p><strong>基本信息栏</strong>:</p>
+<ul>
+<li><p>模块 <code class="docutils literal notranslate"><span class="pre">基本信息</span></code> 配置.</p></li>
+</ul>
+</li>
+<li><p><strong>高级配置</strong>:</p>
+<ul>
+<li><p>特殊信息配置.</p></li>
+</ul>
+</li>
+<li><p><strong>保存按钮</strong>:</p>
+<ul>
+<li><p>保存当前参数配置修改.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>系统预置 Traffic、Protobuf_Logger 等多个模块, 详细信息如下:</strong></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>模块名称</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Traffic</p></td>
+<td><p>交通流模块. <br> 勾选<code class="docutils literal notranslate"><span class="pre">AI交通流随机种子</span></code>后开放交通流生成的随机性, <br> 含AI交通流的同一个场景多次运行可能产生不同的交通流行为结果, <br> 默认情况下不勾选.</p></td>
+</tr>
+<tr class="row-odd"><td><p>SceneExporter</p></td>
+<td><p>问题场景导出, 用于 VISSIM 联合仿真</p></td>
+</tr>
+<tr class="row-even"><td><p>Traffic_log2world</p></td>
+<td><p>用于 log2world 仿真</p></td>
+</tr>
+<tr class="row-odd"><td><p>Traffic_logsim</p></td>
+<td><p>用于回放型仿真</p></td>
+</tr>
+<tr class="row-even"><td><p>VissimTraffic</p></td>
+<td><p>用于 VISSIM 联合仿真</p></td>
+</tr>
+<tr class="row-odd"><td><p>Protobuf_Log_Player</p></td>
+<td><p>回放仿真数据模块, 详情可见<a class="reference internal" href="310.%E4%BB%BF%E7%9C%9F%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AE%B0%E5%BD%95%E5%92%8C%E5%9B%9E%E6%94%BE.html#protobuf-log-player"><span class="std std-ref">Protobuf_Logger模块</span></a>章节</p></td>
+</tr>
+<tr class="row-even"><td><p>Display</p></td>
+<td><p>三维渲染播放模块</p></td>
+</tr>
+<tr class="row-odd"><td><p>Protobuf_Logger</p></td>
+<td><p>数据记录模块, 详情可见”<a class="reference internal" href="310.%E4%BB%BF%E7%9C%9F%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AE%B0%E5%BD%95%E5%92%8C%E5%9B%9E%E6%94%BE.html#protobuf-logger"><span class="std std-ref">Protobuf_Logger模块</span></a>”章节</p></td>
+</tr>
+<tr class="row-even"><td><p>OSI_Adaptor</p></td>
+<td><p>OSI标准数据转发模块</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id26">
+<h3>2.3.5. 交通流配置页面<a class="headerlink" href="#id26" title="Link to this heading"></a></h3>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>当前版本暂不提供该功能，敬请期待.</p>
+</div>
+</section>
+<section id="id27">
+<h3>2.3.6. 指标管理页面<a class="headerlink" href="#id27" title="Link to this heading"></a></h3>
+<p>在菜单栏中 <code class="docutils literal notranslate"><span class="pre">数据管理</span></code> 下拉框中, 点击 <code class="docutils literal notranslate"><span class="pre">指标管理</span></code>, 即可进入 <code class="docutils literal notranslate"><span class="pre">指标管理</span></code> 弹窗.</p>
+<p>用户在场景编辑器中, 每个场景会使用用户设置的默认指标组. 同时, 每个场景可在场景属性编辑中单独设置指标组.</p>
+<div align="center"><img src="./_static/images/image88.png" alt="" width="700px"></div><br>
+<p>在 <code class="docutils literal notranslate"><span class="pre">指标组配置</span></code> 模块中, 用户可自定义指标组合方式, 不同的测试场景可应用不同的指标分组.</p>
+<p>点击 <code class="docutils literal notranslate"><span class="pre">应用为场景默认配置</span></code> 后, 新增的场景将默认使用当前指标组作为评测报告输出的依据.</p>
+<div align="center"><img src="./_static/images/image89.png" alt="" width="700px"></div><br>
+<p>在 <code class="docutils literal notranslate"><span class="pre">指标列表</span></code> 模块中, 用户可查看指标分类、名称、定义、计算方式、阈值的默认设置等信息.</p>
+<ul class="simple">
+<li><p><strong>通过判定条件:</strong></p>
+<ul>
+<li><p>指标是否通过的默认判定条件.</p></li>
+</ul>
+</li>
+<li><p><strong>结束判定</strong>:</p>
+<ul>
+<li><p>指标是否作为场景结束的判定条件.</p></li>
+</ul>
+</li>
+</ul>
+<div align="center"><img src="./_static/images/image90.png" alt="" width="700px"></div><br>
+<p>用户可通过指标分类筛选以及关键字搜索的方式查询指标,且可对指标分类进行编辑.</p>
+<div align="center"><img src="./_static/images/image293.png" alt="" width="700px"></div><br>
+<p>用户可对指标分类标签进行新建、编辑和删除</p>
+<div align="center"><img src="./_static/images/image294.png" alt="" width="700px"></div><br>
+<p>支持用户查看指标列表, 且可对指标组进行创建、编辑、删除、克隆等操作.</p>
+<div align="center"><img src="./_static/images/image295.png" alt="" width="700px"></div><br>
+</section>
+<section id="id28">
+<h3>2.3.7. 评测报告管理页面<a class="headerlink" href="#id28" title="Link to this heading"></a></h3>
+<p>在菜单栏中 <code class="docutils literal notranslate"><span class="pre">数据管理</span></code> 下拉框中, 点击 <code class="docutils literal notranslate"><span class="pre">评测报告管理</span></code>, 即可进入 <code class="docutils literal notranslate"><span class="pre">评测报告管理</span></code> 弹窗.</p>
+<div align="center"><img src="./_static/images/image91.png" alt="" width="700px"></div><br>
+<p>可查看到历史播放记录的评测报告汇总 (前提条件: 需在模块管理中选中并运行 Grading 模块, 需配置后处理脚本).</p>
+<div align="center"><img src="./_static/images/image92.png" alt="" width="700px"></div><br>
+<div align="center"><img src="./_static/images/image93.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p><strong>“查看”按钮:</strong></p>
+<ul>
+<li><p>点击 <code class="docutils literal notranslate"><span class="pre">查看</span></code> 后显示场景评测报告详情,</p></li>
+<li><p>包含场景信息、算法配置列表、指标列表、指标详情、元数据信息, 指标详情及元数据信息通过图表形式呈现(元数据包括速度、加速度、及侧向加速度等信息).</p></li>
+</ul>
+</li>
+<li><p><strong>对比图标:</strong></p>
+<ul>
+<li><p>对两个报告进行横向比较.</p></li>
+<li><p>点击对比图标后, 出现选择弹窗, 选择两个目标报告后, 点击 <code class="docutils literal notranslate"><span class="pre">对比</span></code>, 即可进入 <code class="docutils literal notranslate"><span class="pre">测评报告详情</span></code> 页面.</p></li>
+<li><p>该页面针对两个场景进行对比, 展示场景信息、算法配置列表、指标列表、指标详情、元数据信息.</p></li>
+</ul>
+</li>
+<li><p><strong>删除图标:</strong></p>
+<ul>
+<li><p>勾选报告后, 删除报告及对应的评测数据.</p></li>
+</ul>
+</li>
+<li><p><strong>“导出 PDF 报告”按钮:</strong></p>
+<ul>
+<li><p>支持评测报告详情导出为 PDF 格式文件.</p></li>
+</ul>
+</li>
+<li><p><strong>“打开 EXCEL 目录”按钮:</strong></p>
+<ul>
+<li><p>点击后打开数据存储文件地址.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id29">
+<h3>2.3.8. 仿真设置页面<a class="headerlink" href="#id29" title="Link to this heading"></a></h3>
+<p>在菜单栏中 <code class="docutils literal notranslate"><span class="pre">系统设置</span></code> 下拉框中, 点击 <code class="docutils literal notranslate"><span class="pre">仿真设置</span></code>, 即可进入 <code class="docutils literal notranslate"><span class="pre">仿真设置</span></code> 弹窗.</p>
+<div align="center"><img src="./_static/images/image94.png" alt="" width="700px"></div><br>
+<div align="center"><img src="./_static/images/image95.png" alt="" width="700px"></div><br>
+<p>本设置基于对算法模块运行的限制管理.</p>
+<ul class="simple">
+<li><p><strong>播放速率控制栏:</strong></p>
+<ul>
+<li><p>场景播放的速率设置, 数值越大, 速度越慢.</p></li>
+</ul>
+</li>
+<li><p><strong>场景最大时长栏:</strong></p>
+<ul>
+<li><p>场景主车在不同算法条件下运行, 完成运行时长不一样.此处为最大运行时长, 超过时长运行停止.</p></li>
+<li><p>(注:默认最大时长为不限, 用户也可选择自定义)</p></li>
+</ul>
+</li>
+<li><p><strong>调度模式栏:</strong></p>
+<ul>
+<li><p>同步/异步/按优先级.</p></li>
+</ul>
+</li>
+<li><p><strong>主车初始定位消息勾选框:</strong></p>
+<ul>
+<li><p>可勾选是否显示主车初始定位消息.</p></li>
+</ul>
+</li>
+<li><p><strong>自动重置场景勾选框:</strong></p>
+<ul>
+<li><p>播放完一个场景后根据当前播放模式, 可勾选是否自动重新加载当前/下一个场景.</p></li>
+</ul>
+</li>
+<li><p><strong>是否覆盖用户日志勾选框:</strong></p>
+<ul>
+<li><p>可勾选是否覆盖用户日志.</p></li>
+</ul>
+</li>
+<li><p><strong>评测反馈处理脚本路径栏:</strong></p>
+<ul>
+<li><p>选择存储路径.</p></li>
+</ul>
+</li>
+<li><p><strong>重置按钮:</strong></p>
+<ul>
+<li><p>将用户在当前弹窗的设置恢复到系统默认状态.</p></li>
+</ul>
+</li>
+<li><p><strong>恢复警告弹窗设置按钮:</strong></p>
+<ul>
+<li><p>将用户在警告弹窗的设置恢复到默认状态, 如”不再提示”的勾选状态等.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="id30">
+<h2>2.4. 工具栏<a class="headerlink" href="#id30" title="Link to this heading"></a></h2>
+<section id="id31">
+<h3>2.4.1. 打开页面<a class="headerlink" href="#id31" title="Link to this heading"></a></h3>
+<p>在工具栏中单击 <code class="docutils literal notranslate"><span class="pre">打开</span></code> 按键, 出现 <code class="docutils literal notranslate"><span class="pre">场景管理</span></code> 弹窗, 与前文, 在菜单栏中 <code class="docutils literal notranslate"><span class="pre">数据管理</span></code> 下拉框中, 点击 <code class="docutils literal notranslate"><span class="pre">场景库管理</span></code>, 或在菜单栏中 <code class="docutils literal notranslate"><span class="pre">文件</span></code> 下拉框中点击 <code class="docutils literal notranslate"><span class="pre">打开</span></code>, 出现相同弹窗.</p>
+<div align="center"><img src="./_static/images/image96.png" alt="" width="700px"></div><br>
+<p>在 <code class="docutils literal notranslate"><span class="pre">我的场景</span></code> 模块中, 可以通过点击某一特定场景右侧 <code class="docutils literal notranslate"><span class="pre">打开</span></code> 按钮, 在场景编辑页面打开该场景.<br>
+场景列表可通过关键词搜索场景集或场景格式的筛选来快速定位到目标场景.<br>
+勾选目标场景后点击导出或删除图标, 支持对场景的批量导出和删除.<br>
+单击导入图标, 将外部场景导入到场景库中, 目前不支持含中文字符的路径.</p>
+<div align="center"><img src="./_static/images/image97.png" alt="" width="700px"></div><br>
+<p>在 <code class="docutils literal notranslate"><span class="pre">场景集管理</span></code> 模块中, 用户可以创建、删除及复制场景集, 设置场景集名称, 添加及删除子场景, 点击 <code class="docutils literal notranslate"><span class="pre">保存</span></code> 后保存场景集.</p>
+<div align="center"><img src="./_static/images/image98.png" alt="" width="700px"></div><br>
+</section>
+<section id="id32">
+<h3>2.4.2. 新建页面<a class="headerlink" href="#id32" title="Link to this heading"></a></h3>
+<p>在工具栏中单击 <code class="docutils literal notranslate"><span class="pre">新建</span></code> 按键, 或在菜单栏中 <code class="docutils literal notranslate"><span class="pre">文件</span></code> 下拉框中点击 <code class="docutils literal notranslate"><span class="pre">新建</span></code>, 出现 <code class="docutils literal notranslate"><span class="pre">新建场景</span></code> 弹窗.</p>
+<div align="center"><img src="./_static/images/image99.png" alt="" width="700px"></div><br>
+<p>用户可以在 <code class="docutils literal notranslate"><span class="pre">地图库</span></code> 栏中勾选目标地图, 并编辑场景名称及工况说明, 即可创建场景. 点击 <code class="docutils literal notranslate"><span class="pre">创建</span></code> 按钮完成创建.</p>
+<div align="center"><img src="./_static/images/image100.png" alt="" width="700px"></div><br>
+</section>
+<section id="id33">
+<h3>2.4.3. 保存页面<a class="headerlink" href="#id33" title="Link to this heading"></a></h3>
+<p>在工具栏中单击 <code class="docutils literal notranslate"><span class="pre">保存</span></code> 按键, 或在菜单栏 <code class="docutils literal notranslate"><span class="pre">文件</span></code> 下拉框中点击 <code class="docutils literal notranslate"><span class="pre">保存</span></code>, 即可保存当前编辑场景.</p>
+<div align="center"><img src="./_static/images/image101.png" alt="" width="700px"></div><br>
+<div align="center"><img src="./_static/images/image102.png" alt="" width="700px"></div><br>
+<div align="center"><img src="./_static/images/image36.png" alt="" width="700px"></div><br>
+<p>支持将 .sim 格式的场景另存为 OpenSCENARIO 1.0 标准的 .xosc 格式. 因为格式兼容问题, 少许功能或信息可能会丢失.</p>
+<div align="center"><img src="./_static/images/image37.png" alt="" width="700px"></div><br>
+</section>
+<section id="id34">
+<h3>2.4.4. 交通流页面<a class="headerlink" href="#id34" title="Link to this heading"></a></h3>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>当前版本暂不提供该功能，敬请期待.</p>
+</div>
+</section>
+<section id="id35">
+<h3>2.4.5. 信控配置页面<a class="headerlink" href="#id35" title="Link to this heading"></a></h3>
+<p>交通灯配置功能作为⾃动驾驶⻋辆感知、规划控制算法的重要交互能⼒之⼀, ⽀持⾃定义红绿灯在地图编辑器中的静态信息添加及场景编辑器中的⾃定义灯态配时.</p>
+<p>交通灯配置功能作为⾃动驾驶⻋辆感知、规划控制算法的重要交互能⼒之⼀, ⽀持⾃定义红绿灯在地图编辑器中的静态信息添加及场景编辑器中的⾃定义灯态配时.</p>
+<div align="center"><img src="./_static/images/image103.png" alt="" width="700px"></div><br>
+<div align="center"><img src="./_static/images/image104.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p>信控配置⽅案栏</p>
+<ul>
+<li><p>功能说明:</p>
+<ul>
+<li><p>⽤于展示当前场景中包含的信控配置⽅案, ⼀套信控配置⽅案对应当前场景中每个路⼝的所有相位配置、及其与语义灯关联、物理灯关联信息.</p></li>
+<li><p>⽀持信控配置⽅案的克隆、删除.</p></li>
+</ul>
+</li>
+<li><p>边界说明:</p>
+<ul>
+<li><p>打开信控配置功能窗后, ⽣成⼀套默认信控配置, 不⽀持编辑, 可克隆修改, 默认应⽤默认信控配置.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>物理灯显示</p>
+<ul>
+<li><p>在场景编辑器画板中(场景编辑器主界⾯及信控配置功能界⾯) 显示物理灯, 即三维模型, 来源为:</p>
+<ul>
+<li><p>地图编辑器添加:  按地图编辑器添加信号灯结果⾃动显示物理灯.</p></li>
+<li><p>第三⽅地图⾃带:  按地图存储数据⾃动显示物理灯.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div align="center"><img src="./_static/images/image105.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p>语义灯</p>
+<ul>
+<li><p>功能: 语义灯⽤于整个地图信控配置⽅案配置, 通过可视化⽅式显示</p>
+<ul>
+<li><p>当新建/打开场景时, 场景⽂件中⽆信控配置, 则场景编辑器主界⾯中不显示语义灯, 当打开信控配置功能界⾯时, 根据信控配置模版⽣成默认信控配置⽅案,显示整个地图的全量语义灯及其对应初始颜⾊</p>
+<ul>
+<li><p>当未应⽤某⼀信控配置, 关闭信控配置功能界⾯时, 场景编辑画板不显示语义灯</p></li>
+<li><p>当应⽤了特定信控配置, 返回场景编辑器主界⾯, 场景编辑画板显示所应⽤配置⽅案的语义灯</p></li>
+</ul>
+</li>
+<li><p>当打开包含信控配置的场景⽂件时, 场景编辑器主界⾯显示场景⽂件中语义灯, 当打开信控配置功能界⾯时, 原信控配置⽅案为信控配置⽅案⼀, 并⽣成系统默认信控配置⽅案, 默认应⽤信控配置⽅案⼀</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div align="center"><img src="./_static/images/image106.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p>信控元素栏</p>
+<ul>
+<li><p>路⼝控制器交互:</p>
+<ul>
+<li><p>右键点击路⼝控制器后, ⽀持点击禁⽤/启⽤(默认、全绿、全红、全灭), 该状态调节后, 属性栏中状态同步变化.</p></li>
+<li><p>复制属性/粘贴属性置灰</p></li>
+</ul>
+</li>
+<li><p>相位交互:</p>
+<ul>
+<li><p>右键点击相位, ⽀持选择禁⽤/启⽤(默认、全绿、全红、全灭) /复制属性/粘贴属性.</p></li>
+<li><p>禁⽤及启⽤状态调节后, 属性栏中状态同步变化. 复制当前相位属性后, 可粘贴⾄同⼀路⼝控制器的其他相位, 属性栏中状态同步变化</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div align="center"><img src="./_static/images/image107.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p>属性栏</p>
+<ul>
+<li><p>周期时⻓</p>
+<ul>
+<li><p>功能说明: 当前路⼝控制器的亮灯总时⻓, 输⼊范围为5-600s.</p></li>
+<li><p>边界说明: 周期时⻓调整后, 最后⼀个灯态时间拉⻓</p></li>
+</ul>
+</li>
+<li><p>状态</p>
+<ul>
+<li><p>功能说明:⽤于控制当前路⼝控制器所有相位的禁⽤及启⽤</p>
+<ul>
+<li><p>路⼝控制器启⽤时, 所属相位可⾃⾏修改启⽤/禁⽤状态</p></li>
+<li><p>路⼝控制器禁⽤时, 所属相位均为禁⽤状态</p></li>
+<li><p>路⼝控制器从禁⽤切换为启⽤状态时, 所有所属相位均切换为启⽤状态.</p></li>
+</ul>
+</li>
+<li><p>边界说明:</p>
+<ul>
+<li><p>针对⽆灯态相位(灰⾊全灭灯相位), 该相位⾃动切换为禁⽤状态, 当路⼝控制器从禁⽤状态切换为启⽤状态, 改相位仍为禁⽤状态</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div align="center"><img src="./_static/images/image108.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p>信号灯设置</p>
+<ul>
+<li><p>功能说明(从左⾄右分别为):</p>
+<ul>
+<li><p>增加相位(phase): 点击后新增⼀⾏可配置相位, 默认⽣绿灯3s, ⻩灯2s, 红灯补充剩余周期时间</p></li>
+<li><p>删除相位phase: 点击后删除选中⾏相位</p></li>
+<li><p>添加绿灯: 默认添加5s, 若剩余可添加时⻓不⾜5s则添加剩余时⻓</p></li>
+<li><p>添加红灯: 默认添加5s, 若剩余可添加时⻓不⾜5s则添加剩余时⻓</p></li>
+<li><p>添加⻩灯: 默认添加5s, 若剩余可添加时⻓不⾜5s则添加剩余时⻓</p></li>
+<li><p>删除灯态: 删除当前选中灯态</p></li>
+</ul>
+</li>
+<li><p>边界说明:</p>
+<ul>
+<li><p>新增灯时, 如果当前周期的灯已满, 则新增灯态默认5s, 若添加绿灯, 则⻩灯减少 5s, 若添加⻩灯, 则红灯减少 5s, 若添加红灯, 则绿灯减少 5s (改动某个灯态时间, 该灯态相邻后⾯的灯态调整时间, 直⾄覆盖);如果当前周期灯态为灰⾊, 新增灯填满整个周期. 删除灯时, 其时⻓由后⼀个灯态补⻬, 直⾄灰⾊.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div align="center"><img src="./_static/images/image109.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p>物理灯下拉框</p>
+<ul>
+<li><p>功能:</p>
+<ul>
+<li><p>物理灯为在地图编辑器中添加的三维信号灯, 场景运⾏时 Display 亮灯⽅式采⽤与之关联的 phase 的灯态组合</p></li>
+</ul>
+</li>
+<li><p>交互:</p>
+<ul>
+<li><p>选项框中⾃动填充与当前phase关联的物理灯, 下拉框中包含当前路⼝所有物理灯, ⽤户可勾选相应物理灯与当前phase关联, 选中的物理灯在编辑画板中显示为选中态</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div align="center"><img src="./_static/images/image110.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p>相位(phase)</p>
+<ul>
+<li><p>功能说明:</p>
+<ul>
+<li><p>相位为信号灯红绿黄显示状态及显示时间的一套组合方式.</p>
+<ul>
+<li><p>当选中特定一行相位时, 可对当前相位进行编辑操作</p></li>
+<li><p>相位固定为绿色后接黄色, 黄色后接红色, 红色后接绿色顺序 (如红色、绿色、黄色、红色), 不可乱序</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>关联语义灯:</p>
+<ul>
+<li><p>选中某行相位时, 可在编辑画板中单击选中与该相位关联的语义灯 (语义灯被选中后黄色描边高亮显示可关联当前路口多个语义灯, 选中的语义灯在场景运行时按当前相位灯态顺序显示)</p></li>
+</ul>
+</li>
+<li><p>默认相位 (phase) 生成规则:</p>
+<ul>
+<li><p>打开信控配置功能界面时, 生成默认信控配置方案, mapsdk 输出路口对应进向 road 数量、id 及 roadid 所关联物理灯 id, 生成默认相位(phase) 及相位 (phase)关联的物理灯、语义灯(无物理灯控制的road所对应的语义灯默认为全灭状态)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id36">
+<h3>2.4.6. 环境配置页面<a class="headerlink" href="#id36" title="Link to this heading"></a></h3>
+<p>在工具栏中, 单击 <code class="docutils literal notranslate"><span class="pre">环境配置</span></code> 按钮, 进入 <code class="docutils literal notranslate"><span class="pre">环境配置</span></code> 弹窗. 场景构建过程中, 增加对于天气元素的配置. 当前支持单个场景或全局场景的配置.</p>
+<div align="center"><img src="./_static/images/image111.png" alt="" width="700px"></div><br>
+<p>环境配置仅在 Display 模块勾选状态下, 支持运行.</p>
+<div align="center"><img src="./_static/images/image112.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p><strong>“场景配置”栏:</strong></p>
+<ul>
+<li><p>当前场景的环境配置.(默认状态为: 用户上传场景, 场景自带传感器的配置参数信息)</p></li>
+</ul>
+</li>
+<li><p><strong>“全局配置”栏:</strong></p>
+<ul>
+<li><p>当前场景库中所有场景的环境配置.支持当前场景库中给所有场景开启全局模式, 同步运行此环境配置参数. 关闭全局模式, 即取消当前全局适配设置.</p></li>
+</ul>
+</li>
+<li><p><strong>加号图标:</strong></p>
+<ul>
+<li><p>点击”+”号, 增加新时间戳, 即新时间节点, 对新时间点的环境进行配置.</p></li>
+</ul>
+</li>
+<li><p><strong>“时间戳”栏:</strong></p>
+<ul>
+<li><p>单位毫秒.特指播放状态下, 在某时间点发生某个行为.</p></li>
+</ul>
+</li>
+<li><p><strong>“天气”栏:</strong></p>
+<ul>
+<li><p>默认常规数值, 用户可自定义.</p></li>
+</ul>
+</li>
+<li><p><strong>“日期”及”时间”栏:</strong></p>
+<ul>
+<li><p>用于设置日期和时间, 表示应用确定时间节点规则.(例: 冬至下午4点太阳位置、日照偏移等)</p></li>
+</ul>
+</li>
+<li><p><strong>“恢复配置”按钮:</strong></p>
+<ul>
+<li><p>恢复前一次编辑的数据.</p></li>
+</ul>
+</li>
+<li><p><strong>“全局模式”滑块:</strong></p>
+<ul>
+<li><p>点击”全局模式”滑块, 其变成高亮状态则说明打开全局模式, 配置好环境后, 点击保存, 即可将该配置应用到所有场景.</p></li>
+</ul>
+</li>
+<li><p><strong>保存配置:</strong></p>
+<ul>
+<li><p>保存本次设置的参数, 即开始应用于场景运行中.</p></li>
+</ul>
+</li>
+<li><p>(注: 全局配置的参数数据应用, 仅适用于全局模式. 场景配置的参数默认适用于当前场景, 打开全局模式, 即在全局场景中应用, 关闭恢复正常状态)</p></li>
+</ul>
+</section>
+<section id="id37">
+<h3>2.4.7. 场景生成页面<a class="headerlink" href="#id37" title="Link to this heading"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">场景生成</span></code> 功能支持场景的批量生成. 用户可快速创建测试组, 可以通过单机版连续运行多个仿真测试场景或者重复运行单个仿真测试场景.支持用户通过excel模版批量生成场景</p>
+<p>在工具栏中, 单击 <code class="docutils literal notranslate"><span class="pre">场景生成</span></code>按钮, 进入 <code class="docutils literal notranslate"><span class="pre">场景生成</span></code> 弹窗.</p>
+<div align="center"><img src="./_static/images/image113.png" alt="" width="700px"></div><br>
+<p>支持 <code class="docutils literal notranslate"><span class="pre">场景泛化</span></code>以及<code class="docutils literal notranslate"><span class="pre">语义生成</span></code>的方式批量生成场景， 批量生成场景规则如下:</p>
+<ol class="arabic simple">
+<li><p>场景泛化</p></li>
+</ol>
+<div align="center"><img src="./_static/images/image114.png" alt="" width="700px"></div><br>
+<div align="center"><img src="./_static/images/image115.png" alt="" width="700px"></div><br>
+<p>文件序号编排规则</p>
+<p>依据以下变化要素顺序依次展开: 主车(速度)、交通流车(速度、横向偏移、纵向偏移、加速度、加速度触发时间/距离、变道持续时间、变道横向偏移、变道触发时间/距离、速度变化值、速度变化触发时间/距离).</p>
+<ul class="simple">
+<li><p>计算出主车速度的变化区间, 并依次迭代固定主车速度的变化, 再依次与下列要素组合:</p></li>
+<li><p>计算交通流车辆本身的变化(先速度、再横向偏移, 再纵向偏移), 并依次与下列要素组合:</p></li>
+<li><p>计算交通流车加速度变化区间(先加速度, 后触发值), 并依次迭代固定取值, 再依次与下列要素组合:</p></li>
+<li><p>计算变道变化区间(先持续时间、再横向偏移, 最后触发值), 并依次迭代固定取值, 再依次与下列要素组合:</p></li>
+<li><p>计算速度变化区间(先速度, 后触发值), 并依次迭代取值, 生成一个文件编号.</p></li>
+</ul>
+<p>举例(以下文的生成规则来生成场景):</p>
+<ul class="simple">
+<li><p>设置内容: 主车速度区间为 (1, 2), 速度间隔为 1m/s, 则生成场景数量为 2 个, 位置区间为(1, 2).交通车(id为-1) 生成规则为:</p></li>
+</ul>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>项目</th>
+<th>初始速度</th>
+<th>横向偏移</th>
+<th>纵向偏移</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>区间</td>
+<td>(1, 2)</td>
+<td>(1.4, 1.5)</td>
+<td>(1, 4)</td>
+</tr>
+<tr>
+<td>间隔</td>
+<td>1</td>
+<td>0.1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>生成场景数量</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>实际取值</td>
+<td>1, 2</td>
+<td>1.4, 1.5</td>
+<td>1, 3</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>生成文件序列号(acc为自定义前缀):</p></li>
+</ul>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>序号</th>
+<th>(1, 2) X [(1, 2) X(1.4, 1.5) X(1, 3)]</th>
+<th>生成文件序列号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>主车(1) 交通流车[(1) (1.4) (1)]</td>
+<td>acc_0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>主车(1) 交通车[(1) (1.4) (3)]</td>
+<td>acc_1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>主车(1) 交流车[(1) (1.5) (1)]</td>
+<td>acc_2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>主车(1) 交通车[(1) (1.5) (3)]</td>
+<td>acc_3</td>
+</tr>
+<tr>
+<td>5</td>
+<td>主车(1) 交流车[(2) (1.5) (1)]</td>
+<td>acc_4</td>
+</tr>
+<tr>
+<td>6</td>
+<td>主车(1) 交通车[(2) (1.4) (3)]</td>
+<td>acc_5</td>
+</tr>
+<tr>
+<td>7</td>
+<td>主车(1) 交流车[(2) (1.5) (1)]</td>
+<td>acc_6</td>
+</tr>
+<tr>
+<td>8</td>
+<td>主车(1) 交通车[(2) (1.5) (3)]</td>
+<td>acc_7</td>
+</tr>
+<tr>
+<td>9</td>
+<td>主车(2) 交通车[(1) (1.4) (1)]</td>
+<td>acc_8</td>
+</tr>
+<tr>
+<td>10</td>
+<td>主车(2) 交流车[(1) (1.4) (3)]</td>
+<td>acc_9</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>64</td>
+<td></td>
+<td>acc_63</td>
+</tr>
+</tbody>
+</table>
+<p>基于要素顺序, 顺次生成场景序列, 如上表.时间触发、条件触发情况, 序列号生成, 基于要素顺序, 同上规则.</p>
+<p>生成场景数计算规则</p>
+<p>基于当前编辑的场景, 可根据界面参数设置, 批量生成相关场景.生成策略基于对交通流车辆的限制.(注: 触发时间或者触发条件只有和速度、加速度和变道中的一种进行结合时才有意义, 仅设置触发时间或者触发条件时无效.) 生成逻辑先以速度、加速度和变道单独进行泛化, 然后再对泛化之后结果进行组合返回.</p>
+<ol class="arabic simple">
+<li><p>计算速度泛化.</p></li>
+<li><p>计算加速度泛化.</p></li>
+<li><p>计算变道泛化.</p></li>
+<li><p>计算触发条件的总泛化, 为 速度泛化 * 加速度泛化 * 变道泛化.</p></li>
+<li><p>计算总泛化= 主车泛化 * 交通流车泛化 * 触发条件泛化.</p></li>
+</ol>
+<ul class="simple">
+<li><p>“主车”栏:</p>
+<ul>
+<li><p>设置场景中, 主车的初始速度数值.(例如: M=初始速度1-10m/s, 速度间隔1m/s, 场景数=10/1+1=11)</p></li>
+</ul>
+</li>
+<li><p>“交通车”栏:</p>
+<ul>
+<li><p>交通车的行为参数设置.选择单一交通车(例如: A=初始横向偏移1-10m, 位置间隔1m, 场景数=10/1+1=11. B=初始速度1-10m/s, 速度间隔1m/s, 场景数=10/1+1=11)</p></li>
+</ul>
+</li>
+<li><p>“时间触发”栏:</p>
+<ul>
+<li><p>触发时间或者触发条件只有和速度、加速度和变道中的一种进行结合时才有意义, 仅设置触发时间或者触发条件时无效.生成的场景总数=M*A*B*(C*D) *(C*E) *(C*F*G), 增加时间触发条件的条数x条, 相应场景总数量增加x倍.</p></li>
+</ul>
+</li>
+<li><p>触发时间值(s)</p>
+<ul>
+<li><p>=(初始时间到结束时间的步长) /时间间隔+1. C=初始时间1-10s, 时间间隔1s, 场景数=10/1+1=11.</p></li>
+</ul>
+</li>
+<li><p>速度:</p>
+<ul>
+<li><p>D=初始速度1-10m/s, 速度间隔1m/s, 场景数=10/1+1=11.</p></li>
+</ul>
+</li>
+<li><p>加速度:</p>
+<ul>
+<li><p>E=初始加速度1-10m/s2, 加速度间隔1m/s2, 场景数=10/1+1=11.</p></li>
+</ul>
+</li>
+<li><p>位置偏移:</p>
+<ul>
+<li><p>交通车偏移行为描述.</p></li>
+</ul>
+</li>
+<li><p>偏移距离:</p>
+<ul>
+<li><p>当且仅当位置偏移为’车道内偏移’时, 偏移距离条件可使用. F=偏移距离1-10m, 距离间隔1m, 场景数=10/1+1=11.</p></li>
+</ul>
+</li>
+<li><p>偏移完成时间:</p>
+<ul>
+<li><p>完成偏移行为所用的时间. G=偏移完成时间1-10s, 时间间隔1s, 场景数=10/1+1=11.</p></li>
+</ul>
+</li>
+<li><p>“条件触发”栏:</p>
+<ul>
+<li><p>生成的场景总数=M<em>A</em>B*(I<em>J) <em>(I</em>K) <em>(I</em>L</em>O), 增加条件触发条件的条数x条, 相应场景总数量增加x倍.</p></li>
+</ul>
+</li>
+<li><p>触发条件类型:</p>
+<ul>
+<li><p>TTC 与 主车距离.</p></li>
+</ul>
+</li>
+<li><p>距离类型:</p>
+<ul>
+<li><p>道路坐标系距离(默认) 、欧式距离.</p></li>
+</ul>
+</li>
+<li><p>触发条件值:</p>
+<ul>
+<li><p>例: 在TTC和欧式距离条件下, 触发条件进行计算.相对距离来说: H=初始距离1-10m, 距离间隔1m, 场景数=10/1+1=11. 相对时间来说: I=时间长度1-10s, 时间间隔1s, 场景数=10/1+1=11.</p></li>
+</ul>
+</li>
+<li><p>条件满足次数:</p>
+<ul>
+<li><p>指满足当前条件第几次行为, 不参与计算.</p></li>
+<li><p>例: 3表示第3次满足触发条件时, 计算场景值.速度: J=初始速度1-10m/s, 速度间隔1m/s, 场景数=10/1+1=11. 加速度: K=初始加速度1-10m/s², 加速度间隔1m/s², 场景数=10/1+1=11.</p></li>
+</ul>
+</li>
+<li><p>位置偏移:</p>
+<ul>
+<li><p>交通车偏移行为描述.</p></li>
+</ul>
+</li>
+<li><p>偏移距离:</p>
+<ul>
+<li><p>当且仅当位置偏移为’车道内偏移’时, 偏移距离条件可使用. L=偏移距离1-10m, 距离间隔1m, 场景数=10/1+1=11.</p></li>
+</ul>
+</li>
+<li><p>偏移完成时间:</p>
+<ul>
+<li><p>完成偏移行为所用的时间. O=偏移完成时间1-10s, 时间间隔1s, 场景数=10/1+1=11.</p></li>
+</ul>
+</li>
+</ul>
+<ol class="arabic" start="2">
+<li><p>语义生成</p>
+<p>支持通过语义描述进行简单高精地图的生成（如直道，弯道，路口，上下匝道，红绿灯）。支持通过语义描述进行OpenScenario动态场景的生成，且生成的xosc文件带有ParameterDeclaration属性。</p>
+<p>在<code class="docutils literal notranslate"><span class="pre">场景生成</span></code>页面点击<code class="docutils literal notranslate"><span class="pre">语义生成</span></code>即可进入语义生成页面</p>
+</li>
+</ol>
+<div align="center"><img src="./_static/images/image331.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p>在“场景集名称”栏，填写场景集名称；在“配置文件文件上传”栏，上传配置文件（可下载配置文件模板，基于模板编辑所需配置）</p></li>
+<li><p>在“关联地图”栏，选择关联地图，支持“语义生成地图”和“地图库地图”两种方式。</p>
+<ul>
+<li><p>当关联地图为“语义生成地图“时，通过语义描述进行简单高精地图的生成（如直道，弯道，路口，上下匝道，红绿灯）。点击进入下拉框，下拉选择语义生成的地图地图所属目录，根据目录选择地图集，支持多选；</p></li>
+<li><p>当关联地图为“地图库地图时，点击“选择地图”按钮，选择具体的地图作为测试用例场景的地图，支持多选</p></li>
+<li><p>全部设置完成后，点击保存，新建语义生成任务完成。</p></li>
+</ul>
+</li>
+</ul>
+<div align="center"><img src="./_static/images/image332.png" alt="" width="700px"></div><br>
+<div align="center"><img src="./_static/images/image333.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p>语义生成配置信息</p>
+<ul>
+<li><p>场景集名称：生成的一系列场景归属一个场景集</p></li>
+<li><p>配置文件模版：附配置模版XLSX文件提供下载,下载完成经本地编辑后上传即可</p></li>
+<li><p>关联地图：可选择“语义生成地图”或“地图库地图”</p>
+<ul>
+<li><p>语义生成地图：根据语义生成模版生成地图，生成后可在地图管理中查看并打开对应地图文件</p></li>
+<li><p>地图库地图：可选择系统中已有地图，支持多选（上限数量10）</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>模板内容举例(以下文的生成规则来生成场景):
+a. 场景配置信息</p>
+<div align="center"><img src="./_static/images/image334.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p>FuncId（场景一级名称）（必填项）</p></li>
+<li><p>LogicId（场景二级名称）（必填项）</p></li>
+<li><p>Label（云平台上已有的场景标签）</p></li>
+<li><p>Description（场景描述）</p></li>
+<li><p>Mask（是否完成场景设计）（必填项）</p></li>
+<li><p>Naming（场景命名规则）****</p></li>
+<li><p>MapFile（基于平台上已有地图生成场景）（限制条件下必填项）</p></li>
+</ul>
+<p><strong>b. 场景描述信息</strong></p>
+<div align="center"><img src="./_static/images/image335.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p>L1_Road</p>
+<ul>
+<li><p>道路</p>
+<ul>
+<li><p>道路类型：直道、弯道入口、弯道出口、弯道S、弯道中</p></li>
+<li><p>曲率：可正负, 正代表左偏, 负代表右偏</p></li>
+<li><p>方向：单向、双向</p></li>
+</ul>
+</li>
+<li><p>路口</p>
+<ul>
+<li><p>路口类型：无、十字路口、T字路口、Y字路口、道路入口、道路出口</p></li>
+</ul>
+</li>
+<li><p>车道</p>
+<ul>
+<li><p>车道类型：无、驾驶、自行车道、路肩、专用车道、人行道、停车区域、停止车道、施工道路、有轨电车轨道、铁路轨道、车道入口、车道出口、使出匝道、驶入匝道</p></li>
+<li><p>数量：3、3变2&#64;200m（200m处3车道变2车道）
+边缘：有、无</p></li>
+</ul>
+</li>
+<li><p>道线</p>
+<ul>
+<li><p>类型-类型：无、双实、实虚、虚实、双虚</p></li>
+<li><p>类型-颜色：白、黄、蓝、绿、红、橙</p></li>
+<li><p>状态：清晰、模糊</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>L2_RoadFurnitureAndRules</p>
+<ul>
+<li><p>红绿灯</p>
+<ul>
+<li><p>状态：无、有</p></li>
+<li><p>周期：红绿黄总周期 (如果此处填0, 则使用系统默认的 81s, 系统会按照预设的规则生成)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>L4_MovingObjects：</p>
+<ul>
+<li><p>主车及交通参与者</p>
+<ul>
+<li><p>物理属性：物理模型选择</p></li>
+<li><p>初始：速度，路径</p></li>
+<li><p>关系：参考物，相对纵向距离，相对横向距离，相对航向角</p></li>
+<li><p>动态：触发类（仿真时间/ttc/距离/到达位置/速度触发），触发值，动作类（加速/减速/速度/变道/车道内偏移），动作值</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>L5_EnvironmentalConditions</p>
+<ul>
+<li><p>环境</p>
+<ul>
+<li><p>时间：清晨、上午、中午、黄昏、夜晚</p></li>
+<li><p>天气：晴朗、多云、小雨、中雨、大雨、小雪、中雪、大雪、小雾、中雾、大雾</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id38">
+<h3>2.4.8. 测量页面<a class="headerlink" href="#id38" title="Link to this heading"></a></h3>
+<p>在工具栏中, 单击 <code class="docutils literal notranslate"><span class="pre">测量</span></code> 工具图标, 鼠标变为添加测量点状态.</p>
+<div align="center"><img src="./_static/images/image116.png" alt="" width="700px"></div><br>
+<p>在编辑界面任意位置左键单击后可生成测量点, 按回车键为结束添加点, 单击”x”删除已添加的点, 单击终点的删除 icon 删除整条测量线.</p>
+<p>鼠标接触测量线, 按住ctrl同时鼠标左键在测量线上单击可添加新点, 并显示当前点到起点的距离.鼠标点击圆点时, 圆点呈现高亮状态, 点击按住圆点拖动, 可移动圆点位置.</p>
+<div align="center"><img src="./_static/images/image117.png" alt="" width="700px"></div><br>
+<p>绘制点后, 鼠标移动时会实时显示:</p>
+<ul class="simple">
+<li><p><strong>总长:</strong></p>
+<ul>
+<li><p>当前点到起点的距离.</p></li>
+</ul>
+</li>
+<li><p><strong>朝向:</strong></p>
+<ul>
+<li><p>从上一个点出发, 到当前点的朝向.</p></li>
+</ul>
+</li>
+<li><p><strong>夹角:</strong></p>
+<ul>
+<li><p>当前点相邻线段的锐角夹角.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id39">
+<h3>2.4.9. 返回主车页面<a class="headerlink" href="#id39" title="Link to this heading"></a></h3>
+<p>在工具栏中, 单击 <code class="docutils literal notranslate"><span class="pre">返回主车</span></code> 图标, 快速聚焦到主车元素. 也可以通过单击右侧 <code class="docutils literal notranslate"><span class="pre">场景元素</span></code> 栏中主车元素, 聚焦主车.</p>
+<p>聚焦主车时, 属性栏处同时显示主车属性, 用户可自定义主车属性.</p>
+<div align="center"><img src="./_static/images/image118.png" alt="" width="700px"></div><br>
+</section>
+<section id="id40">
+<h3>2.4.10. 视角切换页面<a class="headerlink" href="#id40" title="Link to this heading"></a></h3>
+<p>在工具栏, 点击视角切换图标, 可以对编辑界面视角进行 <code class="docutils literal notranslate"><span class="pre">顶视角</span></code> 及 <code class="docutils literal notranslate"><span class="pre">透视角</span></code> 切换.</p>
+<div align="center"><img src="./_static/images/image119.png" alt="" width="700px"></div><br>
+</section>
+</section>
+<section id="id41">
+<h2>2.5. 快捷键操作<a class="headerlink" href="#id41" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>操作</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>鼠标右键长按拖动</p></td>
+<td><p>平移视图</p></td>
+</tr>
+<tr class="row-odd"><td><p>鼠标左键长按拖动</p></td>
+<td><p>添加元素</p></td>
+</tr>
+<tr class="row-even"><td><p>鼠标滚轮</p></td>
+<td><p>放大缩小视图</p></td>
+</tr>
+<tr class="row-odd"><td><p>Enter</p></td>
+<td><p>结束添加轨迹点</p></td>
+</tr>
+<tr class="row-even"><td><p>Ctrl + N</p></td>
+<td><p>新建</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ctrl + S</p></td>
+<td><p>保存</p></td>
+</tr>
+<tr class="row-even"><td><p>Ctrl + Q</p></td>
+<td><p>退出</p></td>
+</tr>
+<tr class="row-odd"><td><p>P</p></td>
+<td><p>自由视角</p></td>
+</tr>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>顶视角</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="301.%E4%B8%93%E4%B8%9A%E6%9C%AF%E8%AF%AD.html" class="btn btn-neutral float-left" title="1. 专业术语" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="303.%E5%9C%BA%E6%99%AF%E6%92%AD%E6%94%BE%E5%99%A8.html" class="btn btn-neutral float-right" title="3. 场景播放器" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 Copyright (C) 2024 Tencent Inc.  All rights reserved。</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

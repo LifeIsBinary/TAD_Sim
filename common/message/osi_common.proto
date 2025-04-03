@@ -4,7 +4,7 @@ package osi3;
 
 option optimize_for = SPEED;
 
-//
+// \usepackage{amsmath}
 // \brief A cartesian 3D vector for positions, velocities or accelerations or
 // its uncertainties.
 //
@@ -284,7 +284,7 @@ message MountingPosition {
   //
   // \f$ Origin_{sensor} :=
   // Rotation_{yaw,pitch,roll}( \f$ \c #orientation \f$
-  // )*(Origin_{\text{reference coord system}}
+  // )*(Origin_{\mathrm{reference\ coord\ system}}
   // - \f$ \c #position \f$ )\f$
   //
   Orientation3d orientation = 2;
@@ -407,9 +407,9 @@ message BaseStationary {
   // frame, noted in the parent frame. The orientation becomes global/absolute
   // if the parent frame is inertial (all parent frames up to ground truth).
   //
-  // \f$ Origin_{\text{base stationary entity}} :=
+  // \f$ Origin_{\mathrm{base\ stationary\ entity}} :=
   // Rotation_{yaw,pitch,roll}( \f$ \c #orientation \f$ )*
-  // (Origin_{\text{parent coord system}} -
+  // (Origin_{\mathrm{parent\ coord\ system}} -
   // \f$ \c #position \f$ )\f$
   //
   // \note There may be some constraints how to align the orientation w.r.t.
@@ -472,9 +472,9 @@ message BaseMoving {
   // noted in the parent frame. The orientation becomes global/absolute if
   // the parent frame is inertial (all parent frames up to ground truth).
   //
-  // \f$ Origin_{\text{base moving entity}} :=
+  // \f$ Origin_{\mathrm{base\ moving\ entity}} :=
   // Rotation_{yaw,pitch,roll}( \f$ \c #orientation \f$ )*
-  // (Origin_{\text{parent coord system}} -
+  // (Origin_{\mathrm{parent\ coord\ system}} -
   // \f$ \c #position \f$ ) \f$
   //
   // \note There may be some constraints how to align the orientation w.r.t.

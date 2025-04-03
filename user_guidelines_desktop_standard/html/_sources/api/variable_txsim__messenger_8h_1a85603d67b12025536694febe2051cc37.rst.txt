@@ -1,0 +1,14 @@
+.. _exhale_variable_txsim__messenger_8h_1a85603d67b12025536694febe2051cc37:
+
+Variable tx_sim::topic::kControl
+================================
+
+- Defined in :ref:`file__build_simcore_framework_src_txsim_messenger.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: tx_sim::topic::kControl
+   :project: txSimSDK

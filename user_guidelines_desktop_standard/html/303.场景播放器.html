@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3. 场景播放器 &mdash; Docs</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+      <link rel="stylesheet" type="text/css" href="_static/extra.css?v=be618c9b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=34088549"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=beaddf03"></script>
+        <script src="_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+        <script src="_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="4. 地图编辑器" href="304.%E5%9C%B0%E5%9B%BE%E7%BC%96%E8%BE%91%E5%99%A8.html" />
+    <link rel="prev" title="2. 场景编辑器" href="302.%E5%9C%BA%E6%99%AF%E7%BC%96%E8%BE%91%E5%99%A8.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            TAD Sim
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">🪄概述</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="101.%E5%85%B3%E4%BA%8E%20TAD%20Sim%20%E5%8D%95%E6%9C%BA%E7%89%88.html">1. 关于 TAD Sim 单机版</a></li>
+<li class="toctree-l1"><a class="reference internal" href="102.%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D.html">2. 功能介绍</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀快速入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="201.%E5%8D%95%E6%9C%BA%E7%89%88%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2.html">1. 单机版安装部署</a></li>
+<li class="toctree-l1"><a class="reference internal" href="202.%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E7%AE%97%E6%B3%95%E6%8E%A5%E5%85%A5.html">2. 如何进行算法接入</a></li>
+<li class="toctree-l1"><a class="reference internal" href="203.%E5%AF%BC%E5%85%A5%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%AE%97%E6%B3%95%E5%88%B0%E5%B9%B3%E5%8F%B0.html">3. 导入第一个算法到平台</a></li>
+<li class="toctree-l1"><a class="reference internal" href="204.%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%BB%BF%E7%9C%9F%E5%9C%BA%E6%99%AF.html">4. 创建第一个仿真场景</a></li>
+<li class="toctree-l1"><a class="reference internal" href="205.%E6%92%AD%E6%94%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%9C%BA%E6%99%AF.html">5. 播放第一个场景</a></li>
+<li class="toctree-l1"><a class="reference internal" href="206.%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%9C%B0%E5%9B%BE.html">6. 创建第一个地图</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💡用户指引</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="301.%E4%B8%93%E4%B8%9A%E6%9C%AF%E8%AF%AD.html">1. 专业术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="302.%E5%9C%BA%E6%99%AF%E7%BC%96%E8%BE%91%E5%99%A8.html">2. 场景编辑器</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. 场景播放器</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">3.1 功能清单</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">3.2. 工具栏</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">3.2.1 返回主车页面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">3.2.2 视角切换页面</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">3.3. 播放列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">3.4. 操作栏</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">3.5. 调试栏</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id9">3.5.1. 记录仿真数据设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">3.5.2. 回放仿真数据设置</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">3.6. 运行数据栏</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">3.7 快捷键操作</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="304.%E5%9C%B0%E5%9B%BE%E7%BC%96%E8%BE%91%E5%99%A8.html">4. 地图编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="305.%E5%8A%A8%E5%8A%9B%E5%AD%A6%E4%BB%BF%E7%9C%9F.html">5. 动力学仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="306.%E4%BC%A0%E6%84%9F%E5%99%A8%E4%BB%BF%E7%9C%9F.html">6. 传感器仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="307.V2X%E4%BB%BF%E7%9C%9F.html">7. V2X仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="308.%E4%BB%BF%E7%9C%9F%E5%90%88%E6%88%90%E6%95%B0%E6%8D%AE%E7%94%9F%E6%88%90.html">8. 仿真合成数据生成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="309.%E5%9C%BA%E6%99%AF%E8%AF%84%E6%B5%8B.html">9. 场景评测</a></li>
+<li class="toctree-l1"><a class="reference internal" href="310.%E4%BB%BF%E7%9C%9F%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AE%B0%E5%BD%95%E5%92%8C%E5%9B%9E%E6%94%BE.html">10. 仿真数据的记录和回放</a></li>
+<li class="toctree-l1"><a class="reference internal" href="311.%E5%8D%95%E6%9C%BA%E5%A4%9A%E8%BF%9B%E7%A8%8B%E5%B9%B6%E8%A1%8C%E4%BB%BF%E7%9C%9F.html">11. 单机多进程并行仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="312.OpenSCENARIO%20%E6%94%AF%E6%8C%81.html">12. OpenSCENARIO 支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="313.OpenDRIVE%20%E6%94%AF%E6%8C%81.html">13. OpenDRIVE 支持</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚开发者指引</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="401.%E7%B3%BB%E7%BB%9F%E7%BA%A6%E5%AE%9A.html">1. 系统约定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="402.%E7%AE%97%E6%B3%95%E6%8E%A5%E5%85%A5%E8%AF%B4%E6%98%8E.html">2. 算法接入说明 - txSimSDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="403.%E4%BB%BF%E7%9C%9F%E6%B6%88%E6%81%AF%E8%AF%B4%E6%98%8E.html">3. 仿真消息说明</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔄版本说明</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="501.%E6%9C%80%E6%96%B0%E8%BF%AD%E4%BB%A3.html">1. 最新迭代</a></li>
+<li class="toctree-l1"><a class="reference internal" href="502.%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC.html">2. 历史版本</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TAD Sim</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">3. 场景播放器</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>3. 场景播放器<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<p>播放器可在场景编辑完成后, 快速生成场景, 支持二维播放和三维场景渲染, 通过可视化图表的方式实时显示主车状态, 支持日志查看和算法评估等多种调试方式.</p>
+<ul class="simple">
+<li><p>用户可以通过点击窗口切换栏中 <code class="docutils literal notranslate"><span class="pre">播放</span></code> 图标.</p></li>
+</ul>
+<div align="center"><img src="./_static/images/image120.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p>即可进入播放器, 可直接进入场景播放器中所编辑的场景的播放界面.</p></li>
+</ul>
+<div align="center"><img src="./_static/images/image121.png" alt="" width="700px"></div><br>
+<section id="id2">
+<h2>3.1 功能清单<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>ID</th>
+<th>功能</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>菜单栏</td>
+<td>菜单栏提供各种编辑和查看操作.菜单栏包括以下顶级菜单及子菜单: <br> - 文件: 新建、打开、打开最近、退出. <br> - 数据管理: 场景库管理、地图管理、主车算法管理、全局模块管理、指标管理、评测报告管理. <br> - 系统设置: 仿真设置, 同 <a href="./302.场景编辑器.md#238-仿真设置页面">场景编辑器-仿真设置</a> <br> - 帮助: 关于软件版本信息说明.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>工具栏</td>
+<td>工具栏用于选择当前编辑工具, 并进入下一步操作. 工具栏包括以下项: <br> - 返回主车: 场景编辑状态时, 捕捉定位主车位置, 同 <a href="./302.场景编辑器.md#249-返回主车页面">场景编辑器-返回主车</a>  <br> - 视角切换: 场景播放状态下可以切换播放视角效果, 播放器页面目前支持顶视角、司机视角、跟车视角及自由视角, 见 <a href="./302.场景编辑器.md#2410-视角切换页面">场景编辑器-视角切换</a>. <br> - 视窗放大缩小: 支持放大缩小阈值(0.1%-1000%). <br> (用户滚动鼠标中间滚轮亦有放大或缩小编辑器视图效果).</td>
+</tr>
+<tr>
+<td>3</td>
+<td>播放列表</td>
+<td>用户播放过的场景列表, 支持名称搜索功能.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>运行数据栏</td>
+<td>用户可通过点击运行右侧数据栏图标, 筛选显示运行数据内容, 包括主车速度、加速度、碰撞次数及算法模块数据, 并可以通过调整显示设置来选择是否显示主车、动态交通流等信息, 数据栏的底部图标可以显示车辆仪表盘信息, 以及 V2X 预警信息等.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>播放界面</td>
+<td>显示二维渲染场景. 播放运行过程中, 交通参与者周围会显示实时变化的绝对速度、加速度、相对速度和相对距离等数据, 主车周围显示当前车速及方位信息.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>操作栏</td>
+<td>用户可对场景播放状态进行操作. 详情可见 <a href="./303.场景播放器.md#34-操作栏">播放器-操作栏</a>章节. <br> - 播放状态图标: 播放状态支持场景单次播放和列表顺序播放的两个模式切换. <br> 在列表顺序播放模式下可以设置循环播放次数. <br> 列表顺序播放模式下, 点击 <code>开始批量播放</code> 三角图标后,  <br> 可点击 <code>结束当前场景</code> 图标, 直接跳到下 一个场景播放. <br> 点击 <code>结束批量播放</code> 后, 结束所有场景播放. <br> - 三角图标: 播放当前场景. <br> - 三角加播放帧图标: 单击后播放下一帧场景. <br> - 方形图标: 停止场景播放. <br> - 切换设置: 在 logsim 模式下支持 log2world 切换设置</td>
+</tr>
+<tr>
+<td>7</td>
+<td>调试栏</td>
+<td>记录当前场景各算法模块运行日志并支持日志查看及记录日志位置. 详情可见 <a href="./303.场景播放器.md#35-调试栏">播放器-调试栏</a>章节</td>
+</tr>
+<tr>
+<td>8</td>
+<td>三维播放界面</td>
+<td>基于三维重建技术的场景重建, 可输出场景元素真值, 自动生成各种天气、路况. 在 <code>模块管理</code> 的 <code>模组配置</code> 中加 <code>display</code> 后, 点击 <code>播放</code> 时可自动弹出 display 模式窗口. <br> - 键盘C: 窗口中通过键盘C键切换不同视角. <br> - 键盘P: 窗口中通过键盘P键打开环境设置.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id3">
+<h2>3.2. 工具栏<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<section id="id4">
+<h3>3.2.1 返回主车页面<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>返回主车, 场景编辑状态时, 捕捉定位主车位置.</p></li>
+</ul>
+<div align="center"><img src="./_static/images/image122.png" alt="" width="700px"></div><br>
+<!-- <div align="center">
+  <img src="./_static/images/image122.png" alt="" width="700px">
+  <p></p>
+</div> -->
+</section>
+<section id="id5">
+<h3>3.2.2 视角切换页面<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>在工具栏点击视角切换图标, 支持二维播放界面 <code class="docutils literal notranslate"><span class="pre">顶视角</span></code> （默认）、<code class="docutils literal notranslate"><span class="pre">司机视角</span></code>、<code class="docutils literal notranslate"><span class="pre">跟车视角</span></code>、<code class="docutils literal notranslate"><span class="pre">自由视角</span></code> 播放.</p></li>
+</ul>
+<div align="center"><img src="./_static/images/image123.png" alt="" width="700px"></div><br>
+<div align="center"><img src="./_static/images/image124.png" alt="" width="700px"></div><br>
+<div align="center"><img src="./_static/images/image125.png" alt="" width="700px"></div><br>
+<!-- <div align="center"><img src="./_static/images/image126.png" alt="" width="700px"></div><br>
+
+<div align="center"><img src="./_static/images/image127.png" alt="" width="700px"></div><br> -->
+<ul class="simple">
+<li><p>效果如下:</p></li>
+</ul>
+<div align="center"><img src="./_static/images/image128.png" alt="" width="700px"></div><br>
+<div align="center"><img src="./_static/images/image129.png" alt="" width="700px"></div><br>
+<div align="center"><img src="./_static/images/image130.png" alt="" width="700px"></div><br>
+</section>
+</section>
+<section id="id6">
+<h2>3.3. 播放列表<a class="headerlink" href="#id6" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>用户可在左侧 <code class="docutils literal notranslate"><span class="pre">播放列表</span></code> 栏处可点击加号图标, 在弹出 <code class="docutils literal notranslate"><span class="pre">添加场景</span></code> 窗口, 可多选场景添加入播放列表.</p></li>
+<li><p>点击 <code class="docutils literal notranslate"><span class="pre">减号</span> <span class="pre">-</span></code> 图标, 可以在播放列表中删除某一场景.</p></li>
+<li><p>在列表中按住 <code class="docutils literal notranslate"><span class="pre">shift</span></code> 可多选场景批量删除.</p></li>
+<li><p>点击上下箭头图标, 可以调整场景在播放列表中的前后位置.</p></li>
+</ul>
+<div align="center"><img src="./_static/images/image131.png" alt="" width="700px"></div><br>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>注: 场景列表只可添加相同类型的场景.</p>
+</div>
+</section>
+<section id="id7">
+<h2>3.4. 操作栏<a class="headerlink" href="#id7" title="Link to this heading"></a></h2>
+<p>场景运行在界面左上角可切换 Worldsim 模式和 Logsim 模式.</p>
+<ul class="simple">
+<li><p>播放状态支持单次场景播放和列表顺序播放的两个模式切换.</p></li>
+<li><p>在列表顺序播放模式下可以设置循环播放次数.</p></li>
+<li><p>列表顺序播放模式下, 点击 <code class="docutils literal notranslate"><span class="pre">开始批量播放</span></code> 三角图标后, 可点击方形 <code class="docutils literal notranslate"><span class="pre">结束当前场景</span></code> 图标, 直接跳到下一个场景播放.</p></li>
+<li><p>点击 <code class="docutils literal notranslate"><span class="pre">结束批量播放</span></code> 后, 结束所有场景播放.</p></li>
+<li><p>图标说明：</p>
+<ul>
+<li><p>三角图标:</p>
+<ul>
+<li><p>播放当前场景.</p></li>
+</ul>
+</li>
+<li><p>暂停图标:</p>
+<ul>
+<li><p>暂停场景播放, 可切换别的场景播放或进入场景编辑状态, 进行再编辑.</p></li>
+</ul>
+</li>
+<li><p>下一帧图标:</p>
+<ul>
+<li><p>暂停播放后, 单击下一帧图标播放下一帧场景.</p></li>
+</ul>
+</li>
+<li><p>方形图标:</p>
+<ul>
+<li><p>场景单次播放模式下, 停止当前场景播放.列表顺序播放模式下, 结束当前场景播放, 直接跳到下一场景.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div align="center"><img src="./_static/images/image132.png" alt="" width="700px"></div><br>
+<div align="center"><img src="./_static/images/image133.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p>切换为 Logsim 模式时, 可以设置当前场景运行是否启用 log2world 切换, 如开启主车切换, 则主车由回放数据驱动切换为新算法驱动.</p>
+<ul>
+<li><p>如开启交通流切换, 则在固定切换时机后, 交通流行为由回放数据驱动切换为 AI 驱动.</p></li>
+<li><p>如开启 log2world 切换，则播放时会提示log2world 已切换.</p></li>
+<li><p>切换时机设置分为事件点和场景固定时间两类.</p></li>
+<li><p>仅在场景非运行中状态下可修改切换设置.</p></li>
+</ul>
+</li>
+</ul>
+<div align="center"><img src="./_static/images/image329.png" alt="" width="700px"></div><br>
+<div align="center"><img src="./_static/images/image328.png" alt="" width="700px"></div><br>
+<div align="center"><img src="./_static/images/image330.png" alt="" width="700px"></div><br>
+</section>
+<section id="id8">
+<h2>3.5. 调试栏<a class="headerlink" href="#id8" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>单击调试展开图标, 可查看调试日志和消息.</p></li>
+<li><p>支持查看多个模块运行日志并打开相应日志位置.</p></li>
+<li><p>仿真数据的记录和导出方法:</p>
+<ul>
+<li><p>TAD Sim 各个模块之间数据交互基于 google protobuf, 目前使用版本是 3.9.1.</p></li>
+<li><p>TAD Sim 提供两个模块用于交互数据的存储和回放.</p></li>
+<li><p>TAD Sim 提供一个基于 python 的后处理 demo 脚本, 用于演示如何使用 python 处理 tadsim log 数据.</p></li>
+</ul>
+</li>
+</ul>
+<div align="center"><img src="./_static/images/image134.png" alt="" width="700px"></div><br>
+<section id="id9">
+<h3>3.5.1. 记录仿真数据设置<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
+<p>在 <code class="docutils literal notranslate"><span class="pre">主车算法管理</span></code> 弹窗中, 进入 <code class="docutils literal notranslate"><span class="pre">模组配置</span></code> 栏, 添加 Grading 评测模块, 通常 Grading 模块作为最后一个模块, 对 Grading 模块, 进行以下配置:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">通道设置</span></code> 栏勾选用户想要记录的数据的 topic 类型.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">导出路径设置</span></code> 指定 pblog 存放的目录, tadsim 会自动生成 <code class="docutils literal notranslate"><span class="pre">场景名称-年-月-日-时-分秒.pblog</span></code> 和 <code class="docutils literal notranslate"><span class="pre">场景名称-年-月-日-时-分秒.xlsx</span></code> 命名格式的文件.</p></li>
+</ul>
+<div align="center"><img src="./_static/images/image135.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">后处理脚本</span></code> 栏设置为文件浏览器位置, 通过文件浏览器选择后处理脚本文件.</p></li>
+</ul>
+<div align="center"><img src="./_static/images/image136.png" alt="" width="700px"></div><br>
+</section>
+<section id="id10">
+<h3>3.5.2. 回放仿真数据设置<a class="headerlink" href="#id10" title="Link to this heading"></a></h3>
+<p>在 <code class="docutils literal notranslate"><span class="pre">全局模块管理</span></code> 弹窗中, 进入 <code class="docutils literal notranslate"><span class="pre">模块设置</span></code> 栏, 添加 <code class="docutils literal notranslate"><span class="pre">Protobuf_Log_Player</span></code> 模块, 对 Protobuf_Log_Player 模块, 进行以下配置:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">通道设置</span></code> 栏勾选要回放数据的 topic 类型.</p></li>
+</ul>
+<div align="center"><img src="./_static/images/image137.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">回放文件路径</span></code> 设置为要回放的 pblog 数据文件路径.</p></li>
+</ul>
+<div align="center"><img src="./_static/images/image138.png" alt="" width="700px"></div><br>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>注: 使用 Protobuf_Log_Player 模块时, 要注意回放的 topic 跟模块正在发送的 topic 避免冲突,
+例如, Protobuf_Log_Player 模块在回放 TRAJECTORY, 那么就不应该运行 planning 模块.</p>
+</div>
+</section>
+</section>
+<section id="id11">
+<h2>3.6. 运行数据栏<a class="headerlink" href="#id11" title="Link to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>当前版本暂不提供该功能，敬请期待.</p>
+</div>
+<ul class="simple">
+<li><p>单击运行数据栏中的显示设置, 可以展开显示设置列表, 支持包括场景类信息 (如: 主车、动态交通流、交通信号灯等) 及道路类信息 (如车道线、车道连接线等) 的显示或隐藏.</p></li>
+</ul>
+<div align="center"><img src="./_static/images/image293.png" alt="" width="700px"></div><br>
+<ul class="simple">
+<li><p>运行数据栏底部的车辆仪表盘提供基于主车仪表盘的可视化界面, 包含速度、加速度以及制动、油门等相关行驶状态信息;</p></li>
+</ul>
+<div align="center"><img src="./_static/images/image294.png" alt="" width="700px"></div><br>
+<p>另外, 单击底部的 V2X 预警信息图标可以展开场景运行中动态详尽的 V2X 预警信息.</p>
+</section>
+<section id="id12">
+<h2>3.7 快捷键操作<a class="headerlink" href="#id12" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>操作</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>鼠标左键长按拖动</p></td>
+<td><p>自由视角旋转视图</p></td>
+</tr>
+<tr class="row-odd"><td><p>Alt + 鼠标左键长按拖动</p></td>
+<td><p>自由视角旋转视图</p></td>
+</tr>
+<tr class="row-even"><td><p>鼠标右键长按拖动</p></td>
+<td><p>平移视图</p></td>
+</tr>
+<tr class="row-odd"><td><p>鼠标中键滚动</p></td>
+<td><p>放大缩小视图</p></td>
+</tr>
+<tr class="row-even"><td><p>Alt + C</p></td>
+<td><p>切换是否跟车(二维)切换视角(Display)</p></td>
+</tr>
+<tr class="row-odd"><td><p>P</p></td>
+<td><p>在 Display 中打开天气时间等环境调节窗口</p></td>
+</tr>
+<tr class="row-even"><td><p>Shift + C</p></td>
+<td><p>跟车</p></td>
+</tr>
+<tr class="row-odd"><td><p>R</p></td>
+<td><p>在场景播放前和结束后, 可以通过 R 键切换场景自由漫游模式 <br> 使用 W / S / A / D 键, 控制上下左右移动位置通过R键切换回主车跟踪模式</p></td>
+</tr>
+<tr class="row-even"><td><p>Space</p></td>
+<td><p>播放/暂停</p></td>
+</tr>
+<tr class="row-odd"><td><p>Right</p></td>
+<td><p>下一帧</p></td>
+</tr>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>顶视角</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="302.%E5%9C%BA%E6%99%AF%E7%BC%96%E8%BE%91%E5%99%A8.html" class="btn btn-neutral float-left" title="2. 场景编辑器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="304.%E5%9C%B0%E5%9B%BE%E7%BC%96%E8%BE%91%E5%99%A8.html" class="btn btn-neutral float-right" title="4. 地图编辑器" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 Copyright (C) 2024 Tencent Inc.  All rights reserved。</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

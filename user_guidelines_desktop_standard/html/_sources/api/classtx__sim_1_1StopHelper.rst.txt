@@ -1,0 +1,17 @@
+.. _exhale_class_classtx__sim_1_1StopHelper:
+
+Class StopHelper
+================
+
+- Defined in :ref:`file__build_simcore_framework_src_txsim_messenger.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: tx_sim::StopHelper
+   :project: txSimSDK
+   :members:
+   :protected-members:
+   :undoc-members:

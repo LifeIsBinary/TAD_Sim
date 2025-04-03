@@ -1,0 +1,16 @@
+.. _dir__build_simcore:
+
+
+Directory simcore
+=================
+
+
+*Directory path:* ``/build/simcore``
+
+Subdirectories
+--------------
+
+- :ref:`dir__build_simcore_framework`
+
+
+

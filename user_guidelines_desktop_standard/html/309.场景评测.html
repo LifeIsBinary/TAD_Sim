@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>9. 场景评测 &mdash; Docs</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+      <link rel="stylesheet" type="text/css" href="_static/extra.css?v=be618c9b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=34088549"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=beaddf03"></script>
+        <script src="_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+        <script src="_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="10. 仿真数据的记录和回放" href="310.%E4%BB%BF%E7%9C%9F%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AE%B0%E5%BD%95%E5%92%8C%E5%9B%9E%E6%94%BE.html" />
+    <link rel="prev" title="8. 仿真合成数据生成" href="308.%E4%BB%BF%E7%9C%9F%E5%90%88%E6%88%90%E6%95%B0%E6%8D%AE%E7%94%9F%E6%88%90.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            TAD Sim
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">🪄概述</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="101.%E5%85%B3%E4%BA%8E%20TAD%20Sim%20%E5%8D%95%E6%9C%BA%E7%89%88.html">1. 关于 TAD Sim 单机版</a></li>
+<li class="toctree-l1"><a class="reference internal" href="102.%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D.html">2. 功能介绍</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀快速入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="201.%E5%8D%95%E6%9C%BA%E7%89%88%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2.html">1. 单机版安装部署</a></li>
+<li class="toctree-l1"><a class="reference internal" href="202.%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E7%AE%97%E6%B3%95%E6%8E%A5%E5%85%A5.html">2. 如何进行算法接入</a></li>
+<li class="toctree-l1"><a class="reference internal" href="203.%E5%AF%BC%E5%85%A5%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%AE%97%E6%B3%95%E5%88%B0%E5%B9%B3%E5%8F%B0.html">3. 导入第一个算法到平台</a></li>
+<li class="toctree-l1"><a class="reference internal" href="204.%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%BB%BF%E7%9C%9F%E5%9C%BA%E6%99%AF.html">4. 创建第一个仿真场景</a></li>
+<li class="toctree-l1"><a class="reference internal" href="205.%E6%92%AD%E6%94%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%9C%BA%E6%99%AF.html">5. 播放第一个场景</a></li>
+<li class="toctree-l1"><a class="reference internal" href="206.%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%9C%B0%E5%9B%BE.html">6. 创建第一个地图</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💡用户指引</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="301.%E4%B8%93%E4%B8%9A%E6%9C%AF%E8%AF%AD.html">1. 专业术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="302.%E5%9C%BA%E6%99%AF%E7%BC%96%E8%BE%91%E5%99%A8.html">2. 场景编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="303.%E5%9C%BA%E6%99%AF%E6%92%AD%E6%94%BE%E5%99%A8.html">3. 场景播放器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="304.%E5%9C%B0%E5%9B%BE%E7%BC%96%E8%BE%91%E5%99%A8.html">4. 地图编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="305.%E5%8A%A8%E5%8A%9B%E5%AD%A6%E4%BB%BF%E7%9C%9F.html">5. 动力学仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="306.%E4%BC%A0%E6%84%9F%E5%99%A8%E4%BB%BF%E7%9C%9F.html">6. 传感器仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="307.V2X%E4%BB%BF%E7%9C%9F.html">7. V2X仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="308.%E4%BB%BF%E7%9C%9F%E5%90%88%E6%88%90%E6%95%B0%E6%8D%AE%E7%94%9F%E6%88%90.html">8. 仿真合成数据生成</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9. 场景评测</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">9.1 评测模块功能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">9.2 评测指标集</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">9.3 评测模块配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">9.4 评测指标配置方法</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="310.%E4%BB%BF%E7%9C%9F%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AE%B0%E5%BD%95%E5%92%8C%E5%9B%9E%E6%94%BE.html">10. 仿真数据的记录和回放</a></li>
+<li class="toctree-l1"><a class="reference internal" href="311.%E5%8D%95%E6%9C%BA%E5%A4%9A%E8%BF%9B%E7%A8%8B%E5%B9%B6%E8%A1%8C%E4%BB%BF%E7%9C%9F.html">11. 单机多进程并行仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="312.OpenSCENARIO%20%E6%94%AF%E6%8C%81.html">12. OpenSCENARIO 支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="313.OpenDRIVE%20%E6%94%AF%E6%8C%81.html">13. OpenDRIVE 支持</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚开发者指引</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="401.%E7%B3%BB%E7%BB%9F%E7%BA%A6%E5%AE%9A.html">1. 系统约定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="402.%E7%AE%97%E6%B3%95%E6%8E%A5%E5%85%A5%E8%AF%B4%E6%98%8E.html">2. 算法接入说明 - txSimSDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="403.%E4%BB%BF%E7%9C%9F%E6%B6%88%E6%81%AF%E8%AF%B4%E6%98%8E.html">3. 仿真消息说明</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔄版本说明</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="501.%E6%9C%80%E6%96%B0%E8%BF%AD%E4%BB%A3.html">1. 最新迭代</a></li>
+<li class="toctree-l1"><a class="reference internal" href="502.%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC.html">2. 历史版本</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TAD Sim</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">9. 场景评测</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>9. 场景评测<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<section id="id2">
+<h2>9.1 评测模块功能<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>评测模块, 主要用于辅助/自动驾驶车辆的仿真测试评测.模块从 TAD Sim 仿真系统中获取特定的消息, 如主车定位消息, 交通参与者感知消息, 高精度地图, 红绿灯状态, 规划轨迹等, 通过对客户选择的特定指标进行监测及评测, 并给出对应的详细评测数据, 并支持测评报告自动生成.</p>
+</section>
+<section id="id3">
+<h2>9.2 评测指标集<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p>评测模块使用 KPI 作为基本组成单元, 一个 KPI 对应一个用户关心的评测指标.</p>
+<p><strong>KPI 的基本组成如下所示:</strong></p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>参数名称</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>评测指标名称</td>
+</tr>
+<tr>
+<td>Category</td>
+<td>关联的算法名称</td>
+</tr>
+<tr>
+<td>Parameters</td>
+<td>存放评测阈值</td>
+</tr>
+<tr>
+<td>passCondition</td>
+<td>评测条件</td>
+</tr>
+<tr>
+<td>finishCondition</td>
+<td>结束场景条件</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>注: 需要特别说明, passCondition 多数情况下可以理解为最多出现几次即判定为 Fail, 但也有例外, 如是否到达终点的 KPI 中 passCondition 为 1, 应当理解为至少到达终点 1 次, 才能判定为 Pass. <br>
+finishCondition 理解为最多出现几次即判定结束场景.</p>
+</div>
+<p><strong>目前支持的评测指标集定义如下:</strong></p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>指标定义</th>
+<th>字段名</th>
+<th>注释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TotalTime</td>
+<td>总时长</td>
+<td>场景始末时间差</td>
+</tr>
+<tr>
+<td>MinAveragerTimeHeadway</td>
+<td>跟车时距过小次数</td>
+<td>碰撞交通车所花费的时长小于时距阈值的次数</td>
+</tr>
+<tr>
+<td>MinDistanceFromCar</td>
+<td>跟车距离过小次数</td>
+<td>与交通车距离小于阈值的次数</td>
+</tr>
+<tr>
+<td>MaxAcceleration_V</td>
+<td>加速度过大次数</td>
+<td>纵向加速度过大次数</td>
+</tr>
+<tr>
+<td>MaxDeceleration_V</td>
+<td>减速度过大次数</td>
+<td>纵向刹车过大次数</td>
+</tr>
+<tr>
+<td>MaxTurningAccelerate</td>
+<td>横向加速度过大次数</td>
+<td>横向转向过猛次数</td>
+</tr>
+<tr>
+<td>MaxSpeed_V</td>
+<td>超速次数</td>
+<td>超过道路限速次数</td>
+</tr>
+<tr>
+<td>Collision</td>
+<td>碰撞</td>
+<td>主车是否发生碰撞</td>
+</tr>
+<tr>
+<td>CrossSolidLine</td>
+<td>压实线次数</td>
+<td>车轮接触道路实线的次数</td>
+</tr>
+<tr>
+<td>EndPoint</td>
+<td>是否到达终点</td>
+<td>主车是否到达终点</td>
+</tr>
+<tr>
+<td>MaxPosError_H</td>
+<td>横向偏移距离过大次数</td>
+<td>与规划路径的横向偏移绝对值与阈值的对比</td>
+</tr>
+<tr>
+<td>MaxAveragePosError_H</td>
+<td>平均横向偏移距离</td>
+<td>规划路径的横向偏移值, 左右偏移的平均值</td>
+</tr>
+<tr>
+<td>MaxPosError_H_L</td>
+<td>左侧最大横向偏移距离</td>
+<td>通过规划路径的横向偏移值, 向左偏移的最大值</td>
+</tr>
+<tr>
+<td>MaxPosError_H_R</td>
+<td>右侧最大横向偏移距离</td>
+<td>通过与规划路径的横向偏移值, 向右偏移的最大值</td>
+</tr>
+<tr>
+<td>RunTrafficLight</td>
+<td>闯红灯次数</td>
+<td>主车通过路口时信号灯为红灯的次数</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id4">
+<h2>9.3 评测模块配置<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<p>用户可根据自己的需求设定相应评测指标. 在 TAD Sim 单机版界面菜单栏中, 点击 <code class="docutils literal notranslate"><span class="pre">数据管理</span></code> 下拉框中 <code class="docutils literal notranslate"><span class="pre">主车算法管理</span></code>, 进入 <code class="docutils literal notranslate"><span class="pre">模块设置</span></code> 栏, 选中 <code class="docutils literal notranslate"><span class="pre">Grading</span></code> 模块, 进行设置.</p>
+<div align="center"><img src="./_static/images/image246.png" alt="" width="700px"></div><br>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">通道设置</span></code> 栏勾选用户想要记录的数据的 topic 类型, 用于生成详细评测数据.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">导出路径设置</span></code> 指定 pblog 存放的目录, Grading 模块默认路径为:
+<code class="docutils literal notranslate"><span class="pre">${tadsim_data_dir}/service_data/sim_data/pblog</span></code>
+Grading 模块会自动在该目录下生成 <code class="docutils literal notranslate"><span class="pre">场景名称-年-月-日-时-分秒.pblog</span></code> 的文件</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">后处理脚本</span></code>: 用来生成详细评测数据
+Grading 模块会自动调用, 需要特殊说明,
+<code class="docutils literal notranslate"><span class="pre">-f</span></code> 选项已经由 Grading 模块填写好, 用户只需要选填 <code class="docutils literal notranslate"><span class="pre">-p/i/s</span></code></p></li>
+<li><p>post_process 使用方式:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">f</span><span class="w"> </span><span class="n">xxx</span><span class="p">.</span><span class="n">pblog</span><span class="w">  </span><span class="c1">// 处理的 pblog 文件(必填项)</span>
+<span class="o">-</span><span class="n">p</span><span class="w">            </span><span class="c1">// 处理 trajectory、control, vehState.proto</span>
+<span class="o">-</span><span class="n">i</span><span class="w">            </span><span class="c1">// 处理 osi_imu.proto, osi_gps.proto</span>
+<span class="o">-</span><span class="n">s</span><span class="w">            </span><span class="c1">// 处理客户定制的消息</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="id5">
+<h2>9.4 评测指标配置方法<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<div align="center"><img src="./_static/images/image297.png" alt="" width="700px"></div><br>
+<div align="center"><img src="./_static/images/image300.png" alt="" width="700px"></div><br>
+<div align="center"><img src="./_static/images/image302.png" alt="" width="700px"></div><br>
+<p>通过点击 菜单栏- <code class="docutils literal notranslate"><span class="pre">数据管理</span></code> 下拉列表中的 <code class="docutils literal notranslate"><span class="pre">指标管理</span></code>, 可以在展开的 <code class="docutils literal notranslate"><span class="pre">指标管理</span></code> 界面, 对已有的指标组进行名称搜索, 并支持创建、删除或克隆新的指标组, 以及对新指标组内的指标进行增加、删减和编辑.在编辑指标时, 可以对阈值、评分、指标通过条件以及是否作为场景结束条件进行编辑, 以满足评测指标的个性化要求.</p>
+<div align="center"><img src="./_static/images/image298.png" alt="" width="700px"></div><br>
+<div align="center"><img src="./_static/images/image299.png" alt="" width="700px"></div><br>
+<p>同时, 指标管理支持对各评测指标进行分类 (如系统内置准确类、合规类、安全类等标签) 及基于名称的搜索, 并支持自行添加新的指标分类标签, 方便后续评测指标的组合.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="308.%E4%BB%BF%E7%9C%9F%E5%90%88%E6%88%90%E6%95%B0%E6%8D%AE%E7%94%9F%E6%88%90.html" class="btn btn-neutral float-left" title="8. 仿真合成数据生成" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="310.%E4%BB%BF%E7%9C%9F%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AE%B0%E5%BD%95%E5%92%8C%E5%9B%9E%E6%94%BE.html" class="btn btn-neutral float-right" title="10. 仿真数据的记录和回放" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 Copyright (C) 2024 Tencent Inc.  All rights reserved。</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

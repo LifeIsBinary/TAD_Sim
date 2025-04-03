@@ -7,6 +7,7 @@
 namespace tx_sim {
 
 /*! \~Chinese
+ * \usepackage{amsmath}
  * \brief 所有需要接入TADSim仿真系统的算法模块均需要继承SimModule类型。
  *
  * 用户的(C/C++)代码通过继承 tx_sim::SimModule 类型并实现其定义的4个回调(Callback)方法以接入TADSim仿真系统,四个回调
@@ -16,10 +17,10 @@ namespace tx_sim {
  * 要接受来自外部(仿真系统)的授时(虚拟的仿真时间)，而不应该依赖于特定平台的真实的物理时间。比如算法在计算每一帧的位
  * 移时：
  * \f[ ds = v * dt \f]
- * 其中dt应该是相邻两次 #Step 调用时获取的仿真时间的差值\f$ dt_{\text{simulation}} \f$，而不是两次调用的物理时间间隔
- * \f$ dt_{\text{physical}} \f$，仿真系统保证\f$ dt_{\text{simulation}} \f$永远等于相应模块在TADSim中配置的step time，
+ * 其中dt应该是相邻两次 #Step 调用时获取的仿真时间的差值\f$ dt_{\mathrm{simulation}} \f$，而不是两次调用的物理时间间隔
+ * \f$ dt_{\mathrm{physical}} \f$，仿真系统保证\f$ dt_{\mathrm{simulation}} \f$永远等于相应模块在TADSim中配置的step time，
  * 以此来确保算法在同一个场景的可复现性 [1]，而依赖于物理时间的算法在仿真场景中的运行结果将不可复现(甚至是错误的)，因为
- * \f$ dt_{\text{simulation}} \f$往往不等于\f$ dt_{\text{physical}} \f$，而场景中其他物体的状态变化均由仿真时间计算得出。
+ * \f$ dt_{\mathrm{simulation}} \f$往往不等于\f$ dt_{\mathrm{physical}} \f$，而场景中其他物体的状态变化均由仿真时间计算得出。
  * 任何一个场景的起始仿真时间总是从0s时刻开始。
  *
  * - [1] 前提是算法中不包含任何随机因素。

@@ -1,0 +1,14 @@
+.. _exhale_define_txsim__module_8h_1a63ebb1fa30d06496c9c595ffd95aa2d6:
+
+Define TXSIM_MODULE
+===================
+
+- Defined in :ref:`file__build_simcore_framework_src_txsim_module.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: TXSIM_MODULE
+   :project: txSimSDK

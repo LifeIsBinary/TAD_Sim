@@ -9,6 +9,7 @@ RUN echo "I am running on ${BUILDPLATFORM}, building for ${TARGETPLATFORM}" > /l
 # Disable interactive mode
 ENV DEBIAN_FRONTEND=noninteractive
 
+
 # Setting username
 ARG USERNAME=tadsim
 ARG WORKDIRNAME=/build/
@@ -170,7 +171,7 @@ RUN wget -O cppzmq-${CPPZMQ_VERSION}.tar.gz https://github.com/zeromq/cppzmq/arc
     && rm -rf cppzmq*
 
 # Install Boost
-RUN wget -O boost_${BOOST_VERSION}.tar.bz2 https://boostorg.jfrog.io/artifactory/main/release/1.75.0/source/boost_${BOOST_VERSION}.tar.bz2 \
+RUN wget -O boost_${BOOST_VERSION}.tar.bz2 https://sourceforge.net/projects/boost/files/boost/1.75.0/boost_1_75_0.tar.bz2/download  \
     && tar --bzip2 -xf boost_${BOOST_VERSION}.tar.bz2 \
     && cd boost_${BOOST_VERSION} \
     && ./bootstrap.sh --prefix=/usr/local \
@@ -302,7 +303,7 @@ RUN wget -O uriparser-${URIPARSER_VERSION}.tar.gz https://github.com/uriparser/u
     && rm -rf uriparser*
 
 # Install Go
-RUN wget -O go${GO_VERSION}.linux-amd64.tar.gz https://go.dev/dl/go${GO_VERSION}.linux-amd64.tar.gz \
+RUN wget -O go${GO_VERSION}.linux-amd64.tar.gz https://mirrors.aliyun.com/golang/go${GO_VERSION}.linux-amd64.tar.gz \
     && tar -C /usr/local -xzf go${GO_VERSION}.linux-amd64.tar.gz \
     && rm go${GO_VERSION}.linux-amd64.tar.gz
 

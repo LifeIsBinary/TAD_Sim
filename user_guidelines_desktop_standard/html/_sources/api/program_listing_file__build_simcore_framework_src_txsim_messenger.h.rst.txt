@@ -1,0 +1,264 @@
+
+.. _program_listing_file__build_simcore_framework_src_txsim_messenger.h:
+
+Program Listing for File txsim_messenger.h
+==========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__build_simcore_framework_src_txsim_messenger.h>` (``/build/simcore/framework/src/txsim_messenger.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #pragma once
+   
+   #include <string>
+   #include <unordered_map>
+   #include <utility>
+   #include <vector>
+   
+   #define TXSIM_CALLBACK_SET_ERROR(data, cbs, err) ((void (*)(void*, const char*))cbs[0])(data, err)
+   #define TXSIM_CALLBACK_INIT_PARAMETER(key) ((const char* (*)(void*, const char*))cbs_[1])(data_, key)
+   #define TXSIM_CALLBACK_INIT_SUBSCRIBE(topic) ((void (*)(void*, const char*))cbs_[2])(data_, topic)
+   #define TXSIM_CALLBACK_INIT_PUBLISH(topic) ((void (*)(void*, const char*))cbs_[3])(data_, topic)
+   #define TXSIM_CALLBACK_INIT_SUBSCRIBE_SHMEM(topic) ((void (*)(void*, const char*))cbs_[4])(data_, topic)
+   #define TXSIM_CALLBACK_INIT_PUBLISH_SHMEM(topic, max_size) \
+     ((void (*)(void*, const char*, uint32_t))cbs_[5])(data_, topic, max_size)
+   
+   #define TXSIM_CALLBACK_RESET_MAP_FILE_PATH() ((const char* (*)(void*))cbs_[1])(data_)
+   #define TXSIM_CALLBACK_RESET_MAP_LOCAL_ORIGIN(lon, lat, alt) \
+     ((void (*)(void*, double*, double*, double*))cbs_[2])(data_, lon, lat, alt)
+   #define TXSIM_CALLBACK_RESET_EGO_DESTINATION(lon, lat, alt) \
+     ((void (*)(void*, double*, double*, double*))cbs_[3])(data_, lon, lat, alt)
+   #define TXSIM_CALLBACK_RESET_EGO_SPEED_LIMIT() ((double (*)(void*))cbs_[4])(data_)
+   #define TXSIM_CALLBACK_RESET_LOCATION_RAW_MSG(raw) ((uint32_t(*)(void*, const char**))cbs_[5])(data_, raw)
+   #define TXSIM_CALLBACK_RESET_GEO_FENCE(point_array) ((uint32_t(*)(void*, double*))cbs_[6])(data_, point_array)
+   #define TXSIM_CALLBACK_RESET_SCENARIO_FILE_PATH() ((const char* (*)(void*))cbs_[7])(data_)
+   #define TXSIM_CALLBACK_RESET_EGO_PATH(point_array) ((uint32_t(*)(void*, double*))cbs_[8])(data_, point_array)
+   #define TXSIM_CALLBACK_RESET_VEHICLE_MEASUREMENT_RAW_MSG(idx, raw) \
+     ((uint32_t(*)(void*, int64_t*, const char**))cbs_[9])(data_, idx, raw)
+   #define TXSIM_CALLBACK_RESET_SCENCE_PB(raw) ((uint32_t(*)(void*, const char**))cbs_[10])(data_, raw)
+   #define TXSIM_CALLBACK_RESET_SETTING_PB(raw) ((uint32_t(*)(void*, const char**))cbs_[11])(data_, raw)
+   #define TXSIM_CALLBACK_RESET_GROUP_NAME() ((const char* (*)(void*))cbs_[12])(data_)
+   
+   #define TXSIM_CALLBACK_STEP_SUBSCRIBED_RAW_MSG(topic, msg) \
+     ((uint32_t(*)(void*, const char*, const char**))cbs_[1])(data_, topic, msg)
+   #define TXSIM_CALLBACK_STEP_PUBLISH_RAW_MSG(topic, payload, len) \
+     ((void (*)(void*, const char*, const char*, uint32_t))cbs_[2])(data_, topic, payload, len)
+   #define TXSIM_CALLBACK_STEP_STOP_SCENARIO(reason) ((void (*)(void*, const char*))cbs_[3])(data_, reason)
+   #define TXSIM_CALLBACK_STEP_TIMESTAMP() ((double (*)(void*))cbs_[4])(data_)
+   #define TXSIM_CALLBACK_STEP_SUBSCRIBED_SHMEM_DATA(topic, mem_addr) \
+     ((uint32_t(*)(void*, const char*, const char**))cbs_[5])(data_, topic, mem_addr)
+   #define TXSIM_CALLBACK_STEP_GET_PUBLISHED_SHMEM_BUFFER(topic, mem_addr) \
+     ((uint32_t(*)(void*, const char*, char**))cbs_[6])(data_, topic, mem_addr)
+   #define TXSIM_CALLBACK_STEP_CURRENTTIMESTAMP() ((double (*)(void*))cbs_[7])(data_)
+   
+   #define TXSIM_CALLBACK_STOP_SET_FEEDBACK(key, value) \
+     ((void (*)(void*, const char*, const char*))cbs_[1])(data_, key, value)
+   #define TXSIM_CALLBACK_STOP_MODULE_STATUS() ((const char* (*)(void*))cbs_[2])(data_)
+   
+   #define TXSIM_MESSENGER_API_VERSION 6130803
+   
+   #define TXSIM_MSGER_CLS_DEF(cls) \
+    private:                        \
+     void* data_;                   \
+     void** cbs_;                   \
+                                    \
+    public:                         \
+     cls(void* data, void** cbs) : data_(data), cbs_(cbs) {}
+   
+   namespace tx_sim {
+   
+   namespace topic {
+   const std::string kTraffic = "TRAFFIC";
+   const std::string kLaneMark = "LANE_MARKS";
+   const std::string kGrading = "GRADING";
+   const std::string kLocation = "LOCATION";
+   const std::string kVehicleState = "VEHICLE_STATE";
+   const std::string kTrajectory = "TRAJECTORY";
+   const std::string kControl = "CONTROL";
+   const std::string kControl_V2 = "CONTROL_V2";
+   const std::string kPlanStatus = "PLAN_STATUS";
+   const std::string kTraffic_billborad = "TRAFFIC_BILLBOARD";
+   const std::string kEnviroment = "ENVIRONMENTAL";
+   const std::string kPredictions = "PREDICTION";
+   const std::string kDebugMessage = "DEBUG_MESSAGE";
+   const std::string kUnionFlag = "EgoUnion/";
+   const std::string kLogLevel = "_LOG_LEVEL";
+   }  // namespace topic
+   
+   namespace constant {
+   const std::string kInitKeyModuleSharedLibDirectory = "_cwd";
+   const std::string kInitKeyModuleExecutePeriod = "_exec_period";
+   const std::string kInitKeyModuleLogLevel = "_log_level";
+   }  // namespace constant
+   
+   typedef struct {
+     double x, y, z;
+   } Vector3d;
+   class InitHelper {
+     TXSIM_MSGER_CLS_DEF(InitHelper)
+   
+    public:
+     std::string GetParameter(const std::string& key) { return TXSIM_CALLBACK_INIT_PARAMETER(key.c_str()); }
+   
+     void Subscribe(const std::string& topic) { TXSIM_CALLBACK_INIT_SUBSCRIBE(topic.c_str()); }
+   
+     void Publish(const std::string& topic) { TXSIM_CALLBACK_INIT_PUBLISH(topic.c_str()); }
+   
+     void SubscribeShmem(const std::string& topic) { TXSIM_CALLBACK_INIT_SUBSCRIBE_SHMEM(topic.c_str()); }
+   
+     void PublishShmem(const std::string& topic, size_t max_memory_size) {
+       TXSIM_CALLBACK_INIT_PUBLISH_SHMEM(topic.c_str(), max_memory_size);
+     }
+   };
+   
+   class ResetHelper {
+     TXSIM_MSGER_CLS_DEF(ResetHelper)
+   
+    public:
+     std::string map_file_path() { return TXSIM_CALLBACK_RESET_MAP_FILE_PATH(); }
+   
+     Vector3d map_local_origin() {
+       Vector3d rst;
+       TXSIM_CALLBACK_RESET_MAP_LOCAL_ORIGIN(&rst.x, &rst.y, &rst.z);
+       return rst;
+     }
+   
+     Vector3d ego_destination() {
+       Vector3d rst;
+       TXSIM_CALLBACK_RESET_EGO_DESTINATION(&rst.x, &rst.y, &rst.z);
+       return rst;
+     }
+   
+     double ego_speed_limit() { return TXSIM_CALLBACK_RESET_EGO_SPEED_LIMIT(); }
+   
+     const std::string ego_start_location() {
+       const char* msg = nullptr;
+       uint32_t len = TXSIM_CALLBACK_RESET_LOCATION_RAW_MSG(&msg);
+       return std::string(msg, len);
+     }
+   
+     std::vector<Vector3d> geo_fence() {
+       std::vector<Vector3d> ret;
+       uint32_t len = TXSIM_CALLBACK_RESET_GEO_FENCE(nullptr);
+       if (len > 0) {
+         double* p = new double[len * 2];
+         TXSIM_CALLBACK_RESET_GEO_FENCE(p);
+         ret.reserve(len);
+         for (size_t i = 0; i < len; i++) {
+           ret.emplace_back();
+           Vector3d& g = ret.back();
+           g.x = p[i << 1];
+           g.y = p[(i << 1) + 1];
+           g.z = 0;
+         }
+         delete[] p;
+       }
+       return ret;
+     }
+   
+     std::string scenario_file_path() { return TXSIM_CALLBACK_RESET_SCENARIO_FILE_PATH(); }
+   
+     std::vector<Vector3d> ego_path() {
+       std::vector<Vector3d> ret;
+       uint32_t len = TXSIM_CALLBACK_RESET_EGO_PATH(nullptr);
+       if (len > 0) {
+         double* p = new double[len * 3];
+         TXSIM_CALLBACK_RESET_EGO_PATH(p);
+         ret.reserve(len);
+         for (size_t i = 0; i < len; i++) {
+           ret.emplace_back();
+           Vector3d& pp = ret.back();
+           size_t si = i * 3;
+           pp.x = p[si];
+           pp.y = p[si + 1];
+           pp.z = p[si + 2];
+         }
+         delete[] p;
+       }
+       return ret;
+     }
+   
+     void vehicle_measurements(std::vector<std::pair<int64_t, std::string>>& measurements) {
+       measurements.clear();
+       size_t count = TXSIM_CALLBACK_RESET_VEHICLE_MEASUREMENT_RAW_MSG(0, nullptr);
+       measurements.resize(count);
+       for (int64_t i = 0; i < count; ++i) {
+         const char* msg = nullptr;
+         int64_t id = i;
+         size_t len = TXSIM_CALLBACK_RESET_VEHICLE_MEASUREMENT_RAW_MSG(&id, &msg);
+         std::get<0>(measurements[i]) = id;
+         std::get<1>(measurements[i]).assign(msg, len);
+       }
+     }
+     const std::string scene_pb() {
+       const char* msg = nullptr;
+       uint32_t len = TXSIM_CALLBACK_RESET_SCENCE_PB(&msg);
+       return std::string(msg, len);
+     }
+     const std::string setting_pb() {
+       const char* msg = nullptr;
+       uint32_t len = TXSIM_CALLBACK_RESET_SETTING_PB(&msg);
+       return std::string(msg, len);
+     }
+     const std::string group_name() { return TXSIM_CALLBACK_RESET_GROUP_NAME(); }
+   };
+   
+   class StepHelper {
+     TXSIM_MSGER_CLS_DEF(StepHelper)
+   
+    public:
+     void GetSubscribedMessage(const std::string& topic, std::string& payload) {
+       const char* msg = nullptr;
+       uint32_t len = TXSIM_CALLBACK_STEP_SUBSCRIBED_RAW_MSG(topic.c_str(), &msg);
+       payload.assign(msg, len);
+     }
+   
+     void PublishMessage(const std::string& topic, const std::string& payload) {
+       TXSIM_CALLBACK_STEP_PUBLISH_RAW_MSG(topic.c_str(), payload.c_str(), payload.size());
+     }
+   
+     void StopScenario(const std::string& reason) { TXSIM_CALLBACK_STEP_STOP_SCENARIO(reason.c_str()); }
+   
+     double timestamp() { return TXSIM_CALLBACK_STEP_TIMESTAMP(); }
+   
+     double current_timestamp() { return TXSIM_CALLBACK_STEP_CURRENTTIMESTAMP(); }
+     uint32_t GetSubscribedShmemData(const std::string& topic, const char** mem_data) {
+       return TXSIM_CALLBACK_STEP_SUBSCRIBED_SHMEM_DATA(topic.c_str(), mem_data);
+     }
+   
+     uint32_t GetPublishedShmemBuffer(const std::string& topic, char** mem_buf) {
+       return TXSIM_CALLBACK_STEP_GET_PUBLISHED_SHMEM_BUFFER(topic.c_str(), mem_buf);
+     }
+   };
+   
+   class StopHelper {
+     TXSIM_MSGER_CLS_DEF(StopHelper)
+   
+    public:
+     void set_feedback(const std::string& key, const std::string& value) {
+       TXSIM_CALLBACK_STOP_SET_FEEDBACK(key.c_str(), value.c_str());
+     }
+   
+     std::string get_module_status() { return TXSIM_CALLBACK_STOP_MODULE_STATUS(); }
+   };
+   
+   namespace impl {
+   
+   template <typename Fn>
+   void TranslateExceptions(void* data, void** cbs, Fn&& fn) {
+     // clang-format off
+     try {
+       fn();
+     } catch (const std::exception& e) {
+       TXSIM_CALLBACK_SET_ERROR(data, cbs, e.what());
+     } catch (...) {
+       TXSIM_CALLBACK_SET_ERROR(data, cbs, "Unknown error type");
+     }
+     // clang-format on
+   }
+   
+   }  // namespace impl
+   
+   }  // namespace tx_sim

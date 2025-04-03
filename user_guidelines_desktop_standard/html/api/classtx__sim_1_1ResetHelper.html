@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class ResetHelper &mdash; Docs</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+      <link rel="stylesheet" type="text/css" href="../_static/extra.css?v=be618c9b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=34088549"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/translations.js?v=beaddf03"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Class SimModule" href="classtx__sim_1_1SimModule.html" />
+    <link rel="prev" title="Class InitHelper" href="classtx__sim_1_1InitHelper.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            TAD Sim
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">🪄概述</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../101.%E5%85%B3%E4%BA%8E%20TAD%20Sim%20%E5%8D%95%E6%9C%BA%E7%89%88.html">1. 关于 TAD Sim 单机版</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../102.%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D.html">2. 功能介绍</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀快速入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../201.%E5%8D%95%E6%9C%BA%E7%89%88%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2.html">1. 单机版安装部署</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../202.%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E7%AE%97%E6%B3%95%E6%8E%A5%E5%85%A5.html">2. 如何进行算法接入</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../203.%E5%AF%BC%E5%85%A5%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%AE%97%E6%B3%95%E5%88%B0%E5%B9%B3%E5%8F%B0.html">3. 导入第一个算法到平台</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../204.%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%BB%BF%E7%9C%9F%E5%9C%BA%E6%99%AF.html">4. 创建第一个仿真场景</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../205.%E6%92%AD%E6%94%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%9C%BA%E6%99%AF.html">5. 播放第一个场景</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../206.%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%9C%B0%E5%9B%BE.html">6. 创建第一个地图</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💡用户指引</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../301.%E4%B8%93%E4%B8%9A%E6%9C%AF%E8%AF%AD.html">1. 专业术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../302.%E5%9C%BA%E6%99%AF%E7%BC%96%E8%BE%91%E5%99%A8.html">2. 场景编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../303.%E5%9C%BA%E6%99%AF%E6%92%AD%E6%94%BE%E5%99%A8.html">3. 场景播放器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../304.%E5%9C%B0%E5%9B%BE%E7%BC%96%E8%BE%91%E5%99%A8.html">4. 地图编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../305.%E5%8A%A8%E5%8A%9B%E5%AD%A6%E4%BB%BF%E7%9C%9F.html">5. 动力学仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../306.%E4%BC%A0%E6%84%9F%E5%99%A8%E4%BB%BF%E7%9C%9F.html">6. 传感器仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../307.V2X%E4%BB%BF%E7%9C%9F.html">7. V2X仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../308.%E4%BB%BF%E7%9C%9F%E5%90%88%E6%88%90%E6%95%B0%E6%8D%AE%E7%94%9F%E6%88%90.html">8. 仿真合成数据生成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../309.%E5%9C%BA%E6%99%AF%E8%AF%84%E6%B5%8B.html">9. 场景评测</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../310.%E4%BB%BF%E7%9C%9F%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AE%B0%E5%BD%95%E5%92%8C%E5%9B%9E%E6%94%BE.html">10. 仿真数据的记录和回放</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../311.%E5%8D%95%E6%9C%BA%E5%A4%9A%E8%BF%9B%E7%A8%8B%E5%B9%B6%E8%A1%8C%E4%BB%BF%E7%9C%9F.html">11. 单机多进程并行仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../312.OpenSCENARIO%20%E6%94%AF%E6%8C%81.html">12. OpenSCENARIO 支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../313.OpenDRIVE%20%E6%94%AF%E6%8C%81.html">13. OpenDRIVE 支持</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚开发者指引</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../401.%E7%B3%BB%E7%BB%9F%E7%BA%A6%E5%AE%9A.html">1. 系统约定</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../402.%E7%AE%97%E6%B3%95%E6%8E%A5%E5%85%A5%E8%AF%B4%E6%98%8E.html">2. 算法接入说明 - txSimSDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../402.%E7%AE%97%E6%B3%95%E6%8E%A5%E5%85%A5%E8%AF%B4%E6%98%8E.html#id1">2.1 算法接入简要流程</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../402.%E7%AE%97%E6%B3%95%E6%8E%A5%E5%85%A5%E8%AF%B4%E6%98%8E.html#sdk">2.2 算法接入 SDK 说明</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html">Library API</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="library_root.html#full-api">Full API</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../403.%E4%BB%BF%E7%9C%9F%E6%B6%88%E6%81%AF%E8%AF%B4%E6%98%8E.html">3. 仿真消息说明</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔄版本说明</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../501.%E6%9C%80%E6%96%B0%E8%BF%AD%E4%BB%A3.html">1. 最新迭代</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../502.%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC.html">2. 历史版本</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">TAD Sim</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../402.%E7%AE%97%E6%B3%95%E6%8E%A5%E5%85%A5%E8%AF%B4%E6%98%8E.html">2. 算法接入说明 - txSimSDK</a></li>
+          <li class="breadcrumb-item"><a href="library_root.html">Library API</a></li>
+      <li class="breadcrumb-item active">Class ResetHelper</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-resethelper">
+<span id="exhale-class-classtx-sim-1-1resethelper"></span><h1>Class ResetHelper<a class="headerlink" href="#class-resethelper" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__build_simcore_framework_src_txsim_messenger.h.html#file-build-simcore-framework-src-txsim-messenger-h"><span class="std std-ref">File txsim_messenger.h</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N6tx_sim11ResetHelperE">
+<span id="_CPPv3N6tx_sim11ResetHelperE"></span><span id="_CPPv2N6tx_sim11ResetHelperE"></span><span id="tx_sim::ResetHelper"></span><span class="target" id="classtx__sim_1_1ResetHelper"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ResetHelper</span></span></span><a class="headerlink" href="#_CPPv4N6tx_sim11ResetHelperE" title="Link to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6tx_sim11ResetHelper13map_file_pathEv">
+<span id="_CPPv3N6tx_sim11ResetHelper13map_file_pathEv"></span><span id="_CPPv2N6tx_sim11ResetHelper13map_file_pathEv"></span><span id="tx_sim::ResetHelper::map_file_path"></span><span class="target" id="classtx__sim_1_1ResetHelper_1ad3ec553ddbecba2a230014de096afb14"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">map_file_path</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6tx_sim11ResetHelper13map_file_pathEv" title="Link to this definition"></a><br /></dt>
+<dd><p>获取当前场景对应的地图文件路径。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>当前场景对应的地图文件的绝对路径。 </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6tx_sim11ResetHelper16map_local_originEv">
+<span id="_CPPv3N6tx_sim11ResetHelper16map_local_originEv"></span><span id="_CPPv2N6tx_sim11ResetHelper16map_local_originEv"></span><span id="tx_sim::ResetHelper::map_local_origin"></span><span class="target" id="classtx__sim_1_1ResetHelper_1a9e8f536128a5d2c564edbef59a1c4f49"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="structtx__sim_1_1Vector3d.html#_CPPv4N6tx_sim8Vector3dE" title="tx_sim::Vector3d"><span class="n"><span class="pre">Vector3d</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">map_local_origin</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6tx_sim11ResetHelper16map_local_originEv" title="Link to this definition"></a><br /></dt>
+<dd><p>获取当前场景对应的地图的建议原点。仿真系统中发出的障碍物及主车信息中的位置 一般采用经纬度形式，通过该原点可以方便的将这些经纬度坐标转换为局部坐标系以便于 计算。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>当前场景对应地图的原点坐标(经度-纬度-海拔)。 </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6tx_sim11ResetHelper15ego_destinationEv">
+<span id="_CPPv3N6tx_sim11ResetHelper15ego_destinationEv"></span><span id="_CPPv2N6tx_sim11ResetHelper15ego_destinationEv"></span><span id="tx_sim::ResetHelper::ego_destination"></span><span class="target" id="classtx__sim_1_1ResetHelper_1a488419b26c6958a7cf627c71a2c95443"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="structtx__sim_1_1Vector3d.html#_CPPv4N6tx_sim8Vector3dE" title="tx_sim::Vector3d"><span class="n"><span class="pre">Vector3d</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ego_destination</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6tx_sim11ResetHelper15ego_destinationEv" title="Link to this definition"></a><br /></dt>
+<dd><p>获取当前场景主车的终点位置(经纬度)。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>当前场景主车的终点坐标(经度-纬度-海拔)。 </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6tx_sim11ResetHelper15ego_speed_limitEv">
+<span id="_CPPv3N6tx_sim11ResetHelper15ego_speed_limitEv"></span><span id="_CPPv2N6tx_sim11ResetHelper15ego_speed_limitEv"></span><span id="tx_sim::ResetHelper::ego_speed_limit"></span><span class="target" id="classtx__sim_1_1ResetHelper_1a26a3df2295b7e80fcd5b24f862f456b9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ego_speed_limit</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6tx_sim11ResetHelper15ego_speed_limitEv" title="Link to this definition"></a><br /></dt>
+<dd><p>获取当前场景限速信息。该限速区别于地图数据中不同路段的限速信息，通常是用户在 场景编辑器中针对主车在当前整个场景中设置的一个最大速度，用户算法需要同时考虑 地图元素和当前场景中的限速信息。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>当前场景中针对主车的限速值(最大速度)，单位为米/秒(m/s)。 </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6tx_sim11ResetHelper18ego_start_locationEv">
+<span id="_CPPv3N6tx_sim11ResetHelper18ego_start_locationEv"></span><span id="_CPPv2N6tx_sim11ResetHelper18ego_start_locationEv"></span><span id="tx_sim::ResetHelper::ego_start_location"></span><span class="target" id="classtx__sim_1_1ResetHelper_1a2b7b52436a0438499274067ece570aa3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ego_start_location</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6tx_sim11ResetHelper18ego_start_locationEv" title="Link to this definition"></a><br /></dt>
+<dd><p>获取当前场景中主车的起始定位信息。如果当前模块订阅了系统内置的定位消息 (topic LOCATION)，则和在第0帧的Step方法中获取到的定位消息相同。返回的结果是Google的 <a class="reference external" href="https://developers.google.com/protocol-buffers">protocol buffer</a> 序列化后的字节数组， 详见 <a class="reference internal" href="classtx__sim_1_1StepHelper.html#classtx__sim_1_1StepHelper_1ab758569efa92f2536210c0dd7ae5a7f2"><span class="std std-ref">tx_sim::StepHelper::GetSubscribedMessage</span></a> 。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>经protocol buffer序列化后的主车初始定位消息。 </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6tx_sim11ResetHelper9geo_fenceEv">
+<span id="_CPPv3N6tx_sim11ResetHelper9geo_fenceEv"></span><span id="_CPPv2N6tx_sim11ResetHelper9geo_fenceEv"></span><span id="tx_sim::ResetHelper::geo_fence"></span><span class="target" id="classtx__sim_1_1ResetHelper_1aa8aee566a18d59fe670dce82a9669c92"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structtx__sim_1_1Vector3d.html#_CPPv4N6tx_sim8Vector3dE" title="tx_sim::Vector3d"><span class="n"><span class="pre">Vector3d</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">geo_fence</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6tx_sim11ResetHelper9geo_fenceEv" title="Link to this definition"></a><br /></dt>
+<dd><p>获取本车的地理围栏信息，由返回的一系列经纬度坐标点构成的首尾相接的闭合多边形所表示。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>构成主车地理围栏边界的经纬度坐标点的有序列表，长度至少为3，首尾相接。 </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6tx_sim11ResetHelper18scenario_file_pathEv">
+<span id="_CPPv3N6tx_sim11ResetHelper18scenario_file_pathEv"></span><span id="_CPPv2N6tx_sim11ResetHelper18scenario_file_pathEv"></span><span id="tx_sim::ResetHelper::scenario_file_path"></span><span class="target" id="classtx__sim_1_1ResetHelper_1a30bbe17b4d713fdcc803c33733729712"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">scenario_file_path</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6tx_sim11ResetHelper18scenario_file_pathEv" title="Link to this definition"></a><br /></dt>
+<dd><p>获取当前场景对应的场景文件路径。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>当前场景对应的场景文件的绝对路径。 </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6tx_sim11ResetHelper8ego_pathEv">
+<span id="_CPPv3N6tx_sim11ResetHelper8ego_pathEv"></span><span id="_CPPv2N6tx_sim11ResetHelper8ego_pathEv"></span><span id="tx_sim::ResetHelper::ego_path"></span><span class="target" id="classtx__sim_1_1ResetHelper_1abbb09e0c8e3bced4e0c71abe78d819d2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structtx__sim_1_1Vector3d.html#_CPPv4N6tx_sim8Vector3dE" title="tx_sim::Vector3d"><span class="n"><span class="pre">Vector3d</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ego_path</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6tx_sim11ResetHelper8ego_pathEv" title="Link to this definition"></a><br /></dt>
+<dd><p>获取主车路径的控制点信息，每个控制点由经纬度以及高程组成。 第一个控制点为主车起点，同 <a class="reference internal" href="#classtx__sim_1_1ResetHelper_1a2b7b52436a0438499274067ece570aa3"><span class="std std-ref">ego_start_location</span></a> 中的经纬度信息，最后一个控制点为主车的终点，同 <a class="reference internal" href="#classtx__sim_1_1ResetHelper_1a488419b26c6958a7cf627c71a2c95443"><span class="std std-ref">ego_destination</span></a> ，其余为主车路径中的途径点。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>主车路径的控制点列表，列表中的元素为浮点类型的三元组，分别代表经度、纬度、高程。 </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6tx_sim11ResetHelper20vehicle_measurementsERNSt6vectorINSt4pairI7int64_tNSt6stringEEEEE">
+<span id="_CPPv3N6tx_sim11ResetHelper20vehicle_measurementsERNSt6vectorINSt4pairI7int64_tNSt6stringEEEEE"></span><span id="_CPPv2N6tx_sim11ResetHelper20vehicle_measurementsERNSt6vectorINSt4pairI7int64_tNSt6stringEEEEE"></span><span id="tx_sim::ResetHelper::vehicle_measurements__std::vector:std::pair:int64_t.ss::R"></span><span class="target" id="classtx__sim_1_1ResetHelper_1a981a15380273906823adc113c303cb49"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vehicle_measurements</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">int64_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">measurements</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6tx_sim11ResetHelper20vehicle_measurementsERNSt6vectorINSt4pairI7int64_tNSt6stringEEEEE" title="Link to this definition"></a><br /></dt>
+<dd><p>获取当前场景中（多个）主车的ID和对应车辆尺寸信息，具体参考vehicle_geometry.proto中的定义。 返回时measurements数组中每个二元组第二项std::string是Google的 <a class="reference external" href="https://developers.google.com/protocol-buffers">protocol buffer</a> 序列化后的字节数组， 需要反序列化为vehicle_geometry.proto中定义的VehicleGeometoryList对象然后再获取各个尺寸信息， 详见 <a class="reference internal" href="classtx__sim_1_1StepHelper.html#classtx__sim_1_1StepHelper_1ab758569efa92f2536210c0dd7ae5a7f2"><span class="std std-ref">tx_sim::StepHelper::GetSubscribedMessage</span></a> 。 </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6tx_sim11ResetHelper8scene_pbEv">
+<span id="_CPPv3N6tx_sim11ResetHelper8scene_pbEv"></span><span id="_CPPv2N6tx_sim11ResetHelper8scene_pbEv"></span><span id="tx_sim::ResetHelper::scene_pb"></span><span class="target" id="classtx__sim_1_1ResetHelper_1a117e4206892011d9f9fc8669049ed94f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">scene_pb</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6tx_sim11ResetHelper8scene_pbEv" title="Link to this definition"></a><br /></dt>
+<dd><p>获取scene proto 返回的结果是Google的 <a class="reference external" href="https://developers.google.com/protocol-buffers">protocol buffer</a> 序列化后的字节数组 </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6tx_sim11ResetHelper10setting_pbEv">
+<span id="_CPPv3N6tx_sim11ResetHelper10setting_pbEv"></span><span id="_CPPv2N6tx_sim11ResetHelper10setting_pbEv"></span><span id="tx_sim::ResetHelper::setting_pb"></span><span class="target" id="classtx__sim_1_1ResetHelper_1a1b8bac7003eb218a420eb54e36474308"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setting_pb</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6tx_sim11ResetHelper10setting_pbEv" title="Link to this definition"></a><br /></dt>
+<dd><p>setting proto 返回的结果是Google的 <a class="reference external" href="https://developers.google.com/protocol-buffers">protocol buffer</a> 序列化后的字节数组，反序列后返回的是相关配置，具体内容如下 versioin:版本号 scenario_path:场景文件路径 hadmap_path：地图路径 vehicle_dynamic_cfg_path：动力学参数配置路径 sensor_cfg_path：传感器配置路径 environment_cfg_path：环境参数配置路径 default_xosc_path：主车配置路径 scenario_labels：场景标签 </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6tx_sim11ResetHelper10group_nameEv">
+<span id="_CPPv3N6tx_sim11ResetHelper10group_nameEv"></span><span id="_CPPv2N6tx_sim11ResetHelper10group_nameEv"></span><span id="tx_sim::ResetHelper::group_name"></span><span class="target" id="classtx__sim_1_1ResetHelper_1aee1555a369f4835dcef9282db70ebb13"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">group_name</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6tx_sim11ResetHelper10group_nameEv" title="Link to this definition"></a><br /></dt>
+<dd><p>获取当前主车所在的组名</p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>对于多主车仿真每个主车算法会有一个对应的组,该组名会在创建场景的时候写到场景文件里面, 对于旧的场景文件没有该字段的默认返回Ego001。 </p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>主车的组名</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="classtx__sim_1_1InitHelper.html" class="btn btn-neutral float-left" title="Class InitHelper" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="classtx__sim_1_1SimModule.html" class="btn btn-neutral float-right" title="Class SimModule" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 Copyright (C) 2024 Tencent Inc.  All rights reserved。</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

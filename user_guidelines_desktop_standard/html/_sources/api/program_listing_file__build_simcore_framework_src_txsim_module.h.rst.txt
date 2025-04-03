@@ -1,0 +1,64 @@
+
+.. _program_listing_file__build_simcore_framework_src_txsim_module.h:
+
+Program Listing for File txsim_module.h
+=======================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file__build_simcore_framework_src_txsim_module.h>` (``/build/simcore/framework/src/txsim_module.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #pragma once
+   
+   #include "txsim_messenger.h"
+   #include "visibility.h"
+   
+   namespace tx_sim {
+   
+   class SimModule {
+    public:
+     virtual void Init(InitHelper& helper) = 0;
+     virtual void Reset(ResetHelper& helper) = 0;
+     virtual void Step(StepHelper& helper) = 0;
+     virtual void Stop(StopHelper& helper) = 0;
+    public:
+     virtual ~SimModule(){};
+   };
+   
+   }  // namespace tx_sim
+   
+   extern "C" {
+   TXSIM_API void* txsim_new_module();
+   TXSIM_API void txsim_delete_module(void* p);
+   TXSIM_API void txsim_init(void* module, void* data, void** cbs);
+   TXSIM_API void txsim_reset(void* module, void* data, void** cbs);
+   TXSIM_API void txsim_step(void* module, void* data, void** cbs);
+   TXSIM_API void txsim_stop(void* module, void* data, void** cbs);
+   TXSIM_API uint32_t txsim_messenger_api_version();
+   }
+   
+   #define TXSIM_MODULE(cls)                                                                                              \
+     extern "C" {                                                                                                         \
+     void* txsim_new_module() { return new cls(); }                                                                       \
+     void txsim_delete_module(void* p) { delete reinterpret_cast<tx_sim::SimModule*>(p); }                                \
+     void txsim_init(void* module, void* data, void** cbs) {                                                              \
+       tx_sim::InitHelper helper(data, cbs);                                                                              \
+       tx_sim::impl::TranslateExceptions(data, cbs, [&] { reinterpret_cast<tx_sim::SimModule*>(module)->Init(helper); }); \
+     }                                                                                                                    \
+     void txsim_reset(void* module, void* data, void** cbs) {                                                             \
+       tx_sim::ResetHelper helper(data, cbs);                                                                             \
+       tx_sim::impl::TranslateExceptions(data, cbs,                                                                       \
+                                         [&] { reinterpret_cast<tx_sim::SimModule*>(module)->Reset(helper); });           \
+     }                                                                                                                    \
+     void txsim_step(void* module, void* data, void** cbs) {                                                              \
+       tx_sim::StepHelper helper(data, cbs);                                                                              \
+       tx_sim::impl::TranslateExceptions(data, cbs, [&] { reinterpret_cast<tx_sim::SimModule*>(module)->Step(helper); }); \
+     }                                                                                                                    \
+     void txsim_stop(void* module, void* data, void** cbs) {                                                              \
+       tx_sim::StopHelper helper(data, cbs);                                                                              \
+       tx_sim::impl::TranslateExceptions(data, cbs, [&] { reinterpret_cast<tx_sim::SimModule*>(module)->Stop(helper); }); \
+     }                                                                                                                    \
+     uint32_t txsim_messenger_api_version() { return TXSIM_MESSENGER_API_VERSION; }                                       \
+     }

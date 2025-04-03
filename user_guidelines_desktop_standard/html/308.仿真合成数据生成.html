@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8. 仿真合成数据生成 &mdash; Docs</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+      <link rel="stylesheet" type="text/css" href="_static/extra.css?v=be618c9b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=34088549"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=beaddf03"></script>
+        <script src="_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+        <script src="_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="9. 场景评测" href="309.%E5%9C%BA%E6%99%AF%E8%AF%84%E6%B5%8B.html" />
+    <link rel="prev" title="7. V2X仿真" href="307.V2X%E4%BB%BF%E7%9C%9F.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            TAD Sim
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">🪄概述</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="101.%E5%85%B3%E4%BA%8E%20TAD%20Sim%20%E5%8D%95%E6%9C%BA%E7%89%88.html">1. 关于 TAD Sim 单机版</a></li>
+<li class="toctree-l1"><a class="reference internal" href="102.%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D.html">2. 功能介绍</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀快速入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="201.%E5%8D%95%E6%9C%BA%E7%89%88%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2.html">1. 单机版安装部署</a></li>
+<li class="toctree-l1"><a class="reference internal" href="202.%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E7%AE%97%E6%B3%95%E6%8E%A5%E5%85%A5.html">2. 如何进行算法接入</a></li>
+<li class="toctree-l1"><a class="reference internal" href="203.%E5%AF%BC%E5%85%A5%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%AE%97%E6%B3%95%E5%88%B0%E5%B9%B3%E5%8F%B0.html">3. 导入第一个算法到平台</a></li>
+<li class="toctree-l1"><a class="reference internal" href="204.%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%BB%BF%E7%9C%9F%E5%9C%BA%E6%99%AF.html">4. 创建第一个仿真场景</a></li>
+<li class="toctree-l1"><a class="reference internal" href="205.%E6%92%AD%E6%94%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%9C%BA%E6%99%AF.html">5. 播放第一个场景</a></li>
+<li class="toctree-l1"><a class="reference internal" href="206.%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%9C%B0%E5%9B%BE.html">6. 创建第一个地图</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💡用户指引</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="301.%E4%B8%93%E4%B8%9A%E6%9C%AF%E8%AF%AD.html">1. 专业术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="302.%E5%9C%BA%E6%99%AF%E7%BC%96%E8%BE%91%E5%99%A8.html">2. 场景编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="303.%E5%9C%BA%E6%99%AF%E6%92%AD%E6%94%BE%E5%99%A8.html">3. 场景播放器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="304.%E5%9C%B0%E5%9B%BE%E7%BC%96%E8%BE%91%E5%99%A8.html">4. 地图编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="305.%E5%8A%A8%E5%8A%9B%E5%AD%A6%E4%BB%BF%E7%9C%9F.html">5. 动力学仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="306.%E4%BC%A0%E6%84%9F%E5%99%A8%E4%BB%BF%E7%9C%9F.html">6. 传感器仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="307.V2X%E4%BB%BF%E7%9C%9F.html">7. V2X仿真</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">8. 仿真合成数据生成</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">8.1 核心功能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">8.2 仿真合成数据的生成方法</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="309.%E5%9C%BA%E6%99%AF%E8%AF%84%E6%B5%8B.html">9. 场景评测</a></li>
+<li class="toctree-l1"><a class="reference internal" href="310.%E4%BB%BF%E7%9C%9F%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AE%B0%E5%BD%95%E5%92%8C%E5%9B%9E%E6%94%BE.html">10. 仿真数据的记录和回放</a></li>
+<li class="toctree-l1"><a class="reference internal" href="311.%E5%8D%95%E6%9C%BA%E5%A4%9A%E8%BF%9B%E7%A8%8B%E5%B9%B6%E8%A1%8C%E4%BB%BF%E7%9C%9F.html">11. 单机多进程并行仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="312.OpenSCENARIO%20%E6%94%AF%E6%8C%81.html">12. OpenSCENARIO 支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="313.OpenDRIVE%20%E6%94%AF%E6%8C%81.html">13. OpenDRIVE 支持</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚开发者指引</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="401.%E7%B3%BB%E7%BB%9F%E7%BA%A6%E5%AE%9A.html">1. 系统约定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="402.%E7%AE%97%E6%B3%95%E6%8E%A5%E5%85%A5%E8%AF%B4%E6%98%8E.html">2. 算法接入说明 - txSimSDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="403.%E4%BB%BF%E7%9C%9F%E6%B6%88%E6%81%AF%E8%AF%B4%E6%98%8E.html">3. 仿真消息说明</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔄版本说明</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="501.%E6%9C%80%E6%96%B0%E8%BF%AD%E4%BB%A3.html">1. 最新迭代</a></li>
+<li class="toctree-l1"><a class="reference internal" href="502.%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC.html">2. 历史版本</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TAD Sim</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">8. 仿真合成数据生成</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>8. 仿真合成数据生成<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<p>TAD Sim 中负责仿真合成数据生成的模块为 <code class="docutils literal notranslate"><span class="pre">sim_synthetic_data</span></code> , 该模块专门设计用于仿真合成数据生成, 输出高质量的标注数据, 确保数据的准确性和可用性, 在仿真过程中的各种模拟对象提供标注数据, 从而为感知算法提供海量训练数据, 降低人工标注成本.</p>
+<p>仿真系统可以用于生成自动驾驶标注数据, 这些数据对于训练和验证自动驾驶算法至关重要, 通过在仿真环境中创建各种交通场景, 可以收集大量有关车辆、行人、自行车等交通参与者的信息, 从而为自动驾驶系统提供丰富的训练数据.</p>
+<section id="id2">
+<h2>8.1 核心功能<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>利用仿真系统的强大功能, 可以模拟各种复杂的交通场景, 包括城市街道、高速公路、乡村道路等类型道路；</p>
+<p>在这些场景中, 模块会标注车辆、行人、自行车、摩托车、三轮车等交通参与者, 为自动驾驶系统提供全面的训练数据;</p>
+<p>通过精确的数据处理流程, 为车辆、行人、自行车、摩托车、三轮车等模拟对象添加描述性信息, 生成高质量的标注数据;</p>
+</section>
+<section id="id3">
+<h2>8.2 仿真合成数据的生成方法<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<figure class="center-video">
+  <video controls width="700">
+    <source src="./_static/videos/TAD Sim-仿真合成数据生成.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <figcaption>仿真合成数据生成操作示例</figcaption>
+</figure>
+<p><strong>Step 1. 模块配置</strong></p>
+<p>在主车配置中添加模块, 默认参数即可, 合成数据保存在 <code class="docutils literal notranslate"><span class="pre">用户目录/sim_data/synthetic_data</span></code>, 具体参数描述如下：</p>
+<table border="1" class="docutils">
+<thead>
+<tr>
+<th>参数</th>
+<th>默认值</th>
+<th>含义</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-device</td>
+<td>all</td>
+<td>指定实例id, 只有绑定到<br>该id的传感器才被读取, 可以指定all, 表示所有传感器</td>
+<td>-device=0</td>
+</tr>
+<tr>
+<td>NumOfDisplay</td>
+<td>30</td>
+<td>表示 Display 的个数, 用于分布式<br>多个渲染引擎所有传感器的接收</td>
+<td>NumOfDisplay=30</td>
+</tr>
+<tr>
+<td>DataSavePath</td>
+<td>用户目录/<br><code>sim_data/synthetic_data</code></td>
+<td>保存目录路径 (<strong>必填</strong>)</td>
+<td>DataSavePath=/home/sim/data/</td>
+</tr>
+<tr>
+<td>CreateScenarioDir</td>
+<td>true</td>
+<td>是否创建场景目录, 默认 true, 在多个场景连续播放时, 防止数据被覆盖</td>
+<td>CreateScenarioDir=false</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 2. 配置传感器</strong></p>
+<p>根据项目需求配置传感器, 目前本软件版本仅支持摄像头、语义相机、鱼眼相机及激光雷达四种传感器的标注, 相应传感器配置方式详见 <a class="reference internal" href="306.%E4%BC%A0%E6%84%9F%E5%99%A8%E4%BB%BF%E7%9C%9F.html#id1"><span class="std std-ref">传感器仿真</span></a>.</p>
+<div align="center"><img src="./_static/images/image51.png" alt="" width="700px"></div><br>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>其中激光雷达暂时只支持 <code class="docutils literal notranslate"><span class="pre">禾赛</span> <span class="pre">128AT</span></code> 和 <code class="docutils literal notranslate"><span class="pre">速腾聚创</span> <span class="pre">M1</span></code>.</p>
+</div>
+<p><strong>Step 3. 配置 Display</strong></p>
+<p>该功能依赖 Display 的广播功能, 才能接收到图像点云数据，开关设置方法为, 首先打开 <code class="docutils literal notranslate"><span class="pre">Game.ini</span></code> 文件, 文件路径如下:</p>
+<ul class="simple">
+<li><p>Windows 下:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">C:\Users\用户名\AppData\Roaming\tadsim\data\service_data\display\Saved\Config\WindowsNoEditor\Game.ini</span></code></p></li>
+</ul>
+</li>
+<li><p>Ubuntu 下:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">/home/用户名/.config/tadsim/Display/Saved/Config/LinuxNoEditor/Game.ini</span></code></p></li>
+</ul>
+</li>
+</ul>
+<p>在 Game.ini 中添加如下内容:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[Sensor]</span>
+<span class="na">PublicMsg</span><span class="o">=</span><span class="s">true</span>
+</pre></div>
+</div>
+<p><strong>Step 4. 查看标注数据</strong></p>
+<p>本模块的数据包含图像及点云标注两部分:</p>
+<ul class="simple">
+<li><p>图像标注：</p>
+<ul>
+<li><p>包含鱼眼图像、针孔相机图像和语义图像, 均可以生成对应的 Open Label 文件, 包含了每个目标的 2D 多边形.</p></li>
+</ul>
+</li>
+<li><p>点云标注：</p>
+<ul>
+<li><p>生成每个目标的 3D 包围框.</p></li>
+</ul>
+</li>
+</ul>
+<p>合成数据目录结构如下:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>scene_name
+│
+├── camera
+│   ├── jpg
+│   │   └── 0000000060_1.jpg
+│   └── 0000000060_1.json
+│
+├── lidar
+│   ├── pcd
+│   │   └── 0000000100_1.pcd
+│   └── 00000000100_1.json
+│
+└── semantic
+    ├── png
+    │   └── 0000000060_1.png
+    └── 0000000060_1.json
+</pre></div>
+</div>
+<p>标注文件详细参考 <a class="reference external" href="https://www.asam.net/">ASAM</a> (Association for Standardization of Automation and Measuring Systems) <a class="reference external" href="https://www.asam.net/index.php?eID=dumpFile&amp;amp;t=f&amp;amp;f=4566&amp;amp;token=9d976f840af04adee33b9f85aa3c22f2de4968dd#sec-0c3aa8d0-0340-439f-a45e-4e63c1124b41">OpenLABEL</a>, 它是一个开源的数据标注和语义描述规范, 用于自动驾驶和智能交通系统领域.</p>
+<p>它提供了一种通用、灵活且可扩展的数据标注和描述方法, 以便在不同的应用程序、工具和算法之间实现互操作性, 结构如下:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;openlabel&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;coordinate_systems&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;camera1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;children&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">                </span><span class="nt">&quot;parent&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;geospatial-wgs84&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;pose_wrt_parent&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;euler_angles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                        </span><span class="mf">0.02362162247300148</span><span class="p">,</span>
+<span class="w">                        </span><span class="mf">0.032431244850158691</span><span class="p">,</span>
+<span class="w">                        </span><span class="mf">-4.0072531700134277</span>
+<span class="w">                    </span><span class="p">],</span>
+<span class="w">                    </span><span class="nt">&quot;sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;zyx&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;translation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                        </span><span class="mf">121.17319430917146</span><span class="p">,</span>
+<span class="w">                        </span><span class="mf">31.264391873975356</span><span class="p">,</span>
+<span class="w">                        </span><span class="mf">14.931379369460046</span>
+<span class="w">                    </span><span class="p">]</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;geo&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="nt">&quot;geospatial-wgs84&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;children&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                    </span><span class="s2">&quot;camera1&quot;</span>
+<span class="w">                </span><span class="p">],</span>
+<span class="w">                </span><span class="nt">&quot;parent&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;geo&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;metadata&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;schema_version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0.0&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;objects&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;10001&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;coordinate_system&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;camera1&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;static obstacle&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;object_data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;poly2d&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                        </span><span class="p">{</span>
+<span class="w">                            </span><span class="nt">&quot;closed&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">                            </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="nt">&quot;val&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                                </span><span class="mf">1869.9042510157674</span><span class="p">,</span>
+<span class="w">                                </span><span class="mf">816.44006113256864</span><span class="p">,</span>
+<span class="w">                                </span><span class="mf">1883.1925027238617</span><span class="p">,</span>
+<span class="w">                                </span><span class="mf">823.4215599404456</span><span class="p">,</span>
+<span class="w">                                </span><span class="mf">1904.1553282032924</span><span class="p">,</span>
+<span class="w">                                </span><span class="mf">821.62681394146512</span><span class="p">,</span>
+<span class="w">                                </span><span class="mf">1917.5725686391868</span><span class="p">,</span>
+<span class="w">                                </span><span class="mf">816.37856523613607</span><span class="p">,</span>
+<span class="w">                                </span><span class="mf">1919.4521194348272</span><span class="p">,</span>
+<span class="w">                                </span><span class="mf">786.00369242379645</span><span class="p">,</span>
+<span class="w">                                </span><span class="mf">1915.3122297402197</span><span class="p">,</span>
+<span class="w">                                </span><span class="mf">722.40998510224335</span><span class="p">,</span>
+<span class="w">                                </span><span class="mf">1873.9195983798361</span><span class="p">,</span>
+<span class="w">                                </span><span class="mf">724.70326965525828</span><span class="p">,</span>
+<span class="w">                                </span><span class="mf">1869.9042510157674</span><span class="p">,</span>
+<span class="w">                                </span><span class="mf">816.44006113256864</span>
+<span class="w">                            </span><span class="p">]</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                    </span><span class="p">]</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cone&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;streams&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;camera1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;camera1&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;camera&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;uri&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;camera/jpg/0000000060_1.jpg&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>注: Open Label 中的 pose 为传感器的坐标系姿态, 并非外参.</p>
+<ul class="simple">
+<li><p>Camera: 世界坐标系下相机的安装位置 (经纬度) 和姿态 (X轴朝东)</p></li>
+<li><p>Lidar: 世界坐标系下点云数据原点的位置 (经纬度) 和X轴朝向</p></li>
+</ul>
+</div>
+<p>点云的 Pose 和 Lidar 坐标系定义有关, 详见 <a class="reference internal" href="306.%E4%BC%A0%E6%84%9F%E5%99%A8%E4%BB%BF%E7%9C%9F.html#id7"><span class="std std-ref">6.2 激光雷达仿真</span></a>;</p>
+<ul class="simple">
+<li><p>传感器坐标时, 点云原点为传感器安装位置, 和 Camera 类似</p></li>
+<li><p>车辆坐标系时, 点云原点为主车坐标原点, 姿态为主车的姿态</p></li>
+<li><p>全局坐标系时, 点云的原点为固定点, 一般为预设的 ENU 参考点</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="307.V2X%E4%BB%BF%E7%9C%9F.html" class="btn btn-neutral float-left" title="7. V2X仿真" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="309.%E5%9C%BA%E6%99%AF%E8%AF%84%E6%B5%8B.html" class="btn btn-neutral float-right" title="9. 场景评测" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 Copyright (C) 2024 Tencent Inc.  All rights reserved。</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

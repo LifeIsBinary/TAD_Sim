@@ -1,24 +1,3 @@
-import { AxesHelper } from 'three'
-
-interface IAxesParams {
-  size?: number
-}
-
-class Axes {
-  object: AxesHelper
-  constructor (params: IAxesParams = {}) {
-    const { size = 50 } = params
-    this.object = new AxesHelper(size)
-  }
-
-  setVisible (isVisible: boolean) {
-    if (this.object.visible === isVisible) return
-    this.object.visible = isVisible
-  }
-
-  dispose () {
-    this.object.dispose()
-  }
-}
-
-export default Axes
+version https://git-lfs.github.com/spec/v1
+oid sha256:d39494709d3b6d5865cdab04b4af759b6467e051aaef8d57d8b4af9c5ffc7d31
+size 428

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class StepHelper &mdash; Docs</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css?v=a885cde7" />
+      <link rel="stylesheet" type="text/css" href="../_static/extra.css?v=be618c9b" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=34088549"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/translations.js?v=beaddf03"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js?v=73120307"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js?v=660e4f45"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Class StopHelper" href="classtx__sim_1_1StopHelper.html" />
+    <link rel="prev" title="Class SimModuleService" href="classtx__sim_1_1SimModuleService.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            TAD Sim
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">🪄概述</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../101.%E5%85%B3%E4%BA%8E%20TAD%20Sim%20%E5%8D%95%E6%9C%BA%E7%89%88.html">1. 关于 TAD Sim 单机版</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../102.%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D.html">2. 功能介绍</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🚀快速入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../201.%E5%8D%95%E6%9C%BA%E7%89%88%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2.html">1. 单机版安装部署</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../202.%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E7%AE%97%E6%B3%95%E6%8E%A5%E5%85%A5.html">2. 如何进行算法接入</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../203.%E5%AF%BC%E5%85%A5%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%AE%97%E6%B3%95%E5%88%B0%E5%B9%B3%E5%8F%B0.html">3. 导入第一个算法到平台</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../204.%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%BB%BF%E7%9C%9F%E5%9C%BA%E6%99%AF.html">4. 创建第一个仿真场景</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../205.%E6%92%AD%E6%94%BE%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%9C%BA%E6%99%AF.html">5. 播放第一个场景</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../206.%E5%88%9B%E5%BB%BA%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%9C%B0%E5%9B%BE.html">6. 创建第一个地图</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">💡用户指引</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../301.%E4%B8%93%E4%B8%9A%E6%9C%AF%E8%AF%AD.html">1. 专业术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../302.%E5%9C%BA%E6%99%AF%E7%BC%96%E8%BE%91%E5%99%A8.html">2. 场景编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../303.%E5%9C%BA%E6%99%AF%E6%92%AD%E6%94%BE%E5%99%A8.html">3. 场景播放器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../304.%E5%9C%B0%E5%9B%BE%E7%BC%96%E8%BE%91%E5%99%A8.html">4. 地图编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../305.%E5%8A%A8%E5%8A%9B%E5%AD%A6%E4%BB%BF%E7%9C%9F.html">5. 动力学仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../306.%E4%BC%A0%E6%84%9F%E5%99%A8%E4%BB%BF%E7%9C%9F.html">6. 传感器仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../307.V2X%E4%BB%BF%E7%9C%9F.html">7. V2X仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../308.%E4%BB%BF%E7%9C%9F%E5%90%88%E6%88%90%E6%95%B0%E6%8D%AE%E7%94%9F%E6%88%90.html">8. 仿真合成数据生成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../309.%E5%9C%BA%E6%99%AF%E8%AF%84%E6%B5%8B.html">9. 场景评测</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../310.%E4%BB%BF%E7%9C%9F%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AE%B0%E5%BD%95%E5%92%8C%E5%9B%9E%E6%94%BE.html">10. 仿真数据的记录和回放</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../311.%E5%8D%95%E6%9C%BA%E5%A4%9A%E8%BF%9B%E7%A8%8B%E5%B9%B6%E8%A1%8C%E4%BB%BF%E7%9C%9F.html">11. 单机多进程并行仿真</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../312.OpenSCENARIO%20%E6%94%AF%E6%8C%81.html">12. OpenSCENARIO 支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../313.OpenDRIVE%20%E6%94%AF%E6%8C%81.html">13. OpenDRIVE 支持</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">📚开发者指引</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../401.%E7%B3%BB%E7%BB%9F%E7%BA%A6%E5%AE%9A.html">1. 系统约定</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../402.%E7%AE%97%E6%B3%95%E6%8E%A5%E5%85%A5%E8%AF%B4%E6%98%8E.html">2. 算法接入说明 - txSimSDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../402.%E7%AE%97%E6%B3%95%E6%8E%A5%E5%85%A5%E8%AF%B4%E6%98%8E.html#id1">2.1 算法接入简要流程</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../402.%E7%AE%97%E6%B3%95%E6%8E%A5%E5%85%A5%E8%AF%B4%E6%98%8E.html#sdk">2.2 算法接入 SDK 说明</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html">Library API</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="library_root.html#full-api">Full API</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../403.%E4%BB%BF%E7%9C%9F%E6%B6%88%E6%81%AF%E8%AF%B4%E6%98%8E.html">3. 仿真消息说明</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">🔄版本说明</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../501.%E6%9C%80%E6%96%B0%E8%BF%AD%E4%BB%A3.html">1. 最新迭代</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../502.%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC.html">2. 历史版本</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">TAD Sim</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../402.%E7%AE%97%E6%B3%95%E6%8E%A5%E5%85%A5%E8%AF%B4%E6%98%8E.html">2. 算法接入说明 - txSimSDK</a></li>
+          <li class="breadcrumb-item"><a href="library_root.html">Library API</a></li>
+      <li class="breadcrumb-item active">Class StepHelper</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-stephelper">
+<span id="exhale-class-classtx-sim-1-1stephelper"></span><h1>Class StepHelper<a class="headerlink" href="#class-stephelper" title="Link to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file__build_simcore_framework_src_txsim_messenger.h.html#file-build-simcore-framework-src-txsim-messenger-h"><span class="std std-ref">File txsim_messenger.h</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N6tx_sim10StepHelperE">
+<span id="_CPPv3N6tx_sim10StepHelperE"></span><span id="_CPPv2N6tx_sim10StepHelperE"></span><span id="tx_sim::StepHelper"></span><span class="target" id="classtx__sim_1_1StepHelper"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StepHelper</span></span></span><a class="headerlink" href="#_CPPv4N6tx_sim10StepHelperE" title="Link to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6tx_sim10StepHelper20GetSubscribedMessageERKNSt6stringERNSt6stringE">
+<span id="_CPPv3N6tx_sim10StepHelper20GetSubscribedMessageERKNSt6stringERNSt6stringE"></span><span id="_CPPv2N6tx_sim10StepHelper20GetSubscribedMessageERKNSt6stringERNSt6stringE"></span><span id="tx_sim::StepHelper::GetSubscribedMessage__ssCR.ssR"></span><span class="target" id="classtx__sim_1_1StepHelper_1ab758569efa92f2536210c0dd7ae5a7f2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetSubscribedMessage</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">topic</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">payload</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6tx_sim10StepHelper20GetSubscribedMessageERKNSt6stringERNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>获取当前模块订阅的消息内容。如何解析消息内容取决于发布该消息的模块如何编码该 消息，仿真系统内置的topic对应的消息格式均由Google的 <a class="reference external" href="https://developers.google.com/protocol-buffers">Protocol Buffer</a><p>定义，因此获取到的仿真系统内置的 消息是经过protobuf序列化后的字节数组。</p>
+<p>对于仿真系统内置的消息，可以通过protobuf库进行解析：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">payload</span><span class="p">;</span>
+<span class="n">GetSubscribedMessage</span><span class="p">(</span><span class="n">tx_sim</span><span class="o">::</span><span class="n">topic</span><span class="o">::</span><span class="n">kTraffic</span><span class="p">,</span><span class="w"> </span><span class="n">payload</span><span class="p">);</span>
+<span class="n">sim_msg</span><span class="o">::</span><span class="n">Traffic</span><span class="w"> </span><span class="n">traffic_msg</span><span class="p">;</span>
+<span class="n">traffic_msg</span><span class="p">.</span><span class="n">ParseFromString</span><span class="p">(</span><span class="n">payload</span><span class="p">);</span>
+<span class="c1">// using traffic_msg through generated protobuf getter methods...</span>
+</pre></div>
+</div>
+ 对于用户自定义的消息格式，如果是简单的字符串(以’\0’结尾)，则可以通过该方法获取 到字符串payload后直接使用，如果是序列化后的字节数组(按照 <a class="reference internal" href="#classtx__sim_1_1StepHelper_1ad91afa8dd7a0f01068aad24520fea7eb"><span class="std std-ref">PublishMessage</span></a> 中的方法填入)， 则可以如下解析： <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">payload</span><span class="p">;</span>
+<span class="n">GetSubscribedMessage</span><span class="p">(</span><span class="s">&quot;MY_CUSTOM_TOPIC&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">payload</span><span class="p">);</span>
+<span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">buffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">payload</span><span class="p">.</span><span class="n">data</span><span class="p">();</span>
+<span class="kt">size_t</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">payload</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<span class="c1">// using serialized byte array via buffer and len variables...</span>
+</pre></div>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>topic</strong> – <strong>[in]</strong> 要获取的订阅消息对应的topic。 </p></li>
+<li><p><strong>payload</strong> – <strong>[out]</strong> 获取的订阅消息的内容(字符串或序列化后的字节数组)。 </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6tx_sim10StepHelper14PublishMessageERKNSt6stringERKNSt6stringE">
+<span id="_CPPv3N6tx_sim10StepHelper14PublishMessageERKNSt6stringERKNSt6stringE"></span><span id="_CPPv2N6tx_sim10StepHelper14PublishMessageERKNSt6stringERKNSt6stringE"></span><span id="tx_sim::StepHelper::PublishMessage__ssCR.ssCR"></span><span class="target" id="classtx__sim_1_1StepHelper_1ad91afa8dd7a0f01068aad24520fea7eb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PublishMessage</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">topic</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">payload</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6tx_sim10StepHelper14PublishMessageERKNSt6stringERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>向系统发布消息，以使其他模块可以获取此消息。只有通过 <a class="reference internal" href="classtx__sim_1_1InitHelper.html#classtx__sim_1_1InitHelper_1a2b7809eddb4bf3a7efa17d48e4d555f4"><span class="std std-ref">tx_sim::InitHelper::Publish</span></a> 注册 的topic对应的消息才可以被发布到仿真系统中。发布的消息内容可以是字符串或者序列化后的字节 数组，如何解析需要提前和接收此消息的模块协商好，对于需要和仿真系统交流的消息，需要采用 TADSim提供的内置消息类型进行序列化后发布。 对于仿真系统内置的消息，可以通过protobuf库进行序列化： <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">payload</span><span class="p">;</span>
+<span class="n">traffic_msg</span><span class="p">.</span><span class="n">SerializeToString</span><span class="p">(</span><span class="o">&amp;</span><span class="n">payload</span><span class="p">);</span><span class="w"> </span><span class="c1">// traffic_msg is sim_msg::Traffic type which provided by TADSim.</span>
+<span class="n">PublishMessage</span><span class="p">(</span><span class="n">tx_sim</span><span class="o">::</span><span class="n">topic</span><span class="o">::</span><span class="n">kTraffic</span><span class="p">,</span><span class="w"> </span><span class="n">payload</span><span class="p">);</span>
+</pre></div>
+</div>
+ 对于用户自定义的消息格式，如果是简单的字符串(以’\0’结尾)，则可以直接将字符串传入： <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">PublishMessage</span><span class="p">(</span><span class="s">&quot;MY_CUSTOM_TOPIC&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Hello, my friend!&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+ 如果是序列化后的字节流，则可以按如下方式发布： <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">buffer</span><span class="p">[</span><span class="mi">512</span><span class="p">];</span>
+<span class="c1">// size_t len = ... (the actual length of the serialized data)</span>
+<span class="c1">// say we copy len data into this buffer here. be sure the len &lt;= 512 that we allocated earlier.</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">payload</span><span class="p">;</span>
+<span class="n">payload</span><span class="p">.</span><span class="n">assign</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="n">len</span><span class="p">);</span>
+<span class="n">PublishMessage</span><span class="p">(</span><span class="s">&quot;MY_CUSTOM_TOPIC&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">payload</span><span class="p">);</span>
+</pre></div>
+</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>topic</strong> – <strong>[in]</strong> 要发布的消息对应的topic。 </p></li>
+<li><p><strong>payload</strong> – <strong>[in]</strong> 发布的消息内容(字符串或序列化后的字节数组)。 </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6tx_sim10StepHelper12StopScenarioERKNSt6stringE">
+<span id="_CPPv3N6tx_sim10StepHelper12StopScenarioERKNSt6stringE"></span><span id="_CPPv2N6tx_sim10StepHelper12StopScenarioERKNSt6stringE"></span><span id="tx_sim::StepHelper::StopScenario__ssCR"></span><span class="target" id="classtx__sim_1_1StepHelper_1a2b7e688d941affc27bc23c18da7c4c5f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StopScenario</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">reason</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6tx_sim10StepHelper12StopScenarioERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>通知仿真系统停止当前场景。仿真系统一般不会主动结束某一个场景，通常由用户算法来决定 何时停止当前场景，比如主车到达当前场景设置的终点，或者其他原因导致算法认为无法再继续 运行当前场景(发生事故、没有可选路径等)。传入的字符串参数将会显示在前端界面。</p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>当用户的算法抛出异常且没有被自己的代码捕捉到时则会被仿真系统捕捉，此时系统也会 停止当前场景，并且将出错信息和对应的模块名在前端界面显示。参考 <a class="reference internal" href="classtx__sim_1_1SimModule.html#classtx__sim_1_1SimModule"><span class="std std-ref">tx_sim::SimModule</span></a> Note。</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>reason</strong> – <strong>[in]</strong> 终止当前场景的原因，此信息将会在前端界面显示。 </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6tx_sim10StepHelper9timestampEv">
+<span id="_CPPv3N6tx_sim10StepHelper9timestampEv"></span><span id="_CPPv2N6tx_sim10StepHelper9timestampEv"></span><span id="tx_sim::StepHelper::timestamp"></span><span class="target" id="classtx__sim_1_1StepHelper_1a845ea555c1e751b4b3946eac2b17bd54"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">timestamp</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6tx_sim10StepHelper9timestampEv" title="Link to this definition"></a><br /></dt>
+<dd><p>获取当前的仿真系统时间。该时间代表当前场景已经运行的时间，属于逻辑(虚拟)时间， 和真实的物理时间不同，详见 <a class="reference internal" href="classtx__sim_1_1SimModule.html#classtx__sim_1_1SimModule"><span class="std std-ref">tx_sim::SimModule</span></a> 。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>当前仿真系统的时间戳，单位：毫秒(ms)。 </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6tx_sim10StepHelper17current_timestampEv">
+<span id="_CPPv3N6tx_sim10StepHelper17current_timestampEv"></span><span id="_CPPv2N6tx_sim10StepHelper17current_timestampEv"></span><span id="tx_sim::StepHelper::current_timestamp"></span><span class="target" id="classtx__sim_1_1StepHelper_1a32ae6372919d665e45b7f6be9d5a7b2d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">current_timestamp</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6tx_sim10StepHelper17current_timestampEv" title="Link to this definition"></a><br /></dt>
+<dd><p>获取当前的系统时间。该时间代表服务器当前获取到的时间戳， 是真实的物理时间，详见 <a class="reference internal" href="classtx__sim_1_1SimModule.html#classtx__sim_1_1SimModule"><span class="std std-ref">tx_sim::SimModule</span></a> 。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>当前仿真系统的时间戳，单位：秒(ms)，小数点后精确到微秒。 </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6tx_sim10StepHelper22GetSubscribedShmemDataERKNSt6stringEPPKc">
+<span id="_CPPv3N6tx_sim10StepHelper22GetSubscribedShmemDataERKNSt6stringEPPKc"></span><span id="_CPPv2N6tx_sim10StepHelper22GetSubscribedShmemDataERKNSt6stringEPPKc"></span><span id="tx_sim::StepHelper::GetSubscribedShmemData__ssCR.cCPP"></span><span class="target" id="classtx__sim_1_1StepHelper_1ae2470d6893417a74bc0d3fd7dd676d79"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetSubscribedShmemData</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">topic</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">mem_data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6tx_sim10StepHelper22GetSubscribedShmemDataERKNSt6stringEPPKc" title="Link to this definition"></a><br /></dt>
+<dd><p>同 <a class="reference internal" href="#classtx__sim_1_1StepHelper_1ab758569efa92f2536210c0dd7ae5a7f2"><span class="std std-ref">GetSubscribedMessage</span></a> ，但是从对应的共享内存中获取数据。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>topic</strong> – <strong>[in]</strong> 要获取的订阅消息对应的topic。 </p></li>
+<li><p><strong>mem_data</strong> – <strong>[in]</strong> 指向共享内存中数据的起始地址，值为nullptr时表示该topic目前还没有模块写入数据。 </p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>共享内存大小（字节数）。 </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6tx_sim10StepHelper23GetPublishedShmemBufferERKNSt6stringEPPc">
+<span id="_CPPv3N6tx_sim10StepHelper23GetPublishedShmemBufferERKNSt6stringEPPc"></span><span id="_CPPv2N6tx_sim10StepHelper23GetPublishedShmemBufferERKNSt6stringEPPc"></span><span id="tx_sim::StepHelper::GetPublishedShmemBuffer__ssCR.cPP"></span><span class="target" id="classtx__sim_1_1StepHelper_1a5e07fde0e18cc254dbe241115d1b24d1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GetPublishedShmemBuffer</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">topic</span></span>, <span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">mem_buf</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6tx_sim10StepHelper23GetPublishedShmemBufferERKNSt6stringEPPc" title="Link to this definition"></a><br /></dt>
+<dd><p>获取要发布topic对应的共享内存的起始地址，利用返回的内存地址指针进行要发布的数据的写入。</p>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>该方法返回的指向共享内存中的指针只能在本次调用的Step函数中使用，在函数外使用或者后续的Step调用中使用 极有可能引起程序奔溃（每次被调用的Step方法中调用该方法返回的地址有可能不同）。</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>topic</strong> – <strong>[in]</strong> 要发布的消息对应的topic。 </p></li>
+<li><p><strong>mem_buf</strong> – <strong>[in]</strong> 发布的topic对应的共享内存的起始地址，如果为nullptr通常是因为在Init时没有通过 <a class="reference internal" href="classtx__sim_1_1InitHelper.html#classtx__sim_1_1InitHelper_1ac20a016e225de778b7615d52614a5b09"><span class="std std-ref">tx_sim::InitHelper::PublishShmem</span></a> 向仿真系统注册此topic，也有可能是因为操作系统无法创建此共享内存。 </p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>共享内存大小（字节数）。 </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="classtx__sim_1_1SimModuleService.html" class="btn btn-neutral float-left" title="Class SimModuleService" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="classtx__sim_1_1StopHelper.html" class="btn btn-neutral float-right" title="Class StopHelper" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 Copyright (C) 2024 Tencent Inc.  All rights reserved。</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

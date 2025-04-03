@@ -1,0 +1,14 @@
+.. _exhale_variable_txsim__messenger_8h_1a67e2eb340766b25f5c962f6c80d4cee0:
+
+Variable tx_sim::topic::kTraffic
+================================
+
+- Defined in :ref:`file__build_simcore_framework_src_txsim_messenger.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: tx_sim::topic::kTraffic
+   :project: txSimSDK

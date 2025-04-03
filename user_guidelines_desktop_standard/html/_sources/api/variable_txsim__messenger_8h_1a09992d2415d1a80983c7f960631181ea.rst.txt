@@ -1,0 +1,14 @@
+.. _exhale_variable_txsim__messenger_8h_1a09992d2415d1a80983c7f960631181ea:
+
+Variable tx_sim::topic::kPredictions
+====================================
+
+- Defined in :ref:`file__build_simcore_framework_src_txsim_messenger.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: tx_sim::topic::kPredictions
+   :project: txSimSDK
